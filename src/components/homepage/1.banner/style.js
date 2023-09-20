@@ -7,7 +7,8 @@ const Media = {
 };
 
 export const Container = styled.section`
-  height: 100vh;
+  height: 45rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +23,7 @@ export const Container = styled.section`
     align-items: flex-start;
     padding: 3rem 0;
     min-height: 26rem;
+    height: 100vh;
   }
   ${Media.PhoneLarge} {
     width: 90%;
@@ -46,6 +48,7 @@ export const Container = styled.section`
     height: auto;
     position: absolute;
     left: 0;
+    z-index: -1;
     ${Media.Tablet} {
       position: inherit;
       left: inherit;
@@ -149,6 +152,7 @@ export const Container = styled.section`
     max-width: 500px;
     padding-bottom: 7rem;
     position: absolute;
+    z-index: -1;
     right: 0;
     ${Media.Tablet} {
       position: absolute;

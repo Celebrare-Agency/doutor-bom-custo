@@ -1,5 +1,6 @@
 import * as Styled from "./style.js";
 import imgHospital from "../../../assets/homepage/aboutUs/hospital.png";
+import finalTimelinePhoto from "../../../assets/homepage/aboutUs/finalTimelinePhoto.png";
 import { Timeline } from "../../../mock/timelinestory.js";
 export default function AboutUs() {
   return (
@@ -8,6 +9,7 @@ export default function AboutUs() {
         <img
           src={imgHospital}
           alt="imagem de dentro do nosso centro cirurgico"
+          className="firstTopPhoto"
         />
         <div className="containerTextTitle col">
           <h2>
@@ -24,11 +26,18 @@ export default function AboutUs() {
       <div className="timelineContainer col">
         <hr className="line" />
         {Timeline.map((item) => (
-          <div className="timelineYears row">
+          <div className="timelineYears row" key={item.id}>
             <span>{item.year}</span>
             <p>{item.text}</p>
           </div>
         ))}
+        <div className="photoContainer">
+          <img
+            src={finalTimelinePhoto}
+            alt="aglomerado de imagens com o centro cirurgico e nossos cirurgiões"
+            className="finalTimelinePhoto"
+          />
+        </div>
       </div>
     </Styled.Container>
   );

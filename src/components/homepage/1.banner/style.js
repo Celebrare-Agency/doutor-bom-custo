@@ -7,8 +7,7 @@ const Media = {
 };
 
 export const Container = styled.section`
-  height: 45rem;
-
+  min-height: 45rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,8 +21,6 @@ export const Container = styled.section`
     flex-direction: column-reverse;
     align-items: flex-start;
     padding: 3rem 0;
-    min-height: 26rem;
-    height: 100vh;
   }
   ${Media.PhoneLarge} {
     width: 90%;
@@ -90,8 +87,9 @@ export const Container = styled.section`
       gap: 0.9rem;
       justify-content: space-around;
       width: 100%;
-      ${Media.PhoneLarge} {
+      ${Media.Tablet} {
         justify-content: flex-start;
+        align-items: flex-start;
       }
       button {
         color: var(--light);

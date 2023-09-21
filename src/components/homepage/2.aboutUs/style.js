@@ -144,6 +144,7 @@ export const Container = styled.section`
       width: 90%;
       max-width: 1000px;
       margin-top: 3rem;
+      margin: 0 auto;
       ${Media.Tablet} {
         width: 100%;
       }

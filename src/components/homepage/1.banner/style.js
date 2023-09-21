@@ -20,7 +20,7 @@ export const Container = styled.section`
   ${Media.Tablet} {
     flex-direction: column-reverse;
     align-items: flex-start;
-    padding: 3rem 0;
+    padding: 8rem 0;
   }
   ${Media.PhoneLarge} {
     width: 90%;

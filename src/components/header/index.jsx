@@ -37,7 +37,6 @@ export default function Header() {
       elementOnscroll();
     });
   }, []);
-
   return (
     <>
       <HeaderContainer isVisible={menuIsVisible} isanimation={animation}>

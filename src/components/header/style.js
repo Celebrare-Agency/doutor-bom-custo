@@ -1,9 +1,8 @@
-import styled, { keyframes, css } from "styled-components/";
+import styled, { css } from "styled-components/";
 const Media = {
   Nav: "@media(max-width:1000px)",
   PhoneLarge: "@media(max-width:600px)",
 };
-
 export const HeaderContainer = styled.header`
   position: fixed;
   z-index: 99;
@@ -13,7 +12,6 @@ export const HeaderContainer = styled.header`
     position: absolute;
     width: 100%;
     z-index: 1;
-
     .logoSide {
       ${({ isanimation }) => isanimation && css``}
     }

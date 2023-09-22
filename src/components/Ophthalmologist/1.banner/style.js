@@ -7,9 +7,7 @@ const Media = {
 };
 
 export const Container = styled.section`
-  background-color: var(--blue);
   position: relative;
-
   .patterns {
     width: 85%;
     max-width: 80rem;
@@ -20,13 +18,14 @@ export const Container = styled.section`
     flex-direction: row;
     overflow: hidden;
     margin: auto;
+
     ${Media.Tablet} {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      gap: 2rem;
-      min-height: 40rem;
-      padding: 3rem 0;
+      align-items: flex-start;
+      padding: 8rem 0;
+      min-height: 25rem;
     }
     ${Media.PhoneLarge} {
       width: 90%;
@@ -34,6 +33,9 @@ export const Container = styled.section`
     }
   }
 
+  img {
+    z-index: -1;
+  }
   .col {
     display: flex;
     align-items: center;
@@ -46,8 +48,16 @@ export const Container = styled.section`
     justify-content: center;
     flex-direction: row;
   }
-  .greenLine {
-    display: none;
+  .backgroundVector {
+    position: absolute;
+    width: 50%;
+    height: 20rem;
+    top: -0.4rem;
+    left: 0;
+    z-index: -1;
+    ${Media.Tablet} {
+      width: 100%;
+    }
   }
   .containerText {
     align-items: flex-start;
@@ -55,23 +65,43 @@ export const Container = styled.section`
     justify-content: center;
     gap: 1rem;
     width: 50%;
+    gap: 3rem;
     margin: auto;
+    height: 30rem;
+    img {
+      width: 100%;
+      height: 90%;
+      object-fit: contain;
+    }
     ${Media.Tablet} {
       margin: 0;
       width: 100%;
-      height: 20rem;
+      height: 35rem;
     }
-    h1 {
-      color: var(--light);
-      text-align: center;
-      font-family: Inter;
-      font-weight: 800;
-      text-transform: uppercase;
+
+    ${Media.PhoneLarge} {
+      margin: 0;
+      width: 100%;
+      height: 23rem;
     }
-    p {
-      color: var(--light);
-      font-family: Inter;
-      font-weight: 400;
+    button {
+      background: var(--blue);
+      color: #fff;
+      font-family: inter;
+      font-style: normal;
+      padding: 1rem;
+      font-weight: 700;
+      line-height: normal;
+      font-size: 2rem;
+      transition: 0.3s;
+
+      ${Media.PhoneLarge} {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: var(--blueHover);
+      }
     }
   }
 
@@ -79,17 +109,9 @@ export const Container = styled.section`
     width: 40%;
     margin: auto;
     ${Media.Tablet} {
-      width: 60%;
-      min-height: 0;
-      margin: 0;
-      min-height: 29rem;
+      display: none;
     }
 
-    ${Media.PhoneLarge} {
-      width: 80%;
-      margin: 0 auto;
-      min-height: 5rem;
-    }
     img {
       width: 100%;
     }

@@ -1,17 +1,19 @@
 import * as Styled from "./style.js";
 import photoDoctor from "../../../assets/ophthalmologist/banner/photo-doctor.png";
-import lines from "../../../assets/ophthalmologist/banner/lines.svg";
+import backgroundVector from "../../../assets/ophthalmologist/banner/VectorBackground.svg";
+import imgText from "../../../assets/ophthalmologist/banner/promotionTextImage.png";
 export default function Banner() {
   return (
     <Styled.Container>
       <div className="patterns">
-        <img className="greenLine" src={lines} alt="linha onduladas verdes" />
+        <img
+          className="backgroundVector"
+          src={backgroundVector}
+          alt="linha onduladas verdes"
+        />
         <div className="containerText col">
-          <h1>Oftalmologia</h1>
-          <p>
-            A Doutor Bom Custo te conecta com os melhores médicos e com os
-            menores preços do mercado.
-          </p>
+          <img src={imgText} alt="Imagem de texto promocional" />
+          <button>Agende sua consulta</button>
         </div>
         <div className="imgContainer">
           <img
@@ -20,7 +22,6 @@ export default function Banner() {
             alt="alogmerado de fotos com doutores e pacientes"
           />
         </div>
-        <img className="greenLine" src={lines} alt="linha onduladas verdes" />
       </div>
     </Styled.Container>
   );

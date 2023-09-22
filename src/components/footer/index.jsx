@@ -14,9 +14,9 @@ export default function Footer() {
         <div className="left col">
           <img src={logo} alt="logo do doutor bom Custo" />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud.
+            Pensando em manter nossos clientes conectados com a nossa missão e
+            novidades, criamos nossas redes sociais, através delas você poderá
+            acompanhar de perto todas as novidades e informações. Acesse já
           </p>
         </div>
         <div className="socialGrid">

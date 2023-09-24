@@ -15,6 +15,10 @@ export const HeaderContainer = styled.header`
     .logoSide {
       ${({ isanimation }) => isanimation && css``}
     }
+
+    .logoSide {
+      cursor: pointer;
+    }
     .content {
       display: flex;
       align-items: center;

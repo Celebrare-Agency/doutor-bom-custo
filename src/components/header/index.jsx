@@ -2,12 +2,15 @@ import { HeaderContainer } from "./style";
 import logo from "../../assets/logoExtendBlue.svg";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { useEffect, useState } from "react";
 export default function Header() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
   const path = useLocation().pathname;
   useEffect(() => {
-    function scrollUp() {}
+    function scrollUp() {
+      window.scroll(0, 0);
+    }
     scrollUp();
   }, [path]);
 
@@ -42,9 +45,11 @@ export default function Header() {
       <HeaderContainer isVisible={menuIsVisible} isanimation={animation}>
         <nav className="header">
           <div className="content">
-            <div className="logoSide">
-              <img src={logo} alt="logotipo" />
-            </div>
+            <Link to="/">
+              <div className="logoSide">
+                <img src={logo} alt="logotipo" />
+              </div>
+            </Link>
             <AiOutlineMenu
               onClick={() => setMenuIsVisible(true)}
               className="menu"
@@ -54,12 +59,24 @@ export default function Header() {
               className="menu closeMenu"
             />
             <li className="menuSide">
-              <Link to="">
+              <ScrollLink to="aaaaasdada">
+                <Link to="/">
+                  <ul
+                    className={`${path === "/" ? " color Options" : "Options"}`}
+                    onClick={() => setMenuIsVisible(false)}
+                  >
+                    Sobre nós
+                  </ul>
+                </Link>
+              </ScrollLink>
+              <Link to="/oftalmo">
                 <ul
-                  className={`${path === "/" ? " color Options" : "Options"}`}
+                  className={`${
+                    path === "/oftalmo" ? " color Options" : "Options"
+                  }`}
                   onClick={() => setMenuIsVisible(false)}
                 >
-                  Sobre nós
+                  Serviços
                 </ul>
               </Link>
               <Link to="">
@@ -67,7 +84,7 @@ export default function Header() {
                   className={`${path === "/a" ? " color Options" : "Options"}`}
                   onClick={() => setMenuIsVisible(false)}
                 >
-                  Sobre nós
+                  Dúvidas
                 </ul>
               </Link>
               <Link to="">
@@ -75,7 +92,7 @@ export default function Header() {
                   className={`${path === "/a" ? " color Options" : "Options"}`}
                   onClick={() => setMenuIsVisible(false)}
                 >
-                  Sobre nós
+                  Atendimento
                 </ul>
               </Link>
               <Link to="">
@@ -83,15 +100,7 @@ export default function Header() {
                   className={`${path === "/a" ? " color Options" : "Options"}`}
                   onClick={() => setMenuIsVisible(false)}
                 >
-                  Sobre nós
-                </ul>
-              </Link>
-              <Link to="">
-                <ul
-                  className={`${path === "/a" ? " color Options" : "Options"}`}
-                  onClick={() => setMenuIsVisible(false)}
-                >
-                  Sobre nós
+                  Parceiros
                 </ul>
               </Link>
             </li>

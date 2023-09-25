@@ -4,7 +4,7 @@ import cirurgiacenter from "../../../assets/homepage/partners/Cc.svg";
 
 export default function Partners() {
   return (
-    <Styled.Container>
+    <Styled.Container id="parceiros">
       <h3>parceiros</h3>
       <div className="partnersContainer row">
         <img src={novavisao} alt="logo nova visão" />

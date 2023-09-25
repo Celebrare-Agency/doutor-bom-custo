@@ -79,15 +79,15 @@ export const Container = styled.section`
       rgba(217, 217, 217, 0) 100%
     );
     box-shadow: 0px 2.54715px 15.28289px -0.63679px rgba(0, 0, 0, 0.25);
-    gap: 2rem;
     width: 500px;
-    height: 30rem;
-
     ${Media.PhoneLarge} {
       height: auto;
       width: 100%;
     }
-    h3 {
+    details {
+      width: 100%;
+    }
+    summary {
       width: 100%;
       padding: 1rem 0;
       text-align: center;
@@ -96,8 +96,9 @@ export const Container = styled.section`
       color: #fff;
       font-family: Inter;
       font-weight: 800;
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       text-transform: uppercase;
+      text-align: left;
       ${Media.PhoneLarge} {
         font-size: 1.5rem;
       }
@@ -111,9 +112,6 @@ export const Container = styled.section`
       font-weight: 300;
       line-height: normal;
       margin: auto;
-      ${Media.PhoneLarge} {
-        display: none;
-      }
     }
   }
   .btnContainer {

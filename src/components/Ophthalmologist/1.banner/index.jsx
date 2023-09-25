@@ -13,7 +13,9 @@ export default function Banner() {
         />
         <div className="containerText col">
           <img src={imgText} alt="Imagem de texto promocional" />
-          <button>Agende sua consulta</button>
+          <a href="">
+            <button>Agende sua consulta</button>
+          </a>
         </div>
         <div className="imgContainer">
           <img

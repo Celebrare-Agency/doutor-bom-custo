@@ -98,8 +98,7 @@ export const HeaderContainer = styled.header`
           justify-content: flex-end;
           flex-direction: column;
           gap: 50px;
-
-          backdrop-filter: blur(5px);
+          backdrop-filter: blur(25px);
           ${({ isVisible }) =>
             isVisible &&
             css`
@@ -131,7 +130,6 @@ export const HeaderContainer = styled.header`
                 width: 100%;
                 height: 0.5rem;
                 top: 1.2rem;
-                background-color: var(--greenThin);
                 left: 0;
                 z-index: -1;
                 ${Media.PhoneLarge} {
@@ -150,9 +148,6 @@ export const HeaderContainer = styled.header`
             &:hover {
               font-weight: 700;
             }
-          }
-          ${Media.PhoneLarge} {
-            font-size: 1rem;
           }
         }
         .color {

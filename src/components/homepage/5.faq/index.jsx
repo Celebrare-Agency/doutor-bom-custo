@@ -54,7 +54,7 @@ export default function Faq() {
     },
   ];
   return (
-    <Styled.Container>
+    <Styled.Container id="duvidas">
       <h3>Ainda com dúvida?</h3>
       <p className="textQuestions">
         Separamos essa sessão para esclarecer as principais dúvidas.{" "}

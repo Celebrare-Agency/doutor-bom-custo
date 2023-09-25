@@ -4,7 +4,7 @@ import finalTimelinePhoto from "../../../assets/homepage/aboutUs/finalTimelinePh
 import { Timeline } from "../../../mock/timelinestory.js";
 export default function AboutUs() {
   return (
-    <Styled.Container>
+    <Styled.Container id="sobre">
       <div className="topContainer">
         <img
           src={imgHospital}

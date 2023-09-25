@@ -39,9 +39,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="privacypart row">
-        <p>Política de privacidade</p>
+        {/* <p>Política de privacidade</p> */}
         <p>Copyright © 2023 Doutor BomCusto </p>
-        <p>Termos de serviço</p>
+        {/* <p>Termos de serviço</p> */}
       </div>
     </Styled.Footer>
   );

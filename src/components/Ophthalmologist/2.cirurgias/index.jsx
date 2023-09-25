@@ -7,10 +7,14 @@ export default function Surgery() {
       <div className="containerCard row">
         {SurgeryS.map((item) => (
           <div className="card col" key={item.id}>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
+            <details>
+              <summary>{item.title}</summary>
+              <p>{item.text}</p>
+            </details>
             <div className="btnContainer">
-              <button>Entrar em contato</button>
+              <a href="">
+                <button>Entrar em contato</button>
+              </a>
             </div>
           </div>
         ))}

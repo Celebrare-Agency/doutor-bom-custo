@@ -1,5 +1,6 @@
 import * as Styled from "./style.js";
 import doctorSmiling from "../../../assets/homepage/banner/doctorSmiling.png";
+import { Link } from "react-router-dom";
 import oldWoman from "../../../assets/homepage/banner/oldWoman.png";
 export default function Banner() {
   return (
@@ -14,12 +15,16 @@ export default function Banner() {
           Precisa de médico <br /> bom e barato?
         </h1>
         <div className="buttonsContainer row">
-          <button type="button" className="buttonContactUs">
-            Entre em contato
-          </button>
-          <button type="button" className="buttonScroll">
-            Saiba mais
-          </button>
+          <a href="https://www.google.com/" target="blanked">
+            <button type="button" className="buttonContactUs">
+              Entre em contato
+            </button>
+          </a>
+          <Link to="/oftalmo">
+            <button type="button" className="buttonScroll">
+              Saiba mais
+            </button>
+          </Link>
         </div>
         <hr />
         <p>

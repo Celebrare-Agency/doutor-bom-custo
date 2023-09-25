@@ -20,7 +20,9 @@ export default function Skills() {
             <p>{item.text}</p>
           </div>
         ))}
-        <button className="buttonCallToAction">Fale com o Atendente</button>
+        <a href="">
+          <button className="buttonCallToAction">Fale com o Atendente</button>
+        </a>
       </div>
     </Styled.Container>
   );

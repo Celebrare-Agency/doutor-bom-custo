@@ -1,5 +1,6 @@
 import * as Styled from "./style.js";
 import ophitalmologistIcon from "../../../assets/homepage/services/ophitalmologistIcon.svg";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
@@ -15,10 +16,12 @@ export default function Services() {
         Confira algumas das especialidades disponíveis nas nossas clínicas
         parceiras:
       </h3>
-      <button className="row">
-        <img src={ophitalmologistIcon} alt="icone de oftalmologia" />
-        oftalmologia
-      </button>
+      <Link to="/oftalmo">
+        <button className="row">
+          <img src={ophitalmologistIcon} alt="icone de oftalmologia" />
+          oftalmologia
+        </button>
+      </Link>
     </Styled.Container>
   );
 }

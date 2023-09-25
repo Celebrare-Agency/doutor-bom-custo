@@ -59,10 +59,12 @@ export default function Header() {
               className="menu closeMenu"
             />
             <li className="menuSide">
-              <ScrollLink to="aaaaasdada">
+              <ScrollLink to="sobre">
                 <Link to="/">
                   <ul
-                    className={`${path === "/" ? " color Options" : "Options"}`}
+                    className={`${
+                      path === "sobre" ? " color Options" : "Options"
+                    }`}
                     onClick={() => setMenuIsVisible(false)}
                   >
                     Sobre nós
@@ -79,30 +81,38 @@ export default function Header() {
                   Serviços
                 </ul>
               </Link>
-              <Link to="">
-                <ul
-                  className={`${path === "/a" ? " color Options" : "Options"}`}
-                  onClick={() => setMenuIsVisible(false)}
-                >
-                  Dúvidas
-                </ul>
-              </Link>
-              <Link to="">
+              <ScrollLink to="duvidas">
+                <Link to="/">
+                  <ul
+                    className={`${
+                      path === "/a" ? " color Options" : "Options"
+                    }`}
+                    onClick={() => setMenuIsVisible(false)}
+                  >
+                    Dúvidas
+                  </ul>
+                </Link>
+              </ScrollLink>
+              <a href="https://www.google.com/" target="blanked">
                 <ul
                   className={`${path === "/a" ? " color Options" : "Options"}`}
                   onClick={() => setMenuIsVisible(false)}
                 >
                   Atendimento
                 </ul>
-              </Link>
-              <Link to="">
-                <ul
-                  className={`${path === "/a" ? " color Options" : "Options"}`}
-                  onClick={() => setMenuIsVisible(false)}
-                >
-                  Parceiros
-                </ul>
-              </Link>
+              </a>
+              <ScrollLink to="parceiros">
+                <Link to="/">
+                  <ul
+                    className={`${
+                      path === "/a" ? " color Options" : "Options"
+                    }`}
+                    onClick={() => setMenuIsVisible(false)}
+                  >
+                    Parceiros
+                  </ul>
+                </Link>
+              </ScrollLink>
             </li>
           </div>
         </nav>

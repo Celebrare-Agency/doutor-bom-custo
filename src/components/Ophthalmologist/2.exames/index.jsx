@@ -8,16 +8,15 @@ export default function Exames() {
       <h2>Exames</h2>
       <div className="containerCard row">
         {Services.map((item) => (
-          <div
-            className="card col"
-            key={item.id}
-            onClick={() => setAnimation(true)}
-            onClose={() => setAnimation(false)}
-          >
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
+          <div className="card col" key={item.id}>
+            <details>
+              <summary>{item.title}</summary>
+              <p>{item.text}</p>
+            </details>
             <div className="btnContainer">
-              <button>Entrar em contato</button>
+              <a href="">
+                <button>Entrar em contato</button>
+              </a>
             </div>
           </div>
         ))}

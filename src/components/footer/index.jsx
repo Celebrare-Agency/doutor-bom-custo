@@ -20,22 +20,28 @@ export default function Footer() {
           </p>
         </div>
         <div className="socialGrid">
-          <div className="socialContainer row">
-            <AiOutlineInstagram className="icon" />
-            <p>XXXXXXX</p>
-          </div>
-          <div className="socialContainer row">
-            <AiOutlineWhatsApp className="icon" />
-            <p>XXXXXXX</p>
-          </div>
-          <div className="socialContainer row">
-            <AiOutlineFacebook className="icon" />
-            <p>XXXXXXX</p>
-          </div>
-          <div className="socialContainer row">
-            <AiOutlineLinkedin className="icon" />
-            <p>XXXXXXX</p>
-          </div>
+          <a href="https://www.instagram.com/doutorbomcusto/" target="blanked">
+            <div className="socialContainer row">
+              <AiOutlineInstagram className="icon" />
+              <p>doutorbomcusto</p>
+            </div>
+          </a>
+          {/* <a href="" target="blanked">
+            <div className="socialContainer row">
+              <AiOutlineWhatsApp className="icon" />
+              <p>XXXXXXX</p>
+            </div>
+          </a> */}
+
+          <a
+            href="https://www.facebook.com/people/Dr-Bom-Custo/61551555542534/"
+            target="blanked"
+          >
+            <div className="socialContainer row">
+              <AiOutlineFacebook className="icon" />
+              <p>Dr Bom Custo</p>
+            </div>
+          </a>
         </div>
       </div>
       <div className="privacypart row">

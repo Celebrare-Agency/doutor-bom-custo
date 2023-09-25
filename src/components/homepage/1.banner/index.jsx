@@ -22,7 +22,7 @@ export default function Banner() {
           </a>
           <Link to="/oftalmo">
             <button type="button" className="buttonScroll">
-              Saiba mais
+              Serviços
             </button>
           </Link>
         </div>

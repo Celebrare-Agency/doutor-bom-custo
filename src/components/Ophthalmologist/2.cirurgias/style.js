@@ -50,6 +50,9 @@ export const Container = styled.section`
     font-weight: 800;
     text-transform: uppercase;
     position: relative;
+    ${Media.PhoneLarge} {
+      font-size: 2.5rem;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -60,7 +63,6 @@ export const Container = styled.section`
       left: 0;
       z-index: -1;
       ${Media.PhoneLarge} {
-        display: none;
       }
     }
   }

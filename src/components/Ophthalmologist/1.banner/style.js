@@ -69,9 +69,12 @@ export const Container = styled.section`
     margin: auto;
     height: 30rem;
     img {
-      width: 100%;
+      width: 80%;
       height: 90%;
       object-fit: contain;
+      ${Media.PhoneLarge} {
+        width: 100%;
+      }
     }
     ${Media.Tablet} {
       margin: 0;

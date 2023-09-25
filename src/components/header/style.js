@@ -85,20 +85,18 @@ export const HeaderContainer = styled.header`
       .menuSide {
         ${Media.Nav} {
           width: 100%;
-          min-height: 100vh;
+          height: 100vh;
           margin-left: 100%;
           padding: 0 45px 36px 0px;
-
           position: absolute;
           top: -36px;
           bottom: 34px;
           z-index: -2;
-
           align-items: flex-end;
-          justify-content: flex-end;
           flex-direction: column;
-          gap: 50px;
           backdrop-filter: blur(25px);
+          background: rgb(0 0 0 / 40%);
+
           ${({ isVisible }) =>
             isVisible &&
             css`
@@ -108,10 +106,9 @@ export const HeaderContainer = styled.header`
               left: -42px;
             `}
         }
-        width: auto;
         gap: 2rem;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         align-items: center;
 
         .Options {
@@ -132,7 +129,7 @@ export const HeaderContainer = styled.header`
                 top: 1.2rem;
                 left: 0;
                 z-index: -1;
-                ${Media.PhoneLarge} {
+                ${Media.Nav} {
                   display: none;
                 }
               }
@@ -144,10 +141,8 @@ export const HeaderContainer = styled.header`
 
           ${Media.Nav} {
             font-size: 2rem;
-            font-weight: 400;
-            &:hover {
-              font-weight: 700;
-            }
+            font-weight: bold;
+            color: var(--light);
           }
         }
         .color {
@@ -160,11 +155,11 @@ export const HeaderContainer = styled.header`
             background-color: var(--greenThin);
             left: 0;
             z-index: -1;
-            ${Media.PhoneLarge} {
+            ${Media.Nav} {
               display: none;
             }
           }
-          font-weight: 400;
+
           ${({ isanimation }) => isanimation && css``}
         }
       }

@@ -21,8 +21,12 @@ body {
   height: auto;
 }
 
+ul,
+li,
 a {
+  list-style: none;
   text-decoration: none;
+  color: inherit;
 }
 
 img {

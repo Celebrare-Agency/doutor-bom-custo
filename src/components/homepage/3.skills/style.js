@@ -57,7 +57,19 @@ export const Container = styled.section`
       width: 100%;
     }
   }
-
+  button {
+    color: #fff;
+    font-family: inter;
+    font-style: normal;
+    padding: 1rem;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 2rem;
+    transition: 0.3s;
+    ${Media.PhoneLarge} {
+      font-size: 1.5rem;
+    }
+  }
   .skillSideContainer {
     align-items: flex-start;
     justify-content: space-evenly;
@@ -82,7 +94,7 @@ export const Container = styled.section`
       img {
         max-width: 42px;
       }
-      h4 {
+      h3 {
         margin-top: -1rem;
         color: var(--black);
         font-family: inter;

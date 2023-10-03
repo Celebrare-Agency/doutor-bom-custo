@@ -16,6 +16,15 @@ export const HeaderContainer = styled.header`
       ${({ isanimation }) => isanimation && css``}
     }
 
+    ul {
+      list-style-type: none; /* Remove os marcadores padrão */
+      padding-left: 0; /* Remove o recuo à esquerda padrão */
+    }
+
+    ul,
+    li {
+      text-decoration: none;
+    }
     .logoSide {
       cursor: pointer;
     }

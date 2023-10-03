@@ -12,7 +12,10 @@ export default function Surgery() {
               <p>{item.text}</p>
             </details>
             <div className="btnContainer">
-              <a href="">
+              <a
+                href="https://api.whatsapp.com/send?phone=5511950212678&text=Olá!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
+                target="blanked"
+              >
                 <button>Entrar em contato</button>
               </a>
             </div>

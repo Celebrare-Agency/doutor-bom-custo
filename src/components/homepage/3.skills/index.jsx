@@ -1,6 +1,7 @@
 import * as Styled from "./style.js";
 import { Skill } from "../../../mock/skillsItemns.js";
 import doctor from "../../../assets/homepage/skills/photoDoctor.png";
+import WppButton from "../../buttonWpp/index.jsx";
 
 export default function Skills() {
   return (
@@ -16,13 +17,11 @@ export default function Skills() {
         {Skill.map((item) => (
           <div key={item.id} className="itemsContainer col">
             <img src={item.img} alt={item.alt} />
-            <h4>{item.title}</h4>
+            <h3>{item.title}</h3>
             <p>{item.text}</p>
           </div>
         ))}
-        <a href="">
-          <button className="buttonCallToAction">Fale com o Atendente</button>
-        </a>
+        <WppButton />
       </div>
     </Styled.Container>
   );

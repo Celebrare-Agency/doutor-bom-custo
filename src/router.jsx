@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 // const Error = lazy(() => import("./pages/error/index"));
 import Loading from "./components/loading/index";
 const Home = lazy(() => import("./pages/homePage/index"));
-const Oftalmo = lazy(() => import("./pages/ophthalmologist/index"));
+const Oftalmo = lazy(() => import("./pages/Ophthalmologist/index"));
 export function Router() {
   return (
     <Suspense fallback={<Loading />}>

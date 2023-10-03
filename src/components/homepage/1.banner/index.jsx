@@ -2,6 +2,7 @@ import * as Styled from "./style.js";
 import doctorSmiling from "../../../assets/homepage/banner/doctorSmiling.png";
 import { Link } from "react-router-dom";
 import oldWoman from "../../../assets/homepage/banner/oldWoman.png";
+import WppButton from "../../buttonWpp/index.jsx";
 export default function Banner() {
   return (
     <Styled.Container>
@@ -15,11 +16,7 @@ export default function Banner() {
           Precisa de médico <br /> bom e barato?
         </h1>
         <div className="buttonsContainer row">
-          <a href="https://www.google.com/" target="blanked">
-            <button type="button" className="buttonContactUs">
-              Entre em contato
-            </button>
-          </a>
+          <WppButton />
           <Link to="/oftalmo">
             <button type="button" className="buttonScroll">
               Serviços

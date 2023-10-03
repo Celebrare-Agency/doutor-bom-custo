@@ -88,7 +88,6 @@ export const Container = styled.section`
       height: 23rem;
     }
     button {
-      background: var(--blue);
       color: #fff;
       font-family: inter;
       font-style: normal;
@@ -100,10 +99,6 @@ export const Container = styled.section`
 
       ${Media.PhoneLarge} {
         font-size: 1.5rem;
-      }
-
-      &:hover {
-        background-color: var(--blueHover);
       }
     }
   }

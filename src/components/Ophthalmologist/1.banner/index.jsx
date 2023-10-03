@@ -2,6 +2,7 @@ import * as Styled from "./style.js";
 import photoDoctor from "../../../assets/ophthalmologist/banner/photo-doctor.png";
 import backgroundVector from "../../../assets/ophthalmologist/banner/VectorBackground.svg";
 import imgText from "../../../assets/ophthalmologist/banner/promotionTextImage.png";
+import WppButton from "../../buttonWpp/index.jsx";
 export default function Banner() {
   return (
     <Styled.Container>
@@ -13,9 +14,7 @@ export default function Banner() {
         />
         <div className="containerText col">
           <img src={imgText} alt="Imagem de texto promocional" />
-          <a href="">
-            <button>Agende sua consulta</button>
-          </a>
+          <WppButton />
         </div>
         <div className="imgContainer">
           <img

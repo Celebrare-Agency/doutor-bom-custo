@@ -7,7 +7,7 @@ import "./reset.css";
 import TagManager from "react-gtm-module";
 import { Router } from "./router";
 import Footer from "./components/footer";
-
+import FixedButton from "./components/buttonWpp fixed";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Manager() {
@@ -30,6 +30,7 @@ root.render(
     <BrowserRouter>
       <Router />
       <Footer />
+      <FixedButton />
       <Manager />
     </BrowserRouter>
   </React.StrictMode>

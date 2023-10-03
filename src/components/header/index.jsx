@@ -2,7 +2,7 @@ import { HeaderContainer } from "./style";
 import logo from "../../assets/logoExtendBlue.svg";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { useEffect, useState } from "react";
 export default function Header() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -58,62 +58,65 @@ export default function Header() {
               onClick={() => setMenuIsVisible(false)}
               className="menu closeMenu"
             />
-            <li className="menuSide">
+            <ul className="menuSide">
               <ScrollLink to="sobre">
                 <Link to="/">
-                  <ul
+                  <li
                     className={`${
                       path === "sobre" ? " color Options" : "Options"
                     }`}
                     onClick={() => setMenuIsVisible(false)}
                   >
                     Sobre nós
-                  </ul>
+                  </li>
                 </Link>
               </ScrollLink>
               <Link to="/oftalmo">
-                <ul
+                <li
                   className={`${
                     path === "/oftalmo" ? " color Options" : "Options"
                   }`}
                   onClick={() => setMenuIsVisible(false)}
                 >
                   Serviços
-                </ul>
+                </li>
               </Link>
               <ScrollLink to="duvidas">
                 <Link to="/">
-                  <ul
+                  <li
                     className={`${
                       path === "/a" ? " color Options" : "Options"
                     }`}
                     onClick={() => setMenuIsVisible(false)}
                   >
                     Dúvidas
-                  </ul>
+                  </li>
                 </Link>
               </ScrollLink>
-              <a href="https://www.google.com/" target="blanked">
-                <ul
+              <a
+                href="https://api.whatsapp.com/send?phone=5511950212678&text=Olá!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
+                target="blanked"
+              >
+                <li
                   className={`${path === "/a" ? " color Options" : "Options"}`}
                   onClick={() => setMenuIsVisible(false)}
                 >
                   Atendimento
-                </ul>
+                </li>
               </a>
               <ScrollLink to="parceiros">
                 <Link to="/">
-                  <ul
+                  <li
                     className={`${
                       path === "/a" ? " color Options" : "Options"
                     }`}
                     onClick={() => setMenuIsVisible(false)}
                   >
                     Parceiros
-                  </ul>
+                  </li>
                 </Link>
               </ScrollLink>
-            </li>
+            </ul>
           </div>
         </nav>
       </HeaderContainer>

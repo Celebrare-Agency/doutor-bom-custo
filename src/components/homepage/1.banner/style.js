@@ -90,6 +90,7 @@ export const Container = styled.section`
       ${Media.Tablet} {
         justify-content: flex-start;
         align-items: flex-start;
+        flex-direction: column;
       }
       button {
         color: var(--light);
@@ -107,18 +108,11 @@ export const Container = styled.section`
           font-size: 1rem;
         }
       }
-      .buttonContactUs {
+      .buttonScroll {
         background: var(--blue);
         transition: 0.3s;
         &:hover {
           background-color: var(--blueHover);
-        }
-      }
-      .buttonScroll {
-        background: var(--greenBold);
-        transition: 0.3s;
-        &:hover {
-          background-color: var(--greenHover);
         }
       }
     }

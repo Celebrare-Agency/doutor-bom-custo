@@ -28,6 +28,12 @@ export const HeaderContainer = styled.header`
     .logoSide {
       cursor: pointer;
     }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+    }
     .content {
       display: flex;
       align-items: center;
@@ -153,23 +159,6 @@ export const HeaderContainer = styled.header`
             font-weight: bold;
             color: var(--light);
           }
-        }
-        .color {
-          &:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 0.5rem;
-            top: 1.2rem;
-            background-color: var(--greenThin);
-            left: 0;
-            z-index: -1;
-            ${Media.Nav} {
-              display: none;
-            }
-          }
-
-          ${({ isanimation }) => isanimation && css``}
         }
       }
     }

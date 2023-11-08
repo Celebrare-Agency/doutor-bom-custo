@@ -1,42 +1,27 @@
 import * as Styled from "./style.js";
-import doctorSmiling from "../../../assets/homepage/banner/doctorSmiling.png";
-import { Link } from "react-router-dom";
-import oldWoman from "../../../assets/homepage/banner/oldWoman.png";
+import oldMan from "../../../assets/landing page sell Opthalmologist/banner/oldMan.png";
+import figureDiscount from "../../../assets/landing page sell Opthalmologist/banner/discountFigure.png";
 import WppButton from "../../buttonWpp/index.jsx";
 export default function Banner() {
   return (
     <Styled.Container>
-      <img
-        src={doctorSmiling}
-        alt="doutora sorrindo por estar feliz em atender pacientes"
-        className="DoctorSmilingImage"
-      />
       <div className="middlePartContainer col">
-        <h1>
-          Procurando por
-          <br /> médico oftalmologista
-          <br /> bom e barato?
-        </h1>
+        <h1>R$ 19,90 por uma consulta oftalmológica</h1>
+        <p>
+          Você merece o melhor cuidado para os seus olhos e por apenas R$ 19,90,
+          você terá acesso aos principais oftalmologistas da cidade de São
+          Paulo! Essa é uma oportunidade imperdível que você não encontrará em
+          nenhum outro lugar.
+        </p>
         <div className="buttonsContainer row">
           <WppButton />
-          <Link to="/oftalmo">
-            <button type="button" className="buttonScroll">
-              Serviços
-            </button>
-          </Link>
         </div>
-        <hr />
-        <p>
-          A Doutor Bom Custo te conecta com os melhores médicos oftalmologistas
-          e com os menores preços do mercado. Assim você pode cuidar da sua
-          saúde sem se preocupar com a saúde do seu bolso e tudo isso sendo
-          atendido pelos melhores médicos oftalmologistas de São Paulo!
-        </p>
+        <img src={figureDiscount} alt="imagem de 19,90 desconto" />
       </div>
       <img
-        src={oldWoman}
-        alt="senhora sorrindo e feliz por estar sendo ajudada por uma médica"
-        className="oldWomanImage"
+        src={oldMan}
+        alt="senhor sorrindo e feliz por estar sendo ajudada por um médico"
+        className="oldManImage"
       />
     </Styled.Container>
   );

@@ -27,7 +27,7 @@ export const Skill = [
   },
   {
     id: 4,
-    title: "Profissionais qualificados",
+    title: "Oftalmologistas qualificados",
     text: "Possuímos parceria com os melhores profissionais da saúde para que os pacientes tenham acesso a um atendimento de qualidade.",
     img: item4,
     alt: "Icone de 5 estrelhas, funcionarios capacitados",

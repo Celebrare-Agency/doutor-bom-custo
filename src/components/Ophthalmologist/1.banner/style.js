@@ -16,7 +16,6 @@ export const Container = styled.section`
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    overflow: hidden;
     margin: auto;
 
     ${Media.Tablet} {
@@ -48,12 +47,13 @@ export const Container = styled.section`
     justify-content: center;
     flex-direction: row;
   }
+
   .backgroundVector {
     position: absolute;
     width: 50%;
     height: 20rem;
     top: -0.4rem;
-    left: 0;
+    left: -10rem;
     z-index: -1;
     ${Media.Tablet} {
       width: 100%;
@@ -65,11 +65,19 @@ export const Container = styled.section`
     justify-content: center;
     gap: 1rem;
     width: 50%;
-    gap: 3rem;
     margin: auto;
     height: 30rem;
+
+    h1 {
+      color: var(--Blue, #3b4ae2);
+      font-family: Inter;
+      font-weight: 700;
+      text-transform: uppercase;
+      transform: rotate(-10deg);
+    }
     img {
       width: 80%;
+      margin-top: -4rem;
       height: 90%;
       object-fit: contain;
       ${Media.PhoneLarge} {

@@ -21,7 +21,7 @@ export default function Header() {
 
   useEffect(() => {
     function handleScroll() {
-      setAnimation(window.scrollY > 2300);
+      setAnimation(window.scrollY > 100);
     }
 
     window.addEventListener("scroll", handleScroll);

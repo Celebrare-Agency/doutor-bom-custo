@@ -13,6 +13,7 @@ export default function Banner() {
           alt="linha onduladas verdes"
         />
         <div className="containerText col">
+          <h1>Consulta com oftalmologista em Taboão da serra por:</h1>
           <img src={imgText} alt="Imagem de texto promocional" />
           <WppButton />
         </div>

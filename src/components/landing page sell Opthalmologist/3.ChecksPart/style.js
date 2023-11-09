@@ -15,7 +15,9 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  gap: 1rem;
   overflow: hidden;
+  padding: 1rem 0;
   margin: auto;
   ${Media.Tablet} {
     min-height: 25rem;
@@ -52,11 +54,11 @@ export const Container = styled.section`
       margin: 0;
       width: 100%;
     }
-
-    h3 {
+    h2 {
       color: var(--black);
       font-family: Inter;
-      font-weight: 400;
+      font-weight: 700;
+      text-transform: uppercase;
       ${Media.Tablet} {
         font-size: 2rem;
       }
@@ -64,55 +66,34 @@ export const Container = styled.section`
         font-size: 1.4rem;
       }
     }
-
-    .buttonCallToAction {
-      color: var(--black);
-      font-family: Inter;
-      font-weight: 400;
-      text-decoration-line: underline;
-      text-align: left;
-      position: relative;
-      background-color: inherit;
-      cursor: pointer;
-      font-size: 21px;
-      transition: all 0.3s;
-
-      ${Media.PhoneLarge} {
-        font-size: 1.1rem;
-        font-weight: bold;
+    .items {
+      gap: 2rem;
+      align-items: flex-start;
+      p {
+        color: var(--black, #2f3947);
+        font-family: Inter;
+        font-weight: 400;
       }
-      ${Media.PhoneSmall} {
-        font-size: 1rem;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 0.5rem;
-        top: 1.2rem;
-        background-color: var(--greenThin);
-        left: 0;
-        z-index: -1;
+
+      .icons {
+        ${Media.Tablet} {
+          font-size: 2rem;
+        }
         ${Media.PhoneLarge} {
-          display: none;
+          height: 4rem;
         }
       }
-    }
-    .buttonCallToAction:hover {
-      transform: scale(0.9);
-      transition: all 0.3s;
     }
   }
 
   .imgContainer {
-    width: 50%;
+    width: 45%;
     min-height: 40rem;
     margin: auto;
     ${Media.Tablet} {
       width: 80%;
       min-height: 10rem;
     }
-
     ${Media.PhoneLarge} {
       width: 80%;
       margin: 0 auto;

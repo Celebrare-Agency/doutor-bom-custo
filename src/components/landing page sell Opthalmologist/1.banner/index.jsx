@@ -7,7 +7,8 @@ export default function Banner() {
     <Styled.Container>
       <div className="middlePartContainer col">
         <h1>
-          R$ 19,90 por uma consulta <br /> oftalmológica
+          R$ 19,90 por uma consulta <br />
+          oftalmológica
         </h1>
         <p>
           Você merece o melhor cuidado para os seus olhos e por apenas R$ 19,90,

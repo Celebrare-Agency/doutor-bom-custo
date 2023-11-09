@@ -20,11 +20,12 @@ export const Container = styled.section`
   ${Media.Tablet} {
     flex-direction: column-reverse;
     align-items: flex-start;
-    padding: 8rem 0;
+    padding: 8rem 0 0;
   }
   ${Media.PhoneLarge} {
     width: 90%;
     max-width: 90rem;
+    min-height: 35rem;
   }
   .col {
     display: flex;
@@ -43,7 +44,6 @@ export const Container = styled.section`
     width: 50%;
     margin: auto;
     align-items: flex-start;
-    /* position: relative; */
     gap: 2rem;
     ${Media.Tablet} {
       order: 3;
@@ -61,6 +61,9 @@ export const Container = styled.section`
       font-weight: 800;
       text-transform: uppercase;
       white-space: pre;
+      ${Media.Tablet} {
+        white-space: normal;
+      }
     }
 
     p {
@@ -76,9 +79,11 @@ export const Container = styled.section`
       }
     }
   }
+
   .oldManImage {
-    height: 90%;
-    /* width:50%: */
+    width: 45%;
+    margin: auto;
+    margin-top: -2%;
     z-index: -99;
     ${Media.Tablet} {
       display: none;
@@ -93,21 +98,24 @@ export const Container = styled.section`
       font-weight: 600;
       line-height: normal;
       padding: 1rem;
-      ${Media.PhoneLarge} {
-        font-size: 1.1rem;
-        padding: 0.6rem;
+
+      ${Media.Laptop} {
+        font-size: 2.4rem;
       }
-      ${Media.PhoneSmall} {
-        font-size: 1rem;
+      ${Media.Tablet} {
+        font-size: 7vw;
       }
     }
   }
 
   .figureImage {
     position: absolute;
-    right: 1rem;
+    right: 10rem;
     width: 40rem;
-    bottom: 11rem;
+    bottom: 1rem;
+    ${Media.Laptop} {
+      right: 0;
+    }
     ${Media.Tablet} {
       position: inherit;
       width: 110%;

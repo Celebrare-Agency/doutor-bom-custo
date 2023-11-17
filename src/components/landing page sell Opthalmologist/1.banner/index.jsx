@@ -7,16 +7,17 @@ export default function Banner() {
     <Styled.Container>
       <div className="middlePartContainer col">
         <h1>
-          R$ 19,90 por uma consulta <br />
-          oftalmológica
+          Consulta com Oftalmologista em Clínica Particular com Valores
+          Acessíveis em Taboão da Serra
         </h1>
         <p>
-          Você merece o melhor cuidado para os seus olhos e por apenas R$ 19,90,
-          você terá acesso aos principais oftalmologistas da cidade de São
-          Paulo! Essa é uma oportunidade imperdível que você não encontrará em
-          nenhum outro lugar.
+          Agendamento disponível com preços especiais por tempo limitado.
+          Aproveite!
+          <br />
+          <b> Não atendemos convênios e planos de saúde.</b>
         </p>
         <div className="buttonsContainer ">
+          <p>Clique no botão abaixo e fale conosco pelo Whatsapp</p>
           <WppButton />
         </div>
         <img

@@ -59,8 +59,6 @@ export const Container = styled.section`
       text-align: left;
       font-family: Inter;
       font-weight: 800;
-      text-transform: uppercase;
-      white-space: pre;
       ${Media.Tablet} {
         white-space: normal;
       }

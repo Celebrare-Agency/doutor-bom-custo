@@ -2,7 +2,7 @@ import * as Styled from "./style.js";
 import { Servicess } from "../../../mock/sellerPageServices.js";
 export default function Service() {
   return (
-    <Styled.Container id="sobre">
+    <Styled.Container>
       <div className="container">
         <div className="topContainer">
           <h2>Sobre o seu atendimento</h2>

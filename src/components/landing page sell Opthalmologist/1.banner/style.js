@@ -41,11 +41,12 @@ export const Container = styled.section`
   }
 
   .middlePartContainer {
-    width: 50%;
+    width: 55%;
     margin: auto;
     align-items: flex-start;
     gap: 2rem;
     ${Media.Tablet} {
+      gap: 1rem;
       order: 3;
       margin: 0;
       width: 100%;
@@ -59,8 +60,6 @@ export const Container = styled.section`
       text-align: left;
       font-family: Inter;
       font-weight: 800;
-      text-transform: uppercase;
-      white-space: pre;
       ${Media.Tablet} {
         white-space: normal;
       }
@@ -90,10 +89,12 @@ export const Container = styled.section`
     }
   }
   .buttonsContainer {
+    z-index: 9999999;
+    position: relative;
     button {
       color: var(--light);
       font-family: Inter;
-      font-size: 3rem;
+      font-size: 2rem;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -113,6 +114,7 @@ export const Container = styled.section`
     right: 10rem;
     width: 40rem;
     bottom: 1rem;
+    z-index: 0;
     ${Media.Laptop} {
       right: 0;
     }

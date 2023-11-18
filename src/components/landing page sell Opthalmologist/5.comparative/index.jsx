@@ -40,18 +40,18 @@ export default function Services() {
     },
     {
       id: 2,
-      icon: <CheckIcon className="icons" />,
-      text: "Tempo de espera excessivo ",
+      icon: <NegativeIcon className="icons" />,
+      text: "Atendimento rápido ",
     },
     {
       id: 3,
-      icon: <CheckIcon className="icons" />,
-      text: "São reconhecidos por terem um auto custo.",
+      icon: <NegativeIcon className="icons" />,
+      text: "Parceiros de baixo custo e de alta qualidade",
     },
     {
       id: 4,
       icon: <NegativeIcon className="icons" />,
-      text: "Parcerias com clínicas de São Paulo",
+      text: "Preço mais acessível de São Paulo",
     },
     {
       id: 5,
@@ -66,12 +66,12 @@ export default function Services() {
     {
       id: 7,
       icon: <NegativeIcon className="icons" />,
-      text: "Profissionais altamente capacitados",
+      text: "Melhores médicos de São Paulo",
     },
     {
       id: 8,
       icon: <NegativeIcon className="icons" />,
-      text: "Centro cirúrgico próprio",
+      text: "Centro cirúrgico parceiro",
     },
   ];
 
@@ -89,12 +89,12 @@ export default function Services() {
     {
       id: 3,
       icon: <CheckIcon className="icons" />,
-      text: "Intermediadores de baixo custo e de alta qualidade.",
+      text: "Parceiros de baixo custo e de alta qualidade",
     },
     {
       id: 4,
       icon: <CheckIcon className="icons" />,
-      text: "Preço mais acessível de São Paulo!",
+      text: "Preço mais acessível de São Paulo",
     },
     {
       id: 5,
@@ -109,18 +109,18 @@ export default function Services() {
     {
       id: 7,
       icon: <CheckIcon className="icons" />,
-      text: "Profissionais altamente capacitados",
+      text: "Melhores médicos de São Paulo",
     },
     {
       id: 8,
       icon: <CheckIcon className="icons" />,
-      text: "Centro cirúrgico próprio",
+      text: "Centro cirúrgico parceiro",
     },
   ];
   return (
     <Styled.Container>
       <div className="text col">
-        <h3> Ainda em duvida?</h3>
+        <h3> Ainda em dúvida?</h3>
         <p>Você merece o melhor cuidado para os seus olhos!</p>
       </div>
       <div className="comparativeCont row">

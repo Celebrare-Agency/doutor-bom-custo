@@ -13,7 +13,7 @@ export const Items3 = [
   },
   {
     id: 4,
-    text: "Dificuldade ao realizar tarefas do dia a dia como, ler, assistir TV, mexer no celular.",
+    text: "Dificuldade ao realizar tarefas do dia a dia como, ler, assistir TV e mexer no celular.",
   },
   {
     id: 5,

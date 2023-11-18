@@ -14,6 +14,9 @@ export default function Footer() {
         <div className="left col">
           <img src={logo} alt="logo do doutor bom Custo" />
           <p>
+            A dr bom custo é uma intermediadora de serviços de saúde, estando
+            apta apenas na intermediação entre clientes e entidades de saúde e
+            não na prestação do mesmo. <br />
             Pensando em manter nossos clientes conectados com a nossa missão e
             novidades, criamos nossas redes sociais, através delas você poderá
             acompanhar de perto todas as novidades e informações. Acesse já!

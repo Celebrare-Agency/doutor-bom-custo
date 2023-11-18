@@ -15,8 +15,8 @@ export const Container = styled.button`
   justify-content: center;
   flex-direction: row;
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 4rem;
+  right: 1rem;
   border-radius: 50%;
 
   a {

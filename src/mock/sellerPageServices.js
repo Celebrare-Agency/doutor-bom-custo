@@ -12,7 +12,7 @@ export const Servicess = [
   {
     id: 2,
     title: "Exames",
-    text: "Aqui, faremos exames para identificar suas necessidades.",
+    text: "Aqui faremos exames para identificar suas necessidades.",
     img: i2,
     style: "",
   },

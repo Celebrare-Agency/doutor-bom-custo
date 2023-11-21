@@ -60,8 +60,12 @@ export const Container = styled.section`
       text-align: left;
       font-family: Inter;
       font-weight: 800;
+      font-size: 2rem;
       ${Media.Tablet} {
-        white-space: normal;
+        font-size: 2rem;
+      }
+      ${Media.PhoneLarge} {
+        font-size: 1.5rem;
       }
     }
 
@@ -100,10 +104,7 @@ export const Container = styled.section`
       line-height: normal;
       padding: 1rem;
 
-      ${Media.Laptop} {
-        font-size: 2.4rem;
-      }
-      ${Media.Tablet} {
+      ${Media.PhoneLarge} {
         font-size: 7vw;
       }
     }

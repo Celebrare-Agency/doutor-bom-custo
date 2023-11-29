@@ -8,7 +8,7 @@ const wppLink =
   "https://api.whatsapp.com/send?phone=5511950212678&text=Olá!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20";
 const menuItems = [
   { path: "sobre", label: "Sobre nós" },
-  { path: "/oftalmo", label: "Serviços" },
+  { path: "/oftalmo-taboaodaserra", label: "Serviços" },
   { path: "duvidas", label: "Dúvidas" },
   { path: wppLink, label: "Atendimento" },
   { path: "parceiros", label: "Parceiros" },

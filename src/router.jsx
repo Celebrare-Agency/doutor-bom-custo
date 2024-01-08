@@ -1,11 +1,14 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-// const Error = lazy(() => import("./pages/error/index"));
 import Loading from "./components/loading/index";
+
 const Home = lazy(() => import("./pages/homePage/index"));
-const Oftalmo = lazy(() => import("./pages/Ophthalmologist/index"));
+const Oftalmo = lazy(() => import("./pages/ophthalmologist/index"));
 const OphthalmologistGuarulhos = lazy(() =>
   import("./pages/Ophthalmologist  Guarulhos/index")
+);
+const OphthalmologistParaisopolis = lazy(() =>
+  import("./pages/Ophthalmologist  Paraisopolis/index")
 );
 const Seller2 = lazy(() =>
   import("./pages/landing page sell Opthalmologist/index")
@@ -25,6 +28,10 @@ export function Router() {
         <Route
           path="/oftalmo-guarulhos"
           element={<OphthalmologistGuarulhos />}
+        />{" "}
+        <Route
+          path="/oftalmo-paraisopolis"
+          element={<OphthalmologistParaisopolis />}
         />
       </Routes>
     </Suspense>

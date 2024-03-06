@@ -68,7 +68,7 @@ export default function Header() {
                   </a>
                 ) : item.path.startsWith("/") ? (
                   <Link to={item.path}>{item.label}</Link>
-                ) : path === "/oftalmo" ? (
+                ) : path === "/oftalmo-taboaodaserra" ? (
                   <Link to="/">{item.label}</Link>
                 ) : (
                   <ScrollLink to={item.path} onClick={handleMenuClose}>

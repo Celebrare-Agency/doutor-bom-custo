@@ -17,8 +17,6 @@ export const Container = styled.section`
     gap: 1rem;
   }
   ${Media.PhoneLarge} {
-    width: 90%;
-    max-width: 90rem;
     min-height: 20rem;
   }
 

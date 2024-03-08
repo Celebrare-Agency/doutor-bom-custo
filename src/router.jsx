@@ -11,6 +11,7 @@ const OphthalmologistParaisopolis = lazy(() =>
   import("./pages/consultaLpSellV1 - Paraisopolis/index")
 );
 const Seller2 = lazy(() => import("./pages/consultaLpSellV2/index"));
+const CatarataLpSell = lazy(() => import("./pages/catarataLpSell/index"));
 const GuarulhosSeller2 = lazy(() =>
   import("./pages/consultaLpSellV2 - Guarulhos/index")
 );
@@ -19,6 +20,7 @@ export function Router() {
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/development" element={<Home />} />
+        <Route path="/Catarata" element={<CatarataLpSell />} />
         <Route path="/" element={<Home />} />
         <Route path="/oftalmo-taboaodaserra-v2" element={<Seller2 />} />
         <Route path="/oftalmo-guarulhos-v2" element={<GuarulhosSeller2 />} />

@@ -1,5 +1,4 @@
 import * as Styled from "./style.js";
-import ophitalmologistIcon from "../../../assets/1.home/services/ophitalmologistIcon.svg";
 import { Link } from "react-router-dom";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 

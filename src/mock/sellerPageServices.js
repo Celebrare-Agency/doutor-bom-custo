@@ -1,6 +1,6 @@
-import i1 from "../assets/landing page sell Opthalmologist/service/i1.png";
-import i2 from "../assets/landing page sell Opthalmologist/service/i2.png";
-import i3 from "../assets/landing page sell Opthalmologist/service/i3.png";
+import i1 from "../assets/consultaLpSellV2/service/i1.png";
+import i2 from "../assets/consultaLpSellV2/service/i2.png";
+import i3 from "../assets/consultaLpSellV2/service/i3.png";
 export const Servicess = [
   {
     id: 1,

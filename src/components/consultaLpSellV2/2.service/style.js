@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../../assets/landing page sell Opthalmologist/service/Bg.png";
+import bg from "../../../assets/consultaLpSellV2/service/Bg.png";
 const Media = {
   PhoneLarge: "@media(max-width:600px)",
   Laptop: "@media(max-width:1150px)",

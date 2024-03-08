@@ -1,6 +1,6 @@
 import * as Styled from "./style.js";
-import oldMan from "../../../assets/landing page sell Opthalmologist/banner/oldMan.png";
-import figureDiscount from "../../../assets/landing page sell Opthalmologist/banner/discountFigure.png";
+import oldMan from "../../../assets/consultaLpSellV2/banner/oldMan.png";
+import figureDiscount from "../../../assets/consultaLpSellV2/banner/discountFigure.png";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 
 export default function Banner() {

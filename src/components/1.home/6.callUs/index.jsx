@@ -1,5 +1,5 @@
 import * as Styled from "./style.js";
-import photo from "../../../assets/homepage/contact/photo.png";
+import photo from "../../../assets/1.home/contact/photo.png";
 export default function Contact() {
   return (
     <Styled.Container id="aaaaasdada">

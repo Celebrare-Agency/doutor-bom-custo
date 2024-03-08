@@ -1,5 +1,5 @@
 import * as Styled from "./style.js";
-import ophitalmologistIcon from "../../../assets/homepage/services/ophitalmologistIcon.svg";
+import ophitalmologistIcon from "../../../assets/1.home/services/ophitalmologistIcon.svg";
 import { Link } from "react-router-dom";
 
 export default function Services() {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../../assets/landing page sell Opthalmologist/exames/bg2.png";
+import bg from "../../../assets/consultaLpSellV2/exames/bg2.png";
 
 const Media = {
   PhoneLarge: "@media(max-width: 600px)",

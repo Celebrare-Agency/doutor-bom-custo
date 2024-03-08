@@ -1,7 +1,7 @@
 import * as Styled from "./style.js";
-import doctorSmiling from "../../../assets/homepage/banner/doctorSmiling.png";
+import doctorSmiling from "../../../assets/1.home/banner/doctorSmiling.png";
 import { Link } from "react-router-dom";
-import oldWoman from "../../../assets/homepage/banner/oldWoman.png";
+import oldWoman from "../../../assets/1.home/banner/oldWoman.png";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Banner() {
   return (

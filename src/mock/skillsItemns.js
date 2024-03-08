@@ -1,7 +1,7 @@
-import item1 from "../assets/homepage/skills/item1.svg";
-import item2 from "../assets/homepage/skills/item2.svg";
-import item3 from "../assets/homepage/skills/item3.svg";
-import item4 from "../assets/homepage/skills/item4.svg";
+import item1 from "../assets/1.home/skills/item1.svg";
+import item2 from "../assets/1.home/skills/item2.svg";
+import item3 from "../assets/1.home/skills/item3.svg";
+import item4 from "../assets/1.home/skills/item4.svg";
 
 export const Skill = [
   {

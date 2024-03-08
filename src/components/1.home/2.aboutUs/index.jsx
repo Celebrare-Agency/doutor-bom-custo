@@ -1,6 +1,6 @@
 import * as Styled from "./style.js";
-import imgHospital from "../../../assets/homepage/aboutUs/hospital.png";
-import finalTimelinePhoto from "../../../assets/homepage/aboutUs/finalTimelinePhoto.png";
+import imgHospital from "../../../assets/1.home/aboutUs/hospital.png";
+import finalTimelinePhoto from "../../../assets/1.home/aboutUs/finalTimelinePhoto.png";
 import { Timeline } from "../../../mock/timelinestory.js";
 export default function AboutUs() {
   return (

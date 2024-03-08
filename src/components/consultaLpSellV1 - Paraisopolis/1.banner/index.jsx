@@ -1,7 +1,7 @@
 import * as Styled from "./style.js";
-import photoDoctor from "../../../assets/ophthalmologist/banner/photo-doctor.png";
-import backgroundVector from "../../../assets/ophthalmologist/banner/VectorBackground.svg";
-import imgText from "../../../assets/ophthalmologist/banner/promotionTextImage.png";
+import photoDoctor from "../../../assets/consultaLpSellV1/banner/photo-doctor.png";
+import backgroundVector from "../../../assets/consultaLpSellV1/banner/VectorBackground.svg";
+import imgText from "../../../assets/consultaLpSellV1/banner/promotionTextImage.png";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Banner() {
   return (

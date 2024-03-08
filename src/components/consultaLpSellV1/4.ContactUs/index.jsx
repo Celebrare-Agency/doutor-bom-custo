@@ -1,5 +1,5 @@
 import * as Styled from "./style.js";
-import photo from "../../../assets/ophthalmologist/contactUs/photo.png";
+import photo from "../../../assets/consultaLpSellV1/contactUs/photo.png";
 export default function ContactUs() {
   return (
     <Styled.Container>

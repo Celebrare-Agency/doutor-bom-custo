@@ -1,6 +1,6 @@
 import * as Styled from "./style.js";
-import novavisao from "../../../assets/homepage/partners/nv.svg";
-import cirurgiacenter from "../../../assets/homepage/partners/Cc.svg";
+import novavisao from "../../../assets/1.home/partners/nv.svg";
+import cirurgiacenter from "../../../assets/1.home/partners/Cc.svg";
 
 export default function Partners() {
   return (

@@ -1,5 +1,5 @@
 import * as Styled from "./style.js";
-import photo from "../../../assets/landing page sell Opthalmologist/check/image.png";
+import photo from "../../../assets/consultaLpSellV2/check/image.png";
 import styled from "styled-components";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 import { Items3 } from "../../../mock/itemSellerPage3.js";

@@ -1,7 +1,7 @@
 import * as Styled from "./style.js";
 import { Skill } from "../../../mock/skillsItemns.js";
 import doctor from "../../../assets/homepage/skills/photoDoctor.png";
-import WppButton from "../../buttonWpp/index.jsx";
+import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 
 export default function Skills() {
   return (

@@ -1,7 +1,7 @@
 import * as Styled from "./style.js";
 import photo from "../../../assets/landing page sell Opthalmologist/check/image.png";
 import styled from "styled-components";
-import WppButton from "../../buttonWpp/index.jsx";
+import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 import { Items3 } from "../../../mock/itemSellerPage3.js";
 import { useState } from "react";
 

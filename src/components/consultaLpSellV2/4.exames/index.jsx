@@ -1,5 +1,5 @@
 import * as Styled from "./style.js";
-import WppButton from "../../buttonWpp/index.jsx";
+import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 
 export default function Exames() {
   const items = [

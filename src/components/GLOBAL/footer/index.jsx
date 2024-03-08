@@ -1,5 +1,5 @@
 import * as Styled from "./style";
-import logo from "../../assets/logoExtendWhite.svg";
+import logo from "../../../assets/logoExtendWhite.svg";
 import {
   AiOutlineInstagram,
   AiOutlineWhatsApp,

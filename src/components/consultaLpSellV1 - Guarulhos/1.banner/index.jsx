@@ -2,7 +2,8 @@ import * as Styled from "./style.js";
 import photoDoctor from "../../../assets/ophthalmologist/banner/photo-doctor.png";
 import backgroundVector from "../../../assets/ophthalmologist/banner/VectorBackground.svg";
 import imgText from "../../../assets/ophthalmologist/banner/promotionTextImage.png";
-import WppButton from "../../buttonWpp/index.jsx";
+import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
+
 export default function Banner() {
   return (
     <Styled.Container>
@@ -13,7 +14,7 @@ export default function Banner() {
           alt="linha onduladas verdes"
         />
         <div className="containerText col">
-          <h1>Oftalmologista Preço Popular em Paraisópolis - SP:</h1>
+          <h1>Consulta com oftalmologista em Guarulhos por:</h1>
           <img src={imgText} alt="Imagem de texto promocional" />
           <WppButton />
         </div>

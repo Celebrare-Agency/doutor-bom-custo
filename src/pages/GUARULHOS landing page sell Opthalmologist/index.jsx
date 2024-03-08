@@ -1,5 +1,5 @@
 // import * as Styled from "./style.js";
-import Header from "../../components/header/index";
+import Header from "../../components/GLOBAL/header/index";
 import Service from "../../components/GARULHOS landing page sell Opthalmologist/2.service";
 import Exames from "../../components/GARULHOS landing page sell Opthalmologist/4.exames";
 import Comparative from "../../components/GARULHOS landing page sell Opthalmologist/5.comparative";

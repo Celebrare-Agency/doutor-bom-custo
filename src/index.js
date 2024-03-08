@@ -6,8 +6,8 @@ import "./reset.css";
 // import GA4React from "ga-4-react";
 import TagManager from "react-gtm-module";
 import { Router } from "./router";
-import Footer from "./components/footer";
-import FixedButton from "./components/buttonWpp fixed";
+import Footer from "./components/GLOBAL/footer";
+import FixedButton from "./components/GLOBAL/buttonWpp fixed";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Manager() {

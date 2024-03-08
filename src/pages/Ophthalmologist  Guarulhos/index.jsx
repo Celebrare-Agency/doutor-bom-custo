@@ -1,11 +1,11 @@
 // import * as Styled from "./style.js";
 
-import Banner from "../../components/Ophthalmologist  Guarulhos/1.banner";
-import Exames from "../../components/Ophthalmologist  Guarulhos/2.exames";
-import Surgery from "../../components/Ophthalmologist  Guarulhos/2.cirurgias";
-import ContactUs from "../../components/Ophthalmologist  Guarulhos/4.ContactUs";
-import Header from "../../components/header";
-import Skills from "../../components/homepage/3.skills";
+import Banner from "../../components/consultaLpSellV1 - Guarulhos/1.banner";
+import Exames from "../../components/consultaLpSellV1 - Guarulhos/2.exames";
+import Surgery from "../../components/consultaLpSellV1 - Guarulhos/2.cirurgias";
+import ContactUs from "../../components/consultaLpSellV1 - Guarulhos/4.ContactUs";
+import Header from "../../components/GLOBAL/header";
+import Skills from "../../components/1.home/3.skills";
 
 export default function OphthalmologistGuarulhos() {
   const styleObj = {

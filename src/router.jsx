@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Loading from "./components/loading/index";
+import Loading from "./components/GLOBAL/loading/index";
 
 const Home = lazy(() => import("./pages/homePage/index"));
 const Oftalmo = lazy(() => import("./pages/ophthalmologist/index"));

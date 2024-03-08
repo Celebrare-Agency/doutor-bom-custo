@@ -1,5 +1,5 @@
 import { HeaderContainer } from "./style";
-import logo from "../../assets/logoExtendBlue.svg";
+import logo from "../../../assets/logoExtendBlue.svg";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";

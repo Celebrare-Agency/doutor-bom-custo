@@ -2,7 +2,7 @@ import * as Styled from "./style.js";
 import doctorSmiling from "../../../assets/homepage/banner/doctorSmiling.png";
 import { Link } from "react-router-dom";
 import oldWoman from "../../../assets/homepage/banner/oldWoman.png";
-import WppButton from "../../buttonWpp/index.jsx";
+import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Banner() {
   return (
     <Styled.Container>

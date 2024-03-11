@@ -9,7 +9,7 @@ const Media = {
 };
 const Container = styled.div`
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   height: 500px;
   box-shadow: 10px 10px 35px -10px rgba(48, 48, 48, 0.6);
   margin: 2rem;
@@ -29,9 +29,11 @@ const Container = styled.div`
     height: 500px;
   }
 
-  iframe {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-
   .video-responsive {
     position: absolute;
     top: 0;

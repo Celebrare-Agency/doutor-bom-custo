@@ -107,4 +107,46 @@ export const Container = styled.section`
       }
     }
   }
+
+    button {
+      margin:auto;
+      margin-top:1rem;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1rem;
+        color: var(--light);
+      }
+      color: var(--light);
+      font-family: Inter;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      padding: 1rem;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 1rem;
+      transition: 0.3s;
+      &:hover {
+        background-color: var(--blueHover);
+      }
+      ${Media.PhoneLarge} {
+        font-size: 2rem;
+        padding: 0.6rem;
+      }
+      ${Media.PhoneSmall} {
+        font-size: 1.4rem;
+      }
+
+      .BUttonwhatsApp {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
 `;

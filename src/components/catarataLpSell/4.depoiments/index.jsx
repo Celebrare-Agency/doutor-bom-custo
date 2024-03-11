@@ -1,5 +1,6 @@
 import * as Styled from "./style.js";
 import PrimeiroDepoimento from "./ytDepoimentsIframe/index.jsx";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 
 export default function Depoiments() {
   return (
@@ -37,6 +38,15 @@ export default function Depoiments() {
           </div>
         </div>
       </div>
+      <a
+        href="https://api.whatsapp.com/send?phone=5511950212678"
+        target="blanked"
+      >
+        <button className="row">
+          <AiOutlineWhatsApp className="btnWpp" />
+          Marque sua consulta!
+        </button>
+      </a>
     </Styled.Container>
   );
 }

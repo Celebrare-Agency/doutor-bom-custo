@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import red from "../../../assets/catarataLpSell/3.price/negativePrice.svg";
 const Media = {
   PhoneLarge: "@media(max-width:600px)",
   Laptop: "@media(max-width:1150px)",
@@ -33,9 +32,21 @@ export const Container = styled.section`
     flex-direction: row;
   }
   .titlePart {
-    background-color: var(--blue);
     width: 100%;
     gap: 0.5rem;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: var(--blue);
+      width: 100%;
+      height: 100%;
+      max-height:20rem;
+      object-fit: contain;
+      left: 0rem;
+      z-index: -1;
+      background-repeat: no-repeat;
+    }
+
     h3 {
       font-weight: bold;
       text-transform: uppercase;
@@ -44,7 +55,7 @@ export const Container = styled.section`
       color: var(--light);
       text-align: left;
       ${Media.PhoneLarge} {
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-weight: bold;
       }
     }
@@ -54,14 +65,46 @@ export const Container = styled.section`
       font-family: "inter";
       color: var(--light);
       opacity: 0.6;
-      width: 80%;
+      width: 60%;
       text-align: center;
+      ${Media.PhoneLarge} {
+        width: 90%;
+      }
     }
   }
   .content {
     width: 85%;
     max-width: 80rem;
     gap: 2rem;
-    justify-content: space-between;
+    margin: auto;
+    ${Media.Tablet} {
+      flex-direction: column;
+    }
+    .video {
+      width: 100%;
+
+      h3 {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: calc(100% + 2.4rem);
+        font-family: "inter";
+        color: var(--black);
+        text-align: left;
+        ${Media.PhoneLarge} {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        p {
+          font-family: "inter";
+          color: var(--black);
+          text-align: left;
+        }
+      }
+
+      .containerText {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
   }
 `;

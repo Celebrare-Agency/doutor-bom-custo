@@ -7,22 +7,14 @@ export default function Depoiments() {
     <Styled.Container>
       <div className="titlePart col">
         <h3>excelência</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <p>Mais de 5mil pacientes operados e satisfeitos!</p>
       </div>
       <div className="content row">
         <div className="video col">
           <PrimeiroDepoimento embedId="5eSMXdDXJgs" />
           <div className="containerText col">
             <h3>Maria Neide</h3>
-            <p>
-              {" "}
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla,
-              velit praesentium iusto repellendus consectetur molestiae
-              blanditiis dolor repudiandae
-            </p>
+            <p>Veja como a cirurgia de catarata mudou a vida de Maria Neide</p>
           </div>
         </div>
         <div className="video col">
@@ -31,9 +23,8 @@ export default function Depoiments() {
             <h3>Maria Lucia</h3>
             <p>
               {" "}
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla,
-              velit praesentium iusto repellendus consectetur molestiae
-              blanditiis dolor repudiandae
+              Maria Lucia, confiante e satisfeita com o resultado da cirurgia de
+              catarata.
             </p>
           </div>
         </div>

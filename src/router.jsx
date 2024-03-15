@@ -3,6 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import Loading from "./components/GLOBAL/loading/index";
 
 const Home = lazy(() => import("./pages/1.home/index"));
+const OphthalmologistParaisopolisMedicoDosolhos = lazy(() =>
+  import("./pages/consultaLpSellV1 - Paraisopolis  Medico dos olhos/index")
+);
 const Oftalmo = lazy(() => import("./pages/consultaLpSellV1/index"));
 const OphthalmologistGuarulhos = lazy(() =>
   import("./pages/consultaLpSellV1 - Guarulhos/index")
@@ -21,6 +24,10 @@ export function Router() {
       <Routes>
         <Route path="/development" element={<Home />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
+        <Route
+          path="/medico-dos-olhos"
+          element={<OphthalmologistParaisopolisMedicoDosolhos />}
+        />
         <Route path="/" element={<Home />} />
         <Route path="/oftalmo-taboaodaserra-v2" element={<Seller2 />} />
         <Route path="/oftalmo-guarulhos-v2" element={<GuarulhosSeller2 />} />

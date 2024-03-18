@@ -7,11 +7,11 @@ import Header from "../../components/GLOBAL/header";
 import Skills from "../../components/consultaLpSellV1 - Paraisopolis  Medico dos olhos/3.skills";
 
 export default function OphthalmologistParaisopolisMedicoDosolhos() {
-  const styleObj = {
-    textAlign: "Center",
-    fontWeight: "500",
-    color: "var(--blue)",
-  };
+  // const styleObj = {
+  //   textAlign: "Center",
+  //   fontWeight: "500",
+  //   color: "var(--blue)",
+  // };
   return (
     <>
       <Header />

@@ -11,7 +11,8 @@ const menuItems = [
   { path: "/oftalmo-taboaodaserra", label: "Serviços" },
   { path: "duvidas", label: "Dúvidas" },
   { path: wppLink, label: "Atendimento" },
-  { path: "parceiros", label: "Parceiros" },
+  // { path: "parceiros", label: "Parceiros" },
+  { path: "/blog-catarata", label: "Catarata" },
 ];
 
 export default function Header() {

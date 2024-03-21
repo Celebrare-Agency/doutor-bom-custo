@@ -40,6 +40,7 @@ export const Container = styled.section`
   h4{
         font-family: Inter;
     color: var(--black);
+    text-align:center;
   }
   p{
     color: var(--black);
@@ -47,8 +48,10 @@ export const Container = styled.section`
   }
  
   .fullImg{
-    width:100%;
-    border-radius:10px;
+    width:90%;
+  margin:auto;
+  display:block;
+      border-radius:10px;
   }
   ul {
     align-items: flex-start !important;
@@ -82,4 +85,6 @@ export const Container = styled.section`
       text-transform: uppercase;
       border-radius: 10.94px !important;
     }
+
+ 
 `;

@@ -108,7 +108,7 @@ export const Container = styled.section`
   }
 
   .imgContainer {
-    width: 50%;
+    width: 48%;
     min-height: 40rem;
     margin: auto;
     ${Media.Tablet} {

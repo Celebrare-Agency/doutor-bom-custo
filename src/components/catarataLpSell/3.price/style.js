@@ -15,7 +15,7 @@ export const Container = styled.section`
   flex-direction: row;
   background-color: var(--blue);
   padding: 5rem 0px 5rem;
-  margin-top: -3rem;
+  margin-top: 1rem;
   ${Media.Tablet} {
     min-height: 25rem;
     flex-direction: column;

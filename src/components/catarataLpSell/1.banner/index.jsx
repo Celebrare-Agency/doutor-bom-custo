@@ -16,7 +16,7 @@ export default function Banner() {
           até <b>12x</b>.
         </p>
         <div>
-          <h2>válido até dia 30/04!</h2>
+          <h2>válido até dia 30/05!</h2>
           <span>*preço exclusivo por olho</span>
         </div>
         <a

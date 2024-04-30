@@ -17,7 +17,7 @@ export default function Home() {
       <Services />
       <Faq />
       <Contact />
-      <Partners />
+      {/* <Partners /> */}
     </>
   );
 }

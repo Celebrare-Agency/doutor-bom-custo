@@ -11,7 +11,7 @@ export default function Contact() {
           atualidade.
         </h3>
         <a
-          href="https://api.whatsapp.com/send?phone=5511950212678"
+          href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!"
           target="blanked"
         >
           <button className="row">

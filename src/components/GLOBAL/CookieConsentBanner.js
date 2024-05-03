@@ -24,8 +24,18 @@ const CookieConsentBanner = ({ onAccept }) => {
       }
     });
     sessionStorage.setItem('consentMode', JSON.stringify(consent));
-    setShowBanner(false);
   };
+
+  useEffect(() => {
+    const defaultConsent = {
+      ad_storage: 'denied', // DENIED = NÃO PERMITIDO
+      analytics_storage: 'denied',
+      functionality_storage: 'true', // TRUE = PERMITIDO
+      personalization_storage: 'true',
+      security_storage: 'true'
+    };
+    setConsent(defaultConsent);
+  }, []);
 
   const handleAcceptAll = () => {
     const newConsent = {

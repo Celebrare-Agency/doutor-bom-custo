@@ -1,8 +1,16 @@
 import * as Styled from "./style.js";
 import photo from "../../../assets/catarataLpSell/2.callUs/photo.png";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import Modal from "../../modalForm/index.jsx";
+import { useState } from "react";
 
 export default function Contact() {
+  const [modalDisplay, setModalDisplay] = useState(false);
+
+  const handleModalToggle = () => {
+    setModalDisplay(!modalDisplay);
+  };
+
   return (
     <Styled.Container id="aaaaasdada">
       <div className="containerText col">
@@ -10,19 +18,16 @@ export default function Contact() {
           Hospital de ponta com os melhores equipamentos e profissionais da
           atualidade.
         </h3>
-        <a
-          href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!"
-          target="blanked"
-        >
-          <button className="row">
-            <AiOutlineWhatsApp className="btnWpp" />
-            Entre em contato
-          </button>
-        </a>
+
+        <button className="row" onClick={handleModalToggle}>
+          <AiOutlineWhatsApp className="btnWpp" />
+          Entre em contato
+        </button>
       </div>
       <div className="imgContainer row">
         <img src={photo} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
+      <Modal display={modalDisplay} onClose={handleModalToggle} />
     </Styled.Container>
   );
 }

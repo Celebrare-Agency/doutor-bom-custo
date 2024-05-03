@@ -1,9 +1,14 @@
 import * as Styled from "./style.js";
-import { Link } from "react-router-dom";
 import discountFlag from "../../../assets/catarataLpSell/1.banner/flagDisccount.png";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-
+import Modal from "../../modalForm/index.jsx";
+import { useState } from "react";
 export default function Banner() {
+  const [modalDisplay, setModalDisplay] = useState(false);
+
+  const handleModalToggle = () => {
+    setModalDisplay(!modalDisplay);
+  };
   return (
     <Styled.Container>
       <div className="col LeftSideContent">
@@ -19,17 +24,14 @@ export default function Banner() {
           <h2>válido até dia 30/05!</h2>
           <span>*preço exclusivo por olho</span>
         </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!"
-          target="blanked"
-        >
-          <button className="row">
-            <AiOutlineWhatsApp className="btnWpp" />
-            Entre em contato
-          </button>
-        </a>
+
+        <button className="row" onClick={handleModalToggle}>
+          <AiOutlineWhatsApp className="btnWpp" />
+          Entre em contato
+        </button>
         <img className="flags" src={discountFlag} alt="flag de desconto" />
       </div>
+      <Modal display={modalDisplay} onClose={handleModalToggle} />
     </Styled.Container>
   );
 }

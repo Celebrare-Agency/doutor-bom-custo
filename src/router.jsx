@@ -7,6 +7,7 @@ const OphthalmologistParaisopolisMedicoDosolhos = lazy(() =>
   import("./pages/consultaLpSellV1 - Paraisopolis  Medico dos olhos/index")
 );
 const Oftalmo = lazy(() => import("./pages/consultaLpSellV1/index"));
+const CatarataTks = lazy(() => import("./pages/obrigado-catarata/index"));
 const OphthalmologistGuarulhos = lazy(() =>
   import("./pages/consultaLpSellV1 - Guarulhos/index")
 );
@@ -26,6 +27,7 @@ export function Router() {
         <Route path="/development" element={<Home />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
+        <Route path="/obrigado-catarata" element={<CatarataTks />} />
         <Route
           path="/medico-dos-olhos"
           element={<OphthalmologistParaisopolisMedicoDosolhos />}

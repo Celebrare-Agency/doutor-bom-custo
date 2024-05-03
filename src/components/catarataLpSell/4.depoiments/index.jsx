@@ -1,8 +1,15 @@
 import * as Styled from "./style.js";
 import PrimeiroDepoimento from "./ytDepoimentsIframe/index.jsx";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-
+import Modal from "../../modalForm/index.jsx";
+import { useState } from "react";
 export default function Depoiments() {
+  const [modalDisplay, setModalDisplay] = useState(false);
+
+  const handleModalToggle = () => {
+    setModalDisplay(!modalDisplay);
+  };
+
   return (
     <Styled.Container>
       <div className="titlePart col">
@@ -29,15 +36,12 @@ export default function Depoiments() {
           </div>
         </div>
       </div>
-      <a
-        href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!"
-        target="blanked"
-      >
-        <button className="row">
-          <AiOutlineWhatsApp className="btnWpp" />
-          Marque sua consulta!
-        </button>
-      </a>
+
+      <button className="row" onClick={handleModalToggle}>
+        <AiOutlineWhatsApp className="btnWpp" />
+        Marque sua consulta!
+      </button>
+      <Modal display={modalDisplay} onClose={handleModalToggle} />
     </Styled.Container>
   );
 }

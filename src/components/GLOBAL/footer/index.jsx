@@ -6,13 +6,16 @@ import {
   AiOutlineLinkedin,
   AiOutlineFacebook,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <Styled.Footer>
       <div className="footer row">
         <div className="left col">
-          <img src={logo} alt="logo do doutor bom Custo" />
+          <Link to="/">
+            <img src={logo} alt="logo do doutor bom Custo" />
+          </Link>
           <p>
             A dr bom custo é uma intermediadora de serviços de saúde, estando
             apta apenas na intermediação entre clientes e entidades de saúde e
@@ -49,7 +52,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="privacypart row">
-        {/* <p>Política de privacidade</p> */}
+        <Link to="/politica" target="_blank">
+          <p>Política de privacidade</p>
+        </Link>
         <p>Copyright © 2023 Doutor BomCusto </p>
         {/* <p>Termos de serviço</p> */}
       </div>

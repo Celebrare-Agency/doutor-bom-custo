@@ -53,7 +53,7 @@ position: fixed;
   margin: auto;
  .Button {
       border: none;
-      background-color: var(--blue);
+      background-color: #38af7e;
       cursor:pointer;
       padding: 1rem !important;
       font-size: 1rem !important;

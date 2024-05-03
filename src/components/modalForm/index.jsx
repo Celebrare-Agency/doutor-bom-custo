@@ -25,7 +25,7 @@ export default function Modal(props) {
         className="col"
       >
         <h3>
-          Preencha o formulário <br />e fale com um consultor!
+          Preencha o formulário <br />e fale com um consultor pelo Whatsapp!
         </h3>
         <input
           type="text"

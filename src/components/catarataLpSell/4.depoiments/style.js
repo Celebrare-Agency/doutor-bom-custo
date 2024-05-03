@@ -126,7 +126,7 @@ export const Container = styled.section`
       font-weight: 600;
       line-height: normal;
       padding: 1rem;
-      background: var(--blue);
+      background:#38af7e;
       display: flex;
       align-items: center;
       justify-content: center;

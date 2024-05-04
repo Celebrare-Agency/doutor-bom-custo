@@ -15,12 +15,12 @@ const tagManagerArgs = {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+TagManager.initialize(tagManagerArgs)
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CookieConsentBanner onAccept={() => TagManager.initialize(tagManagerArgs)} />
+      <CookieConsentBanner />
       <Router />
       <Footer />
       <FixedButton />

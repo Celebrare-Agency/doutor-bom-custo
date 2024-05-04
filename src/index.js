@@ -12,7 +12,7 @@ import TagManager from 'react-gtm-module';
 
 const tagManagerArgs = {
   gtmId: 'GTM-PQ2XPWNH',
-}; TagManager.initialize(tagManagerArgs)
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CookieConsentBanner />
+      <CookieConsentBanner onAccept={() => TagManager.initialize(tagManagerArgs)} />
       <Router />
       <Footer />
       <FixedButton />

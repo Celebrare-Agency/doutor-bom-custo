@@ -1,47 +1,44 @@
-
-import React, { useEffect, useState, useMemo, useCallback } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
-import Cookies from "universal-cookie";
-import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
+import TagManager from 'react-gtm-module'; // Importando a biblioteca
 
-export default function ConsentForm({ color }) {
-  const [decisionMade, setDecisionMade] = useState(false);
-  const cookies = useMemo(() => new Cookies(), []);
+const CookieConsentBanner = () => {
+  const [showBanner, setShowBanner] = useState(true);
 
   useEffect(() => {
-    const cookie = cookies.get("consentimento_cookies");
-    if (cookie !== undefined) {
-      setDecisionMade(true);
-    }
-  }, [cookies]);
-
-  const sendConsent = useCallback((consent) => {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'consentChange',
-      consent: consent
-    });
-    window.dataLayer.push({ 'event': 'gtm.allowlist' });
+    const storedConsent = JSON.parse(sessionStorage.getItem('consentMode'));
+    setShowBanner(!storedConsent);
   }, []);
 
-  const handleDecision = (outcome) => {
-    const consent = {
-      'ad_storage': outcome,
-      'analytics_storage': outcome,
-      'ad_user_data': outcome,
-      'ad_personalization': outcome,
-    };
-
-    cookies.set("consentimento_cookies", consent, {
-      expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
-      path: "/",
-      domain: "doutorbomcusto.com.br"
+  const handleAcceptAll = () => {
+    setConsent({
+      necessary: true,
+      analytics: true,
+      preferences: true,
+      marketing: true,
     });
+    hideBanner();
 
-    sendConsent(consent);
-    setDecisionMade(true);
+    // Inicializando o Google Tag Manager com o ID correto
+    TagManager.initialize({ gtmId: 'GTM-PQ2XPWNH' });
   };
+
+  const setConsent = (consent) => {
+    const consentMode = {
+      ad_storage: consent.marketing ? "granted" : "denied",
+      analytics_storage: consent.analytics ? "granted" : "denied",
+      functionality_storage: consent.necessary ? "granted" : "denied",
+      security_storage: consent.necessary ? "granted" : "denied",
+      personalization_storage: consent.preferences ? "granted" : "denied",
+    };
+    sessionStorage.setItem("consentMode", JSON.stringify(consentMode));
+  };
+
+  const hideBanner = () => {
+    setShowBanner(false);
+  };
+
   const Media = {
     PhoneLarge: "@media(max-width:800px)",
   };
@@ -54,8 +51,8 @@ export default function ConsentForm({ color }) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .cookie-consent-banner {
-      width: 50%;
+  .cookie-consent-banner{
+     width: 50%;
       height: 10rem;
       margin:auto;
       position: fixed;
@@ -69,57 +66,57 @@ export default function ConsentForm({ color }) {
       justify-content: center;
       box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
+
       ${Media.PhoneLarge}{
         width: 80%;
         height:15rem;
-      }
-    }
-    p {
-      font-size: 1.21rem;
-      margin-bottom: 10px;
-      color: var(--black);
-      text-align:center;
-    }
-    a {
-      color: var(--blue);
-    }
-    .cookie-consent-button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-      &:hover {
-        background-color: var(--blue);
+   .cookie-consent-button {
+          background-color:var(--blue);
         color: #fff;
       }
-    }
-  `;
+      }
+  }
+      p {
+        font-size: 1.21rem;
+        margin-bottom: 10px;
+        color: var(--black);
+        text-align:center;
+      }
+      a{
+        color: var(--blue);
+      }
+
+      .cookie-consent-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .cookie-consent-button:hover {
+        background-color:var(--blue);
+        color: #fff;
+      }
+    `;
+
   return (
-    !decisionMade && (
-      <Container>
+    showBanner && (
+      <Container >
         <div className="cookie-consent-banner">
-          <p>
-            <b>Doutor Bom Custo e os cookies:</b> Utilizamos cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <Link to="/politica">Política de Privacidade</Link>.
-          </p>
+          <p> <b>Doutor bom custo e os cookies:</b>  A gente usa cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <Link to="/politica">Política de privacidade</Link></p>
           <button
             type="button"
             className="cookie-consent-button btn-success"
-            onClick={() => handleDecision("granted")}
+            onClick={handleAcceptAll}
           >
             Aceitar
           </button>
         </div>
-      </Container>
+      </Container >
     )
   );
-}
-
-ConsentForm.propTypes = {
-  color: PropTypes.string.isRequired,
 };
 
-ConsentForm.defaultProps = {
-  color: "blue",
-};
+export default CookieConsentBanner;

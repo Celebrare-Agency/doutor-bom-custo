@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./components/GLOBAL/loading/index";
-import CookieConsentBanner from "./components/GLOBAL/consent-mode/CookieConsentBanner";
 
 const Home = lazy(() => import("./pages/1.home/index"));
 const OphthalmologistParaisopolisMedicoDosolhos = lazy(() =>
@@ -26,7 +25,6 @@ const GuarulhosSeller2 = lazy(() =>
 export function Router() {
   return (
     <Suspense fallback={<Loading />}>
-      <CookieConsentBanner />
       <Routes>
         <Route path="/development" element={<Home />} />
         <Route path="/blog-Catarata" element={<Catarata />} />

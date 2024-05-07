@@ -22,14 +22,13 @@ export default function Modal(props) {
         ref={modalRef}
         action="https://api.sheetmonkey.io/form/hQULB84E4heetSowEh3mHb"
         method="post"
-        className="col"
+        className="col formulario"
       >
         <h3>
           Preencha o formulário <br />e fale com um consultor pelo Whatsapp!
         </h3>
         <input
           type="text"
-          id="Nome"
           name="Nome"
           required
           for="Nome"
@@ -40,7 +39,6 @@ export default function Modal(props) {
 
         <input
           type="tel"
-          id="Telefone"
           name="Telefone"
           required
           for="Telefone"

@@ -24,42 +24,11 @@
       rel="stylesheet"
     />
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      if (sessionStorage.getItem("consentMode") === null) {
-        gtag("consent", "default", {
-          ad_storage: "denied", // DENIED = NÃO PERMITIDO
-          analytics_storage: "denied",
-          functionality_storage: "true", // TRUE = PERMITIDO
-          personalization_storage: "true",
-          security_storage: "true",
-        });
-      } else {
-        gtag(
-          "consent",
-          "default",
-          JSON.parse(sessionStorage.getItem("consentMode"))
-        );
-      }
-    </script>
+    <script></script>
     <title>Doutor Bom Custo</title>
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PQ2XPWNH"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
-
     <main id="root"></main>
   </body>
 </html>

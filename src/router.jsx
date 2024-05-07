@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./components/GLOBAL/loading/index";
+import CookieConsentBanner from "./components/GLOBAL/consent-mode/CookieConsentBanner";
 
 const Home = lazy(() => import("./pages/1.home/index"));
 const OphthalmologistParaisopolisMedicoDosolhos = lazy(() =>
@@ -21,9 +22,11 @@ const CatarataLpSell = lazy(() => import("./pages/catarataLpSell/index"));
 const GuarulhosSeller2 = lazy(() =>
   import("./pages/consultaLpSellV2 - Guarulhos/index")
 );
+
 export function Router() {
   return (
     <Suspense fallback={<Loading />}>
+      <CookieConsentBanner />
       <Routes>
         <Route path="/development" element={<Home />} />
         <Route path="/blog-Catarata" element={<Catarata />} />

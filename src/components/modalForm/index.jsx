@@ -29,19 +29,23 @@ export default function Modal(props) {
         </h3>
         <input
           type="text"
-          id="name"
+          id="Nome"
           name="Nome"
           required
+          for="Nome"
           placeholder="Nome"
           pattern="^[A-Za-zÀ-ú\s]+$"
+          className="Nome"
         />
 
         <input
           type="tel"
-          id="phone"
+          id="Telefone"
           name="Telefone"
           required
+          for="Telefone"
           placeholder="Telefone"
+          className="Telefone"
           pattern="^\+?(\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$"
         />
 

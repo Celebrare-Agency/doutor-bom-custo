@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
-import TagManager from 'react-gtm-module'; // Importando a biblioteca
+import TagManager from 'react-gtm-module';
 
 const CookieConsentBanner = () => {
   const [showBanner, setShowBanner] = useState(true);
 
   useEffect(() => {
+    initializeTagManager();
+
     const storedConsent = JSON.parse(sessionStorage.getItem('consentMode'));
     setShowBanner(!storedConsent);
   }, []);
+
+  const initializeTagManager = () => {
+    const tagManagerArgs = {
+      gtmId: 'GTM-PQ2XPWNH',
+    };
+    TagManager.initialize(tagManagerArgs);
+  };
 
   const handleAcceptAll = () => {
     setConsent({
@@ -18,10 +27,17 @@ const CookieConsentBanner = () => {
       preferences: true,
       marketing: true,
     });
-    hideBanner();
 
-    // Inicializando o Google Tag Manager com o ID correto
-    TagManager.initialize({ gtmId: 'GTM-PQ2XPWNH' });
+    window.dataLayer.push({
+      event: 'consentGiven',
+      consent: {
+        analytics_storage: 'granted',
+        ad_storage: 'granted',
+      },
+    });
+
+
+    setShowBanner(false);
   };
 
   const setConsent = (consent) => {
@@ -34,11 +50,6 @@ const CookieConsentBanner = () => {
     };
     sessionStorage.setItem("consentMode", JSON.stringify(consentMode));
   };
-
-  const hideBanner = () => {
-    setShowBanner(false);
-  };
-
   const Media = {
     PhoneLarge: "@media(max-width:800px)",
   };

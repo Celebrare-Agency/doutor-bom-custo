@@ -10,12 +10,24 @@ const CookieConsentBanner = () => {
     initializeTagManager();
 
     const storedConsent = JSON.parse(sessionStorage.getItem('consentMode'));
-    setShowBanner(!storedConsent);
+    if (storedConsent) {
+      setConsent(storedConsent);
+      setShowBanner(false);
+    }
   }, []);
 
   const initializeTagManager = () => {
     const tagManagerArgs = {
       gtmId: 'GTM-PQ2XPWNH',
+      dataLayer: {
+        consent: {
+          ad_storage: 'denied',
+          analytics_storage: 'denied',
+          functionality_storage: 'true',
+          personalization_storage: 'true',
+          security_storage: 'true'
+        }
+      }
     };
     TagManager.initialize(tagManagerArgs);
   };
@@ -28,28 +40,27 @@ const CookieConsentBanner = () => {
       marketing: true,
     });
 
-    window.dataLayer.push({
-      event: 'consentGiven',
-      consent: {
-        analytics_storage: 'granted',
-        ad_storage: 'granted',
-      },
-    });
-
-
     setShowBanner(false);
   };
-
   const setConsent = (consent) => {
     const consentMode = {
       ad_storage: consent.marketing ? "granted" : "denied",
       analytics_storage: consent.analytics ? "granted" : "denied",
-      functionality_storage: consent.necessary ? "granted" : "denied",
-      security_storage: consent.necessary ? "granted" : "denied",
+      functionality_storage: "true", // Sempre permitido
+      security_storage: "true", // Sempre permitido
       personalization_storage: consent.preferences ? "granted" : "denied",
     };
     sessionStorage.setItem("consentMode", JSON.stringify(consentMode));
+
+    // Atualizar o consentimento no Google Tag Manager
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'consentGiven',
+        consent: consentMode,
+      }
+    });
   };
+
   const Media = {
     PhoneLarge: "@media(max-width:800px)",
   };

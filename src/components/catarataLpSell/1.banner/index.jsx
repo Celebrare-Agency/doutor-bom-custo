@@ -14,7 +14,7 @@ export default function Banner() {
       <div className="col LeftSideContent">
         <h1>
           Cirurgia de catarata <br />
-          por <b>R$ 2.900,00</b>.
+          por <b>R$ 2.900,00</b> em São Paulo.
         </h1>
         <p>
           Pacote Completo com Lente Importada e Exames. <br></br>Parcelamos em

@@ -91,20 +91,26 @@ export default function BtnAds() {
   const handleButtonClick = () => {
     if (window.scrollY > 500) {
       window.scrollTo({ top: 0, behavior: "smooth" });
+      // Exibe o modal após a animação de ancoragem
+      setTimeout(() => {
+        setModalDisplay(true);
+      }, 1000); // Tempo para alcançar o topo
     } else {
       handleModalToggle();
     }
   };
 
   return (
-    <Container
-      ref={(ref) => (buttonRefs.current[0] = ref)}
-      aria-label="Botão para o numero de contato"
-      onClick={handleButtonClick}
-    >
-      <AiOutlineWhatsApp className="btnWpp" />
-      Entre em contato
-      <Modal display={modalDisplay} onClose={handleModalToggle} />
-    </Container>
+    <>
+      <Container
+        ref={(ref) => (buttonRefs.current[0] = ref)}
+        aria-label="Botão para o numero de contato"
+        onClick={handleButtonClick}
+      >
+        <AiOutlineWhatsApp className="btnWpp" />
+        Entre em contato
+        <Modal display={modalDisplay} onClose={handleModalToggle} />
+      </Container>
+    </>
   );
 }

@@ -1,7 +1,4 @@
 import * as Styled from "./style.js";
-import { Link } from "react-router-dom";
-import discountFlag from "../../../assets/catarataLpSell/1.banner/flagDisccount.png";
-import { AiOutlineWhatsApp } from "react-icons/ai";
 
 export default function Price() {
   return (

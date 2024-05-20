@@ -2,6 +2,7 @@ import * as Styled from "./style.js";
 import { Skill } from "../../../mock/skillsItemns.js";
 import doctor from "../../../assets/1.home/skills/photoDoctor.png";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
+import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 
 export default function Skills() {
   return (
@@ -21,7 +22,7 @@ export default function Skills() {
             <p>{item.text}</p>
           </div>
         ))}
-        <WppButton />
+        <BtnAds />
       </div>
     </Styled.Container>
   );

@@ -1,14 +1,45 @@
+import React, { useState, useEffect } from "react";
 import * as Styled from "./style.js";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+
 export default function WppButton() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setShowButton(scrollTop > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleClick = () => {
+    if (showButton) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      // Lógica para ativar a animação no outro botão
+      console.log("Botão destacado!");
+    }
+  };
+
   return (
-    <Styled.Container aria-label="Botão para o numero de contato">
-      <a
-        href="https://api.whatsapp.com/send?phone=5511950212678&text=Olá!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
-        target="blanked"
-      >
-        <AiOutlineWhatsApp className="BUttonwhatsApp" aria-label="" />
-      </a>
-    </Styled.Container>
+    <>
+      {showButton && (
+        <Styled.Container
+          aria-label="Botão para o número de contato"
+          onClick={handleClick}
+        >
+          <AiOutlineWhatsApp className="BUttonwhatsApp" aria-label="" />
+        </Styled.Container>
+      )}
+    </>
   );
 }

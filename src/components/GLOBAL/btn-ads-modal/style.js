@@ -7,23 +7,28 @@ const Media = {
 };
 
 export const Container = styled.button`
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    color: var(--light);
+  }
   color: var(--light);
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   padding: 1rem;
   background: #38af7e;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  position: fixed;
-  bottom: 4rem;
-  right: 1rem;
-  border-radius: 50%;
-z-index:999999999999;
-  a {
-    text-decoration: none;
-    color: var(--light);
-  }
-
+  gap: 1rem;
+  transition: 0.3s;
   &:hover {
     background-color: var(--greenHover);
   }
@@ -36,8 +41,7 @@ z-index:999999999999;
   }
 
   .BUttonwhatsApp {
-    width: 2.4rem;
-    height: 2.4rem;
-    margin: auto;
+    width: 2rem;
+    height: 2rem;
   }
 `;

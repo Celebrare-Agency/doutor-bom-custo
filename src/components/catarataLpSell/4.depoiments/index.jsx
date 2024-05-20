@@ -1,15 +1,8 @@
+import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 import * as Styled from "./style.js";
 import PrimeiroDepoimento from "./ytDepoimentsIframe/index.jsx";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-import Modal from "../../modalForm/index.jsx";
-import { useState } from "react";
 export default function Depoiments() {
-  const [modalDisplay, setModalDisplay] = useState(false);
-
-  const handleModalToggle = () => {
-    setModalDisplay(!modalDisplay);
-  };
-
   return (
     <Styled.Container>
       <div className="titlePart col">
@@ -36,12 +29,7 @@ export default function Depoiments() {
           </div>
         </div>
       </div>
-
-      <button className="row" onClick={handleModalToggle}>
-        <AiOutlineWhatsApp className="btnWpp" />
-        Marque sua consulta!
-      </button>
-      <Modal display={modalDisplay} onClose={handleModalToggle} />
+      <BtnAds />
     </Styled.Container>
   );
 }

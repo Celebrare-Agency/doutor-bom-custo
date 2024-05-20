@@ -4,6 +4,7 @@ import backgroundVector from "../../../assets/consultaLpSellV1/banner/VectorBack
 import imgText from "../../../assets/consultaLpSellV1/banner/promotionTextImage.png";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 
 export default function Banner() {
   return (
@@ -17,16 +18,7 @@ export default function Banner() {
         <div className="containerText col">
           <h1>Oftalmologista Preço Popular em Paraisópolis - SP:</h1>
           <img src={imgText} alt="Imagem de texto promocional" />
-
-          <a
-            href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20um%20m%C3%A9dico%20oftalmologista%20em%20Parais%C3%B3polis."
-            target="blanked"
-          >
-            <button>
-              <AiOutlineWhatsApp className="btnWpp" />
-              Entre em contato
-            </button>
-          </a>
+          <BtnAds />{" "}
         </div>
         <div className="imgContainer">
           <img

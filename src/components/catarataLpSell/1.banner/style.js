@@ -20,9 +20,8 @@ export const Container = styled.section`
   background-position: 40%;
   position: relative;
 
-
   ${Media.PhoneLarge} {
-    min-height: 40rem;
+    min-height: 40rem;  
   }
 
   .col {

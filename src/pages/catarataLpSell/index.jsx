@@ -11,9 +11,9 @@ import PromotionModal from "../../components/GLOBAL/Regressive -ads - catarata -
 export default function CatarataLpSell() {
   return (
     <>
-      <Header style={{ display: "none" }} />
+      <Header />
       {/* <PromotionModal /> */}
-      <Modal />
+      {/* <Modal /> */}
       <Banner />
       <Contact />
       <Price />

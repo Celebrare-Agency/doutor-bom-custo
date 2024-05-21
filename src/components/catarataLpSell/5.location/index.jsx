@@ -1,9 +1,25 @@
 import * as Styled from "./style.js";
 import Map from "./Map/maps";
+import React, { useState } from "react";
+
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
+import Modal from "../../modalForm/index.jsx";
 export default function Location() {
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+    // Lógica para lidar com o ID do modal se necessário
+  };
   return (
     <Styled.Container id="conversion">
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1" // Você pode passar o modalId se necessário
+        />
+      )}
       <div className="titlePart col">
         <h3>Estamos localizados no coração de São Paulo</h3>
         <p>
@@ -12,7 +28,7 @@ export default function Location() {
         </p>
       </div>
       <Map />
-      <BtnAds />{" "}
+      <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
     </Styled.Container>
   );
 }

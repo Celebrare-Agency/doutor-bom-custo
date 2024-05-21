@@ -81,8 +81,22 @@ const Modal = ({ isFormModalOpen }) => {
     }
   };
 
+    const [isModalVisible, setModalVisibility] = useState(false);
+
+    const toggleModalVisibility = (modalId) => {
+      setModalVisibility(!isModalVisible);
+      // Lógica para lidar com o ID do modal se necessário
+    };
   return (
     <>
+      {" "}
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1" // Você pode passar o modalId se necessário
+        />
+      )}
       {showModal && (
         <ModalBackground onClick={handleModalClick} id="conversion">
           <ModalWrapper>
@@ -95,7 +109,10 @@ const Modal = ({ isFormModalOpen }) => {
               Clique no botão abaixo para falar com um atendente e não perder a
               promoção. Haverá um aumento de 40% após o dia 30/05.
             </PersuasiveText>
-            <CustomButton onClick={handleCloseModal}>
+            <CustomButton
+              modalId="1"
+              toggleModalVisibility={toggleModalVisibility}
+            >
               Entrar em contato
             </CustomButton>
           </ModalWrapper>

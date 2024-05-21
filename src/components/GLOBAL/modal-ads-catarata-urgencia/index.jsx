@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import Modal from "../../modalForm/index";
 import { MdWarning } from "react-icons/md"; // Importando o ícone de alerta do React Icons
 import CustomButton from "../btn-ads-modal/index"; // Importe o componente de botão personalizado
 
@@ -44,7 +45,7 @@ const PersuasiveText = styled.p`
   color: var(--black); /* Cor preta do site */
 `;
 
-const Modal = ({ isFormModalOpen }) => {
+const ModalComponent = ({ isFormModalOpen }) => {
   const [showModal, setShowModal] = useState(false);
   const [modalShown, setModalShown] = useState(false);
 
@@ -52,7 +53,7 @@ const Modal = ({ isFormModalOpen }) => {
     if (!isFormModalOpen) {
       const timer = setTimeout(() => {
         setShowModal(true);
-      }, 10000);
+      }, 20000);
 
       return () => {
         clearTimeout(timer);
@@ -81,15 +82,15 @@ const Modal = ({ isFormModalOpen }) => {
     }
   };
 
-    const [isModalVisible, setModalVisibility] = useState(false);
+  const [isModalVisible, setModalVisibility] = useState(false);
 
-    const toggleModalVisibility = (modalId) => {
-      setModalVisibility(!isModalVisible);
-      // Lógica para lidar com o ID do modal se necessário
-    };
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+    // Lógica para lidar com o ID do modal se necessário
+  };
+
   return (
     <>
-      {" "}
       {isModalVisible && (
         <Modal
           display={isModalVisible}
@@ -122,4 +123,4 @@ const Modal = ({ isFormModalOpen }) => {
   );
 };
 
-export default Modal;
+export default ModalComponent;

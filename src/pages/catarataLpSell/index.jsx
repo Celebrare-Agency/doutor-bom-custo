@@ -13,7 +13,7 @@ export default function CatarataLpSell() {
     <>
       <Header style={{ display: "none" }} />
       {/* <PromotionModal /> */}
-      {/* <Modal /> */}
+      <Modal />
       <Banner />
       <Contact />
       <Price />

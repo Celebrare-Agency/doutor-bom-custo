@@ -14,7 +14,7 @@ const ModalBackground = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  z-index: 9999;
+  z-index: 9;
 `;
 
 const ModalWrapper = styled.div`
@@ -52,7 +52,7 @@ const Modal = ({ isFormModalOpen }) => {
     if (!isFormModalOpen) {
       const timer = setTimeout(() => {
         setShowModal(true);
-      }, 2000);
+      }, 10000);
 
       return () => {
         clearTimeout(timer);
@@ -84,16 +84,16 @@ const Modal = ({ isFormModalOpen }) => {
   return (
     <>
       {showModal && (
-        <ModalBackground onClick={handleModalClick}>
+        <ModalBackground onClick={handleModalClick} id="conversion">
           <ModalWrapper>
             <UrgentText>
               <MdWarning size={32} style={{ marginRight: "10px" }} />
               ATENÇÃO!!!
             </UrgentText>
-            <UrgentText>A promoção vai acabar em 3 dias!</UrgentText>
+            <UrgentText>A promoção vai acabar em breve!</UrgentText>
             <PersuasiveText>
               Clique no botão abaixo para falar com um atendente e não perder a
-              promoção. Haverá um aumento de 40% após esses 3 dias.
+              promoção. Haverá um aumento de 40% após o dia 30/05.
             </PersuasiveText>
             <CustomButton onClick={handleCloseModal}>
               Entrar em contato

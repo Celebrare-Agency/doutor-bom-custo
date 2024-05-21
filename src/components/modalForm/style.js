@@ -14,7 +14,7 @@ position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999; /* Ensure it stays above other elements */
+  z-index: 999999999; /* Ensure it stays above other elements */
   display: flex;
   justify-content: center;
   align-items: center;

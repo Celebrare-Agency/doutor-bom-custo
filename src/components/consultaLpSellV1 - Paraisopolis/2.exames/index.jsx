@@ -3,7 +3,7 @@ import { Services } from "../../../mock/servicesOftal.js";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 export default function Exames() {
   return (
-    <Styled.Container>
+    <Styled.Container id="conversion">
       <h2>Exames</h2>
       <div className="containerCard row">
         {Services.map((item) => (
@@ -13,7 +13,7 @@ export default function Exames() {
               <p>{item.text}</p>
             </details>
             <div className="btnContainer">
-              <BtnAds/>
+              <BtnAds />
             </div>
           </div>
         ))}

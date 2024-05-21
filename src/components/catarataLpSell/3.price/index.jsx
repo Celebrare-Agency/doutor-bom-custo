@@ -2,7 +2,7 @@ import * as Styled from "./style.js";
 
 export default function Price() {
   return (
-    <Styled.Container>
+    <Styled.Container id="conversion">
       <div className="content col">
         <div className="titlePart col">
           <h3>O que está incluso</h3>

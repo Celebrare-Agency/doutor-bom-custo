@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import * as Styled from "./style.js";
 
 export default function Modal(props) {
-  const { display, onClose } = props;
+  const { display, onClose, modalId } = props;
   const modalRef = useRef(null);
   const location = useLocation();
 
@@ -28,12 +28,13 @@ export default function Modal(props) {
         display: display ? "flex" : "none",
       }}
     >
+      {/* Adicione um id ao formulário para identificação no Tag Manager */}
       <form
         ref={modalRef}
         action={getFormActionUrl()}
         method="post"
-        className="col formulario"
-        onClick={(e) => e.stopPropagation()} // Evita que o clique dentro do formulário propague para o modal
+        className={`col formulario conversionForm-${modalId}`}
+        onClick={(e) => e.stopPropagation()}
       >
         <h3>
           Preencha o formulário <br />e fale com um consultor pelo Whatsapp!
@@ -45,17 +46,18 @@ export default function Modal(props) {
           placeholder="Nome"
           pattern="^[A-Za-zÀ-ú\s]+$"
           className="Nome"
+          data-input-id={`nome-${modalId}`}
         />
 
         <input
-          type="tel"
+          type="text"
           name="Telefone"
           required
           placeholder="Telefone"
-          className="Telefone"
           pattern="^\+?(\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$"
+          className="Telefone"
+          data-input-id={`telefone-${modalId}`}
         />
-
         <input className="Button" type="submit" value="Fale com um consultor" />
       </form>
 

@@ -19,8 +19,9 @@ export const Container = styled.section`
   background-repeat: no-repeat;
   background-position: 40%;
   position: relative;
-
+  z-index:0;
   ${Media.PhoneLarge} {
+
     min-height: 40rem;  
   }
 

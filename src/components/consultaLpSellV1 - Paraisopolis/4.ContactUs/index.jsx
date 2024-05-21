@@ -3,7 +3,7 @@ import photo from "../../../assets/consultaLpSellV1/contactUs/photo.png";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 export default function ContactUs() {
   return (
-    <Styled.Container>
+    <Styled.Container id="conversion">
       <div className="containerText col">
         <h3>Entre em contato!</h3>
         <p>Para mais informações sobre exames, entre em contato!</p>

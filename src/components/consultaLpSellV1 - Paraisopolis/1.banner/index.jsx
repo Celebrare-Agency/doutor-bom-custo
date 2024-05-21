@@ -8,7 +8,7 @@ import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 
 export default function Banner() {
   return (
-    <Styled.Container>
+    <Styled.Container id="conversion">
       <div className="patterns">
         <img
           className="backgroundVector"

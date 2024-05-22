@@ -1,6 +1,7 @@
 import * as Styled from "./style.js";
 import { Services } from "../../../mock/servicesOftal.js";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
+import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Exames() {
   return (
     <Styled.Container id="conversion">
@@ -13,7 +14,7 @@ export default function Exames() {
               <p>{item.text}</p>
             </details>
             <div className="btnContainer">
-              <BtnAds />
+              <WppButton />
             </div>
           </div>
         ))}

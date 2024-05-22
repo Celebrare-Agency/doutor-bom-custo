@@ -15,7 +15,7 @@ const ModalBackground = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  z-index: 9;
+  z-index: 999; /* Ensure it stays below the form modal */
 `;
 
 const ModalWrapper = styled.div`
@@ -53,7 +53,7 @@ const ModalComponent = ({ isFormModalOpen }) => {
     if (!isFormModalOpen) {
       const timer = setTimeout(() => {
         setShowModal(true);
-      }, 20000);
+      }, 1000);
 
       return () => {
         clearTimeout(timer);

@@ -22,7 +22,7 @@ export default function Skills() {
             <p>{item.text}</p>
           </div>
         ))}
-        <BtnAds />
+        <WppButton style={{ color: "black" }} />
       </div>
     </Styled.Container>
   );

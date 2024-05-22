@@ -8,18 +8,18 @@ const Media = {
 };
 
 export const Container = styled.main`
-position: fixed;
+  position: fixed;
   width: 90%;
   height: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999999999; /* Ensure it stays above other elements */
+  z-index: 9999; /* Increase to ensure it stays above the other modal */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction:column;
-  padding:1rem 0;
+  flex-direction: column;
+  padding: 1rem 0;
   ${Media.PhoneLarge} {
     width: 95%; /* Adjust width for smaller screens */
   }
@@ -38,23 +38,23 @@ position: fixed;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(1, 1, 1,0.6); /* Dark overlay */
+    background-color: rgba(1, 1, 1, 0.6); /* Dark overlay */
     backdrop-filter: blur(8px); /* Gaussian blur */
     z-index: -1; /* Place it below the content */
-    border-radius:20px;
+    border-radius: 20px;
   }
 
   form {
-        display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-  margin: auto;
- .Button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin: auto;
+    .Button {
       border: none;
       background-color: #38af7e;
-      cursor:pointer;
+      cursor: pointer;
       padding: 1rem !important;
       font-size: 1rem !important;
       color: var(--light);
@@ -64,63 +64,61 @@ position: fixed;
       text-transform: uppercase;
       border-radius: 10.94px !important;
     }
-  input {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    width: 50%;
-    font-size: 1.5rem;
+    input {
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      width: 50%;
+      font-size: 1.5rem;
 
-    ${Media.PhoneLarge} {
-      font-size: 1rem;
-      width: 90%;
+      ${Media.PhoneLarge} {
+        font-size: 1rem;
+        width: 90%;
+      }
+    }
+
+    input::placeholder {
+      font-size: 1.3rem;
+      text-align: left;
+      color: var(--black);
+      font-family: lato;
+      font-weight: bold;
+
+      ${Media.PhoneLarge} {
+        font-size: 1rem;
+        width: 90%;
+      }
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 2px 1px var(--blue);
     }
   }
 
-  input::placeholder {
-    font-size: 1.3rem;
-    text-align: left;
-    color: var(--black);
-    font-family: lato;
-    font-weight: bold;
-
-    ${Media.PhoneLarge} {
-      font-size: 1rem;
-      width: 90%;
+  h3 {
+    color: var(--light) !important;
+    text-align: center;
+    font-family: Inter;
+    font-weight: Bold;
+    text-transform: uppercase;
+    white-space: pre;
+    ${Media.Laptop} {
+      white-space: normal;
     }
   }
-
-  input:focus {
-    outline: none;
-    box-shadow: 0 0 2px 1px var(--blue);
-  }
-      }
-
-      h3{
-     color: var(--light ) !important;;
-        text-align: center;
-        font-family: Inter;
-        font-weight: Bold;
-        text-transform: uppercase;
-        white-space: pre;
-        ${Media.Laptop} {
-          white-space: normal;
-        }
-      }
-button{
-
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 2.5rem;
-  cursor: pointer;
-
+  button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
 
     ${Media.PhoneLarge} {
       font-size: 1.5rem;
     }
-}
+  }
 `;

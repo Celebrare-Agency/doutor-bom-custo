@@ -119,6 +119,16 @@ export const Container = styled.section`
   .btnContainer {
     width: 80%;
     padding: 1rem 0;
+   button{
+       &:hover{
+        background-color:transparent !important;
+      }
+      a{
+        color: var(--black) !important;
+   
+      }
+    }
+
   }
   button {
     color: var(--black, #2f3947);

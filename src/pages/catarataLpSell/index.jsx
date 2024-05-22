@@ -13,12 +13,11 @@ export default function CatarataLpSell() {
     <>
       <Header />
       {/* <PromotionModal /> */}
-      <ModalComponent />
       <Banner />
       <Contact />
       <Price />
       <Depoiments />
-      <Location />{" "}
+      <Location /> <ModalComponent />
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function Banner() {
         <div className="containerText col">
           <h1>Oftalmologista Preço Popular em Paraisópolis - SP:</h1>
           <img src={imgText} alt="Imagem de texto promocional" />
-          <BtnAds />{" "}
+          <WppButton />
         </div>
         <div className="imgContainer">
           <img

@@ -1,5 +1,6 @@
 import { SurgeryS } from "../../../mock/cirurgiasOftal.js";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
+import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 import * as Styled from "./style.js";
 export default function Surgery() {
   return (
@@ -13,7 +14,7 @@ export default function Surgery() {
               <p>{item.text}</p>
             </details>
             <div className="btnContainer">
-              <BtnAds />{" "}
+              <WppButton />
             </div>
           </div>
         ))}

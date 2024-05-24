@@ -53,7 +53,7 @@ const ModalComponent = ({ isFormModalOpen }) => {
     if (!isFormModalOpen) {
       const timer = setTimeout(() => {
         setShowModal(true);
-      }, 10000);
+      }, 15000);
 
       return () => {
         clearTimeout(timer);
@@ -90,9 +90,10 @@ const ModalComponent = ({ isFormModalOpen }) => {
   };
 
   return (
-    <>
+    <div id="conversion">
       {isModalVisible && (
         <Modal
+          id="conversion"
           display={isModalVisible}
           onClose={() => toggleModalVisibility()}
           modalId="1" // Você pode passar o modalId se necessário
@@ -119,7 +120,7 @@ const ModalComponent = ({ isFormModalOpen }) => {
           </ModalWrapper>
         </ModalBackground>
       )}
-    </>
+    </div>
   );
 };
 

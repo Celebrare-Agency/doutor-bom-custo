@@ -53,7 +53,7 @@ export const Container = styled.section`
     margin: auto;
     display: block;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
 
     ${Media.Tablet} {
       max-height: 80vw;

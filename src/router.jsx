@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./components/GLOBAL/loading/index";
 
@@ -7,6 +7,9 @@ const OphthalmologistParaisopolisMedicoDosolhos = lazy(() =>
   import("./pages/consultaLpSellV1 - Paraisopolis  Medico dos olhos/index")
 );
 const Oftalmo = lazy(() => import("./pages/consultaLpSellV1/index"));
+const BlefaroplastiaLpSell = lazy(() =>
+  import("./pages/blefaroplastiaLpSell/index")
+);
 const Politica = lazy(() => import("./pages/politica/index"));
 const CatarataTks = lazy(() => import("./pages/obrigado-catarata/index"));
 const OphthalmologistGuarulhos = lazy(() =>
@@ -27,6 +30,7 @@ export function Router() {
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/development" element={<Home />} />
+        <Route path="/blefaroplastia" element={<BlefaroplastiaLpSell />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
         <Route path="/obrigado-catarata" element={<CatarataTks />} />

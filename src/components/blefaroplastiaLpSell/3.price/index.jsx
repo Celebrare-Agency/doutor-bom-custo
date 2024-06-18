@@ -13,15 +13,15 @@ export default function Price() {
           <li>Médico cirurgião auxiliar</li>
           <li>Instrumentador </li>
           <li>Aluguel do centro cirúrgico</li>
-          <li>Todos os insumos</li>
+          <li>Fio de sutura importado</li>
           <li>lente intraocular</li>
+          <li>Consulta pré-operatória </li>
           <li>Consulta de pós operatório</li>
-          <li>Exame de ceratometria; Biometria; MEC;</li>
         </ol>
         <div className="pricePart col">
           <h2>TUDO ISSO POR:</h2>
-          <p className="nonPrice">R$ 5.997,00</p>
-          <p className="realPrice">R$ 2.900,00!!!</p>
+          <p className="nonPrice">R$ 9.997,00</p>
+          <p className="realPrice">R$ 5.900,00!!!</p>
         </div>
       </div>
     </Styled.Container>

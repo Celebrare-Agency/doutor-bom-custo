@@ -23,8 +23,8 @@ export default function Depoiments() {
       <div className="titlePart col">
         <h3>Transformações Reais</h3>
         <p>
-          Veja como a cirurgia de prótese mamária transformou a vida das
-          nossas pacientes
+          Veja como o procedimento de blefaroplastia pode transformar um olhar
+          triste para um olhar empoderado
         </p>
       </div>
       <div className="content row">

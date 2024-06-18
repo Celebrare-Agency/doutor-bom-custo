@@ -34,6 +34,15 @@ export const HeaderContainer = styled.header`
     a {
       list-style: none;
     }
+
+    .light {
+      color: var(--light) !important;
+      ${({ isanimation }) =>
+        isanimation &&
+        css`
+          color: var(--black) !important;
+        `}
+    }
     .content {
       display: flex;
       align-items: center;

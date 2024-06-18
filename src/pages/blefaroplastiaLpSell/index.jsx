@@ -6,12 +6,16 @@ import Price from "../../components/blefaroplastiaLpSell/3.price";
 import Depoiments from "../../components/blefaroplastiaLpSell/4.depoiments";
 import Location from "../../components/blefaroplastiaLpSell/5.location/index";
 import ModalComponent from "../../components/GLOBAL/modal-ads-catarata-urgencia/index";
+import WhatIs from "../../components/blefaroplastiaLpSell/6.whatIsBlefaroplastia";
+// import PromotionModal from "../../components/GLOBAL/Regressive -ads - catarata - count";
 
-export default function BlefaroplastiaLpSell() {
+export default function CatarataLpSell() {
   return (
     <>
       <Header />
+      {/* <PromotionModal /> */}
       <Banner />
+      <WhatIs />
       <Contact />
       <Price />
       <Depoiments />

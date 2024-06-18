@@ -15,7 +15,8 @@ export const Container = styled.section`
   flex-direction: row;
   background-color: var(--blue);
   padding: 5rem 0px 5rem;
-  margin-top: 1rem;
+  margin-top: -1rem;
+
   ${Media.Tablet} {
     min-height: 25rem;
     flex-direction: column;
@@ -60,9 +61,9 @@ export const Container = styled.section`
           font-size: 2rem;
           font-weight: bold;
         }
-          ${Media.PhoneSmall} {
+        ${Media.PhoneSmall} {
           font-size: 1.5rem;
-    }
+        }
       }
       p {
         font-weight: 600;
@@ -132,7 +133,7 @@ export const Container = styled.section`
         font-family: "inter";
         color: var(--light);
         text-align: left;
-          ${Media.PhoneLarge} {
+        ${Media.PhoneLarge} {
           font-size: 2.3rem;
         }
       }

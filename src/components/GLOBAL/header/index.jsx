@@ -62,7 +62,12 @@ export default function Header() {
           />
           <ul className="menuSide">
             {menuItems.map((item) => (
-              <li key={item.path} className="Options  ">
+              <li
+                key={item.path}
+                className={`Options ${
+                  path === "/blefaroplastia" ? "light" : ""
+                }`}
+              >
                 {item.path === wppLink ? (
                   <a href={item.path} target="_blank" rel="noopener noreferrer">
                     {item.label}

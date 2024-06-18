@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import bgPc from "../../../assets/blefaroplastiaLpSell/1.banner/bg-pc.png";
 const Media = {
   PhoneLarge: "@media(max-width:600px)",
   Laptop: "@media(max-width:1150px)",
@@ -8,7 +8,6 @@ const Media = {
 };
 
 export const Container = styled.section`
-
   min-height: 45rem;
   display: flex;
   align-items: center;
@@ -19,9 +18,12 @@ export const Container = styled.section`
   background-repeat: no-repeat;
   background-position: 40%;
   position: relative;
+  background-image: url(${bgPc});
+  background-size: cover;
+  background-position: bottom center;
   ${Media.PhoneLarge} {
-
-    min-height: 40rem;  
+    min-height: 40rem;
+    padding-top: 4rem;
   }
 
   .col {
@@ -36,42 +38,67 @@ export const Container = styled.section`
     justify-content: center;
     flex-direction: row;
   }
-  .LeftSideContent {
-    width: 90%;
+
+  .centerText {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .centerSideContent {
+    width: 80%;
     max-width: 80rem;
-    align-items: flex-start;
-    color: var(--black);
+    align-items: center;
+    color: var(--light);
     position: relative;
     gap: 1rem;
     z-index: 9;
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 3rem;
+      z-index: -1;
+      border-radius: 10px;
+      background-color: var(--black);
+      filter: blur(20px);
+      opacity: 0.3;
+      ${Media.PhoneLarge} {
+        padding: 0;
+      }
+    }
+
     h1 {
       font-weight: 500;
       text-transform: uppercase;
+      text-align: center;
       font-size: calc(100% + 2.4rem);
       ${Media.PhoneLarge} {
         font-size: 2rem;
         font-weight: bold;
-        b {
-          color: var(--blue);
-          font-size: 2.2rem;
-        }
+        text-align: left;
       }
     }
 
     p {
       font-size: calc(10% + 1.7rem);
+      text-align: center;
+
       ${Media.PhoneLarge} {
         font-size: 1.4rem;
         font-weight: bold;
+        text-align: center;
         b {
           color: var(--blue);
+          text-align: center;
           font-size: 1.5rem;
         }
       }
     }
     h2 {
       text-transform: uppercase;
+      text-align: center;
     }
 
     span {

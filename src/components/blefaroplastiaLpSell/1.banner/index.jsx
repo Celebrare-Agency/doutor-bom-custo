@@ -1,6 +1,5 @@
 import * as Styled from "./style.js";
 import React, { useState } from "react";
-import discountFlag from "../../../assets/catarataLpSell/1.banner/flagDisccount.png";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 import Modal from "../../modalForm/index.jsx";
 export default function Banner() {
@@ -19,21 +18,22 @@ export default function Banner() {
           modalId="1" // Você pode passar o modalId se necessário
         />
       )}
-      <div className="col LeftSideContent">
-        <h2>A promoção está prestes a acabar! Aproveite agora!</h2>
+      <div className="col centerSideContent">
         <h1>
-          Cirurgia de catarata <br />
-          por <b>R$ 2.900,00</b> em São Paulo.
+          Renove Seu Olhar com a Cirurgia de Blefaroplastia! Apenas R$ 5.900,00
         </h1>
-        <p>
-          Pacote Completo com Lente Importada e Exames. <br></br>Parcelamos em
-          até <b>12x</b>.
-        </p>
+
         <div>
-          <span>*preço exclusivo por olho</span>
+          <div>
+            <h2>Oferta Exclusiva até 30/06!</h2>
+            <p>Parcelamento em até 12x</p>
+          </div>
+
+          <span className="centerText">
+            *preço exclusivo para pálpebra superior <br />
+          </span>
         </div>
         <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
-        <img className="flags" src={discountFlag} alt="flag de desconto" />
       </div>
     </Styled.Container>
   );

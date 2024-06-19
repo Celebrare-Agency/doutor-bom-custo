@@ -5,8 +5,8 @@ import Contact from "../../components/catarataLpSell/2.callUs/index";
 import Price from "../../components/catarataLpSell/3.price";
 import Depoiments from "../../components/catarataLpSell/4.depoiments";
 import Location from "../../components/catarataLpSell/5.location/index";
-import ModalComponent from "../../components/GLOBAL/modal-ads-catarata-urgencia/index";
-import PromotionModal from "../../components/GLOBAL/Regressive -ads - catarata - count";
+// import ModalComponent from "../../components/GLOBAL/modal-ads-catarata-urgencia/index";
+// import PromotionModal from "../../components/GLOBAL/Regressive -ads - catarata - count";
 
 export default function CatarataLpSell() {
   return (
@@ -17,7 +17,7 @@ export default function CatarataLpSell() {
       <Contact />
       <Price />
       <Depoiments />
-      <Location /> <ModalComponent />
+      <Location /> \{/* <ModalComponent /> */}
     </>
   );
 }

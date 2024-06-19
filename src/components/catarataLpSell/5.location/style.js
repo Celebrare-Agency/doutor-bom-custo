@@ -8,7 +8,7 @@ const Media = {
 
 export const Container = styled.section`
   min-height: 34rem;
-  margin-top:5rem;
+  margin-top: 5rem;
   ${Media.Tablet} {
     min-height: 25rem;
     flex-direction: column;
@@ -39,11 +39,12 @@ export const Container = styled.section`
       font-weight: bold;
       text-transform: uppercase;
       font-size: calc(100% + 2.4rem);
-      font-family: "inter";width: 50%;
+      font-family: "inter";
+      width: 80%;
       color: var(--black);
-      text-align:center;
+      text-align: center;
       ${Media.Tablet} {
-      text-align:left;
+        text-align: left;
         font-size: 2.4rem;
         font-weight: bold;
         width: 90%;
@@ -55,11 +56,11 @@ export const Container = styled.section`
       font-family: "inter";
       color: var(--black);
       opacity: 0.6;
-   width: 50%;
+      width: 80%;
       text-align: center;
       ${Media.Tablet} {
         width: 90%;
-         text-align:left;
+        text-align: left;
       }
     }
   }
@@ -99,45 +100,45 @@ export const Container = styled.section`
     }
   }
 
-    button {
-      margin:auto;
-      margin-top:1rem;
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 1rem;
-        color: var(--light);
-      }
-      color: var(--light);
-      font-family: Inter;
-      font-size: 2rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      padding: 1rem;
-      background:#38af7e;
+  button {
+    margin: auto;
+    margin-top: 1rem;
+    a {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: row;
       gap: 1rem;
-      transition: 0.3s;
-      &:hover {
-        background-color: var(--blueHover);
-      }
-      ${Media.PhoneLarge} {
-        font-size: 2rem;
-        padding: 0.6rem;
-      }
-      ${Media.PhoneSmall} {
-        font-size: 1.4rem;
-      }
-
-      .BUttonwhatsApp {
-        width: 2rem;
-        height: 2rem;
-      }
+      color: var(--light);
     }
+    color: var(--light);
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 1rem;
+    background: #38af7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    transition: 0.3s;
+    &:hover {
+      background-color: var(--blueHover);
+    }
+    ${Media.PhoneLarge} {
+      font-size: 2rem;
+      padding: 0.6rem;
+    }
+    ${Media.PhoneSmall} {
+      font-size: 1.4rem;
+    }
+
+    .BUttonwhatsApp {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 `;

@@ -20,7 +20,7 @@ export default function Banner() {
         />
       )}
       <div className="col LeftSideContent">
-        <h2>A promoção está prestes a acabar! Aproveite agora!</h2>
+        {/* <h2>A promoção está prestes a acabar! Aproveite agora!</h2> */}
         <h1>
           Cirurgia de catarata <br />
           por <b>R$ 2.900,00</b> em São Paulo.

@@ -19,6 +19,7 @@ export default function Banner() {
         />
       )}
       <div className="col centerSideContent">
+        <p>adasdsa</p>
         <h1>
           Renove Seu Olhar com a Cirurgia de Blefaroplastia! Apenas R$ 5.900,00
         </h1>

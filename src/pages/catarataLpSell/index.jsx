@@ -24,9 +24,8 @@ export default function CatarataLpSell() {
       <Check />
       <Depoiments />
       {/* <Faq /> */}
-      <Location />
       <Slideshow />
-      <ModalComponent />
+      {/* <ModalComponent /> */}
       <Location /> \{/* <ModalComponent /> */}
     </>
   );

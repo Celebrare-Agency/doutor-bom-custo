@@ -60,9 +60,9 @@ export const Container = styled.section`
           font-size: 2rem;
           font-weight: bold;
         }
-          ${Media.PhoneSmall} {
+        ${Media.PhoneSmall} {
           font-size: 1.5rem;
-    }
+        }
       }
       p {
         font-weight: 600;
@@ -109,6 +109,7 @@ export const Container = styled.section`
       .nonPrice {
         font-weight: regular;
         text-transform: uppercase;
+
         font-size: 2rem;
         font-family: "inter";
         color: var(--light);
@@ -117,11 +118,12 @@ export const Container = styled.section`
         &::after {
           content: "";
           position: absolute;
-          background-image: url(${red});
+          background-color: red;
           width: 100%;
-          height: 100%;
+          height: 20%;
+          top: 40%;
           object-fit: contain;
-          left: 2rem;
+          left: 0;
           background-repeat: no-repeat;
         }
       }
@@ -132,7 +134,7 @@ export const Container = styled.section`
         font-family: "inter";
         color: var(--light);
         text-align: left;
-          ${Media.PhoneLarge} {
+        ${Media.PhoneLarge} {
           font-size: 2.3rem;
         }
       }

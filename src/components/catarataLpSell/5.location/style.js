@@ -56,7 +56,11 @@ export const Container = styled.section`
       font-family: "inter";
       color: var(--black);
       opacity: 0.6;
+<<<<<<< HEAD
       width: 50%;
+=======
+      width: 80%;
+>>>>>>> 0c8a5524ee6188c93a6f383b3e9e104b403bc8de
       text-align: center;
       ${Media.Tablet} {
         width: 90%;

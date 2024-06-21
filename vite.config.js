@@ -1,19 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import cssnano from "cssnano";
-import { imagetools } from "vite-imagetools";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    {
-      ...imagetools(),
-      enforce: "pre", // Certifica-se de que este plugin execute antes dos outros
-    },
-  ],
+  plugins: [react()],
   build: {
-    target: "esnext", // Especifica o alvo da compilação
-    minify: "esbuild", // Utiliza esbuild para minificação rápida e eficiente
+    target: "esnext",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         entryFileNames: "assets/[name].[hash].js",
@@ -23,11 +15,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["react", "react-dom"], // Inclui dependências comuns para otimização
-  },
-  css: {
-    postcss: {
-      plugins: [cssnano()],
-    },
+    include: ["react", "react-dom"],
   },
 });

@@ -1,22 +1,22 @@
 export const Items3 = [
   {
     id: 1,
-    text: "Sinto desafio ao realizar tarefas do dia a dia devido à minha baixa visão.",
+    text: "Visão Embaçada: Dificuldade para enxergar claramente.",
   },
   {
     id: 2,
-    text: "Sinto minha segurança afetada ao andar sozinho em locais desconhecidos.",
+    text: "Cores Desbotadas: As cores podem parecer menos vivas ou mais amareladas.",
   },
   {
     id: 3,
-    text: "Preciso da ajuda de outras pessoas para realizar tarefas visuais ",
+    text: "Dificuldade com Luzes: Sensibilidade aumentada à luz e brilho, especialmente à noite.",
   },
   {
     id: 4,
-    text: "Dificuldade ao realizar tarefas do dia a dia como, ler, assistir TV e mexer no celular.",
+    text: "Visão Dupla: Em alguns casos, a catarata pode causar visão dupla em um olho.",
   },
   {
     id: 5,
-    text: "Sinto dificuldade em apreciar obras de arte e paisagens.",
+    text: "Alterações na Prescrição: Mudanças frequentes na prescrição dos óculos podem ser um sinal de catarata.",
   },
 ];

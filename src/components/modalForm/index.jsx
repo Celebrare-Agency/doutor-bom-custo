@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import * as Styled from "./style.js";
 
@@ -7,6 +7,8 @@ export default function Modal(props) {
   const modalRef = useRef(null);
   const location = useLocation();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSubmitButton, setShowSubmitButton] = useState(true);
+  const [redirectMessage, setRedirectMessage] = useState("");
 
   const handleCloseModal = () => {
     onClose();
@@ -25,6 +27,8 @@ export default function Modal(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
+    setShowSubmitButton(false);
+    setRedirectMessage("Redirecionando você para o contato...");
 
     const formData = new FormData(event.target);
     const data = {
@@ -33,14 +37,13 @@ export default function Modal(props) {
       origem: "Google",
       observacoes: getObservacao(),
     };
-    onClose();
 
     try {
       const response = await fetch("https://api.pipefy.com/graphql", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3MTg3MzAzMTMsImp0aSI6IjBlMGY5ZTk2LTVmMjEtNDhkOC1hMGQ0LTkzMTBkNjczZTYxYSIsInN1YiI6MzA0ODc2MTQ5LCJ1c2VyIjp7ImlkIjozMDQ4NzYxNDksImVtYWlsIjoiZmVybmFuZG9hbHZlcy5vY3Vwb3BAZ21haWwuY29tIn19.27xePP1Idj4DJ9-93-A7--Wi5-Wa_Qc8NIAUBYB4660P9WeWFtddL-ztyLPWbeBvDZJNSfWLE9kcV-oFlpm-kg`,
+          Authorization: `Bearer YOUR_API_TOKEN_HERE`,
         },
         body: JSON.stringify({
           query: `
@@ -77,6 +80,7 @@ export default function Modal(props) {
       window.location.href = whatsappLink;
 
       // Fecha o modal após o envio bem-sucedido
+      handleCloseModal();
     } catch (error) {
       console.error("Erro ao enviar os dados para o Pipefy:", error);
     } finally {
@@ -86,15 +90,35 @@ export default function Modal(props) {
 
   return (
     <Styled.Container
+      className="teste"
       style={{
         display: display ? "flex" : "none",
       }}
     >
+      {redirectMessage && (
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(255, 255, 255, 0.9)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000,
+            fontSize: "24px",
+            fontWeight: "bold",
+          }}
+        >
+          {redirectMessage}
+        </div>
+      )}
       <form
         ref={modalRef}
         onSubmit={handleSubmit}
         className={`col formulario conversionForm-${modalId}`}
-        onClick={(e) => e.stopPropagation()}
       >
         <h3>
           Preencha o formulário <br />e fale com um consultor pelo Whatsapp!
@@ -117,12 +141,14 @@ export default function Modal(props) {
           className="Telefone"
           data-input-id={`telefone-${modalId}`}
         />
-        <input
-          className="Button"
-          type="submit"
-          value="Fale com um consultor"
-          disabled={isSubmitting}
-        />
+        {showSubmitButton && (
+          <input
+            className="Button"
+            type="submit"
+            value="Fale com um consultor"
+            disabled={isSubmitting}
+          />
+        )}
       </form>
 
       <button onClick={handleCloseModal}>X</button>

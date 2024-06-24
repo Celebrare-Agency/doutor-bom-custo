@@ -43,7 +43,7 @@ export default function Modal(props) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer YOUR_API_TOKEN_HERE`,
+          Authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3MTg3MzAzMTMsImp0aSI6IjBlMGY5ZTk2LTVmMjEtNDhkOC1hMGQ0LTkzMTBkNjczZTYxYSIsInN1YiI6MzA0ODc2MTQ5LCJ1c2VyIjp7ImlkIjozMDQ4NzYxNDksImVtYWlsIjoiZmVybmFuZG9hbHZlcy5vY3Vwb3BAZ21haWwuY29tIn19.27xePP1Idj4DJ9-93-A7--Wi5-Wa_Qc8NIAUBYB4660P9WeWFtddL-ztyLPWbeBvDZJNSfWLE9kcV-oFlpm-kg`,
         },
         body: JSON.stringify({
           query: `

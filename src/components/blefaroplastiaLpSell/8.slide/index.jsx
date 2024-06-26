@@ -8,7 +8,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import slide1 from "../../../assets/catarataLpSell/5.slide/slide1.png";
 import slide2 from "../../../assets/catarataLpSell/5.slide/slide2.png";
 import { Container } from "./style";
-export default function SlideshowBlefaro() {
+export default function Slideshow() {
   return (
     <Container>
       <div className="containerTitle">

@@ -23,14 +23,13 @@ export default function Banner() {
         {/* <h2>recupere a alegria de enxergar com clareza!</h2> */}
         <h1>
           Cirurgia Refrativa <br /> A partir de
-          <b> R$ XXXXX</b> EM SÃO PAULO!
+          <b> R$ 3.900,00</b> EM SÃO PAULO!
         </h1>
         <p>
-          Pacote Completo com Lente Importada e Exames. <br></br>Parcelamos em
-          até <b>12x</b>.
+          Pacote Completo com exames. <br></br> Fazemos parcelamento!
         </p>
         <div>
-          <span>*preço exclusivo por (....)</span>
+          <span>*preço exclusivo para os dois olhos</span>
         </div>
         <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
         <img className="flags" src={discountFlag} alt="flag de desconto" />

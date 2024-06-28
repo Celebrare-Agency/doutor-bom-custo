@@ -22,7 +22,7 @@ export default function RefrativaLpSell() {
       <Contact />
       <Price />
       <Check />
-      <Depoiments />
+      {/* <Depoiments /> */}
       {/* <Faq /> */}
       <Slideshow />
       {/* <ModalComponent /> */}

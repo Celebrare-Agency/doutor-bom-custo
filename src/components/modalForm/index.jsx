@@ -19,6 +19,8 @@ export default function Modal(props) {
       return "Lead de catarata";
     } else if (location.pathname === "/blefaroplastia") {
       return "Lead de blefaroplastia";
+    } else if (location.pathname === "/refrativa") {
+      return "Lead de blefaroplastia";
     } else {
       return "Lead de origem desconhecida";
     }
@@ -74,6 +76,8 @@ export default function Modal(props) {
         whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!`;
       } else if (location.pathname === "/blefaroplastia") {
         whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20blefaroplastia!`;
+      } else if (location.pathname === "/refrativa") {
+        whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20brefrativa!`;
       } else {
         whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20falar%20com%20um%20consultor!`;
       }

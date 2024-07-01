@@ -8,7 +8,6 @@ const Media = {
 };
 
 export const Container = styled.section`
-
   min-height: 45rem;
   display: flex;
   align-items: center;
@@ -20,8 +19,7 @@ export const Container = styled.section`
   background-position: 40%;
   position: relative;
   ${Media.PhoneLarge} {
-
-    min-height: 40rem;  
+    min-height: 40rem;
   }
 
   .col {
@@ -44,7 +42,12 @@ export const Container = styled.section`
     position: relative;
     gap: 1rem;
     z-index: 9;
-
+    ${Media.Tablet} {
+      margin-top: 7rem;
+    }
+    ${Media.PhoneLarge} {
+      margin-top: 5rem;
+    }
     h1 {
       font-weight: 500;
       text-transform: uppercase;

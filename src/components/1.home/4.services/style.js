@@ -16,14 +16,19 @@ export const Container = styled.section`
   justify-content: space-around;
   flex-direction: column;
   margin: auto;
+  padding: 2rem 0;
+  gap: 1rem;
   ${Media.Tablet} {
     align-items: flex-start;
     width: 90%;
     max-width: 90rem;
+    margin: auto;
   }
+
   ${Media.PhoneLarge} {
     width: 90%;
     max-width: 90rem;
+    margin: auto;
   }
 
   .col {
@@ -32,6 +37,7 @@ export const Container = styled.section`
     justify-content: center;
     flex-direction: column;
   }
+
   .row {
     display: flex;
     align-items: center;
@@ -39,21 +45,43 @@ export const Container = styled.section`
     flex-direction: row;
   }
 
+  .formGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    margin: auto;
+    a {
+      margin: auto;
+
+      ${Media.Tablet} {
+        margin: 0;
+      }
+    }
+    ${Media.Tablet} {
+      margin-top: 1rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
   p {
     color: var(--black);
     text-align: center;
     font-family: Lato;
+
     ${Media.Tablet} {
       white-space: pre-wrap;
       text-align: left;
     }
   }
+
   h3 {
     color: var(--blue);
     text-align: center;
     font-family: Inter;
     font-weight: 800;
     text-transform: uppercase;
+
     ${Media.Tablet} {
       white-space: pre-wrap;
       text-align: left;
@@ -73,6 +101,7 @@ export const Container = styled.section`
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
+
     ${Media.PhoneLarge} {
       font-size: 1rem;
       gap: 0.5rem;

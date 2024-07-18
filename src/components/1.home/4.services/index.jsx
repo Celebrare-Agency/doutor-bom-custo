@@ -1,10 +1,9 @@
 import * as Styled from "./style.js";
-import ophitalmologistIcon from "../../../assets/1.home/services/ophitalmologistIcon.svg";
 import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
-    <Styled.Container>
+    <Styled.Container id="services">
       <p>
         Nossos parceiros estão à sua disposição! Projetados para sua segurança e
         comodidade, cada detalhe do centro cirúrgico e das clínicas é pensado
@@ -16,12 +15,23 @@ export default function Services() {
         Confira algumas das especialidades disponíveis nas nossas clínicas
         parceiras:
       </h3>
-      <Link to="/oftalmo">
-        <button className="row">
-          <img src={ophitalmologistIcon} alt="icone de oftalmologia" />
-          oftalmologia
-        </button>
-      </Link>
+      <div className="formGroup">
+        <a
+          href="https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20com%20Oftalmologista.%20"
+          target="blanked"
+        >
+          <button className="row">Oftalmologia</button>
+        </a>
+        <Link to="/catarata">
+          <button className="row">Catarata</button>
+        </Link>
+        <Link to="/blefaroplastia">
+          <button className="row">Blefaroplastia</button>
+        </Link>
+        <Link to="/refrativa">
+          <button className="row">Cirurgia Refrativa</button>
+        </Link>
+      </div>
     </Styled.Container>
   );
 }

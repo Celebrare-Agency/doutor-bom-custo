@@ -19,11 +19,11 @@ export default function Banner() {
         </h1>
         <div className="buttonsContainer row">
           <WppButton />
-          <Link to="/oftalmo">
+          <a href="#services">
             <button type="button" className="buttonScroll">
               Serviços
             </button>
-          </Link>
+          </a>
         </div>
         <hr />
         <p>

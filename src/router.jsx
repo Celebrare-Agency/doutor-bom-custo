@@ -12,6 +12,9 @@ const Politica = lazy(() => import("./pages/politica/index"));
 
 const Catarata = lazy(() => import("./pages/Blog/catarata/index"));
 const CatarataLpSell = lazy(() => import("./pages/catarataLpSell/index"));
+const OphthalmologistParaisopolis = lazy(() =>
+  import("./pages/consultaLpSellV1 - Paraisopolis/index")
+);
 
 export function Router() {
   return (
@@ -23,6 +26,10 @@ export function Router() {
         <Route path="/refrativa" element={<RefrativaLpSell />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
         <Route path="/politica" element={<Politica />} />
+        <Route
+          path="/paraisopolis-consulta"
+          element={<OphthalmologistParaisopolis />}
+        />
         <Route path="/" element={<Home />} />
       </Routes>
     </Suspense>

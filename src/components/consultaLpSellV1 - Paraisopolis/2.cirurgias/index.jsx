@@ -5,7 +5,9 @@ import * as Styled from "./style.js";
 export default function Surgery() {
   return (
     <Styled.Container id="conversion">
-      <h2>Cirurgias</h2>
+      <a href="#sobre">
+        <h2>Cirurgias</h2>
+      </a>
       <div className="containerCard row">
         {SurgeryS.map((item) => (
           <div className="card col" key={item.id}>

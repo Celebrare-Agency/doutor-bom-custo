@@ -5,7 +5,9 @@ import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Exames() {
   return (
     <Styled.Container id="conversion">
-      <h2>Exames</h2>
+      <a href="#contato">
+        <h2>Exames</h2>
+      </a>
       <div className="containerCard row">
         {Services.map((item) => (
           <div className="card col" key={item.id}>

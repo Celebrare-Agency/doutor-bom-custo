@@ -1,7 +1,7 @@
 import * as Styled from "./style.js";
 import photoDoctor from "../../../assets/consultaLpSellV1/banner/photo-doctor.png";
 import backgroundVector from "../../../assets/consultaLpSellV1/banner/VectorBackground.svg";
-import imgText from "../../../assets/consultaLpSellV1/banner/promotionTextImage.png";
+import imgText from "../../../assets/consultaLpSellV1/banner/promotionTextImage-taboao.png";
 import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 
 export default function Banner() {

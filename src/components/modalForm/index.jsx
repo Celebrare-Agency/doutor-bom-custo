@@ -71,19 +71,17 @@ export default function Modal(props) {
       const result = await response.json();
       console.log(result);
 
-      // let whatsappLink;
-      // if (location.pathname === "/catarata") {
-      //   whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!`;
-      // } else if (location.pathname === "/blefaroplastia") {
-      //   whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20blefaroplastia!`;
-      // } else if (location.pathname === "/refrativa") {
-      //   whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20refrativa!`;
-      // } else {
-      //   whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20falar%20com%20um%20consultor!`;
-      // }
+      let whatsappLink;
+      if (location.pathname === "/catarata") {
+        whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Tenho%20interesse%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20cirurgia%20de%20catarata.`;
+      } else if (location.pathname === "/blefaroplastia") {
+        whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Tenho%20interesse%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20procedimento%20de%20blefaroplastia`;
+      } else if (location.pathname === "/refrativa") {
+        whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Tenho%20interesse%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20cirurgia%20refrativa.`;
+      } else {
+        whatsappLink = `https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia!`;
+      }
 
-      let whatsappLink =
-        "https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia!";
       window.location.href = whatsappLink;
 
       // Fecha o modal após o envio bem-sucedido

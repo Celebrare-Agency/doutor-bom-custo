@@ -8,6 +8,7 @@ const RefrativaLpSell = lazy(() => import("./pages/refrativaLpSell/index"));
 const BlefaroplastiaLpSell = lazy(() =>
   import("./pages/blefaroplastiaLpSell/index")
 );
+const Ophthalmologist = lazy(() => import("./pages/consultaLpSellV1/index"));
 const Politica = lazy(() => import("./pages/politica/index"));
 
 const Catarata = lazy(() => import("./pages/Blog/catarata/index"));
@@ -30,6 +31,7 @@ export function Router() {
           path="/paraisopolis-consulta"
           element={<OphthalmologistParaisopolis />}
         />
+        <Route path="/taboao-consulta" element={<Ophthalmologist />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Suspense>

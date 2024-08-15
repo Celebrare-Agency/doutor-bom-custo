@@ -3,7 +3,9 @@ import { Services } from "../../../mock/servicesOftal.js";
 export default function Exames() {
   return (
     <Styled.Container>
-      <h2>Exames</h2>
+      <a href="#exames">
+        <h2>Exames</h2>
+      </a>
       <div className="containerCard row">
         {Services.map((item) => (
           <div className="card col" key={item.id}>

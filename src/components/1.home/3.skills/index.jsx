@@ -11,10 +11,12 @@ export default function Skills() {
         <img src={doctor} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
       <div className="skillSideContainer col">
-        <h2>
-          Nossos Diferenciais <br />
-          em Saúde Acessível
-        </h2>
+        <a href="#diferenciais">
+          <h2>
+            Nossos Diferenciais <br />
+            em Saúde Acessível
+          </h2>
+        </a>
         {Skill.map((item) => (
           <div key={item.id} className="itemsContainer col">
             <img src={item.img} alt={item.alt} />

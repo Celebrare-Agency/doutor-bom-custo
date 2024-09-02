@@ -23,7 +23,7 @@ export default function Services() {
           <button className="row">Oftalmologia</button>
         </a>
         <Link to="/catarata">
-          <button className="row">Catarata</button>p
+          <button className="row">Catarata</button>
         </Link>
         <Link to="/blefaroplastia">
           <button className="row">Blefaroplastia</button>

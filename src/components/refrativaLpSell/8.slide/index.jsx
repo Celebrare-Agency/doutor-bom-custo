@@ -12,7 +12,9 @@ export default function SlideshowBlefaro() {
   return (
     <Container>
       <div className="containerTitle">
-        <h3>Nossos Espaços e Nossa Tecnologia</h3>
+        <a href="#espaco">
+          <h3>Nossos Espaços e Nossa Tecnologia</h3>
+        </a>
         <hr />
       </div>
       <div>

@@ -68,7 +68,7 @@ export const Carousell = styled.header`
             }
         }
 
-        .avaliacao{
+        .assessment{
             display: flex;
             flex-direction: row;
             align-items: center;

@@ -724,11 +724,11 @@ export const Testimony = styled.header`
       text-align: center;
       margin: 40px auto auto auto;
 
-      .linha{
+      .line{
         width: 50px;
         height: 5px;
         background-color: black;
-        margin: 10px auto 10px auto;
+        margin: 10px auto 0px auto;
       }
 
       h1{

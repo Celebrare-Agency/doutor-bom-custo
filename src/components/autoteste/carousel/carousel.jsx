@@ -87,7 +87,7 @@ const Carousel = () => {
                         <p className="testimonial-job">{testimonial.job}</p>   
                     </div>
                 </div> 
-                <div className='avaliacao'>
+                <div className='assessment'>
                     <IoMdStar  />
                     <IoMdStar  />
                     <IoMdStar  />

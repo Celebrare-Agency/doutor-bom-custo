@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Loading from "./components/GLOBAL/loading/index";
 
 const Home = lazy(() => import("./pages/1.home/index"));
+const Autoteste = lazy(() => import("./pages/autoteste/index"));
 const RefrativaLpSell = lazy(() => import("./pages/refrativaLpSell/index"));
 const Ortoceratologia = lazy(() =>
   import("./pages/ortoceratologiaLpSell/index")
@@ -28,6 +29,7 @@ export function Router() {
         <Route path="/blefaroplastia" element={<BlefaroplastiaLpSell />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/refrativa" element={<RefrativaLpSell />} />
+        <Route path="/autoteste" element={<Autoteste />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
         <Route path="/politica" element={<Politica />} />
         <Route path="/Ortoceratologia" element={<Ortoceratologia />} />

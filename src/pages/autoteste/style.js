@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components/";
-import cover from "./images/cover.png";
-import background from "./images/background.png";
+import cover from "../../assets/autoteste/Cover.png";
+import background from "../../assets/autoteste/Background.png";
 
 const Media = {
   NavLarge: "@media(max-width:1200px)",
@@ -196,7 +196,7 @@ export const Cover = styled.header`
         background-position: right;
     }
 
-    .textos{
+    .texts{
         max-width: 2160px;
         margin: auto;
         position: absolute;
@@ -277,7 +277,7 @@ export const Ortoce = styled.header`
         }
     }
 
-    .textosOrto{
+    .textsOrto{
         position: relative;
         width: 38%;
         text-align: left;
@@ -329,7 +329,7 @@ export const Ortoce = styled.header`
     }
 `;
 
-export const Beneficios = styled.header`
+export const Benefits = styled.header`
   width: 100%;
   min-height: 30rem;
   background-image: url(${background});
@@ -337,7 +337,7 @@ export const Beneficios = styled.header`
   background-size: 100%;
   background-position: center;
 
-  .Bef{
+  .Ben{
     position: relative;
     width: 100%;
     display: flex;
@@ -348,7 +348,7 @@ export const Beneficios = styled.header`
     margin: auto;
   }   
     
-  .containerBef{
+  .containerBen{
       position: relative;
       width: 98%;
       display: flex;
@@ -363,7 +363,7 @@ export const Beneficios = styled.header`
       }
   }
 
-  .textosBef{
+  .textsBen{
       position: relative;
       text-align: left;
 
@@ -382,7 +382,7 @@ export const Beneficios = styled.header`
       }
   }
 
-  .containerImgBef{      
+  .containerImgBen{      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -407,7 +407,7 @@ export const Beneficios = styled.header`
     }
 `;
 
-export const Quem = styled.header`
+export const Who = styled.header`
   width: 100%;
   height: auto;
   min-height: 50rem;
@@ -421,7 +421,7 @@ export const Quem = styled.header`
           height: auto;
     }
 
-    .Quem{
+    .Who{
       position: relative;
       width: 100%;
       display: flex;
@@ -434,7 +434,7 @@ export const Quem = styled.header`
       }
     }   
     
-    .containerQuem{
+    .containerWho{
       position: relative;
       width: 98%;
       display: flex;
@@ -447,7 +447,7 @@ export const Quem = styled.header`
       }
     }
 
-    .textosQuem{
+    .textsWho{
       position: relative;
       width: 38%;
       text-align: left;
@@ -495,7 +495,7 @@ export const Quem = styled.header`
         }
     }
 
-    .containerImgQuem{
+    .containerImgWho{
       max-width: 600px;
       width: 98%;
 
@@ -505,7 +505,7 @@ export const Quem = styled.header`
     }
 `;
 
-export const Indi = styled.header`
+export const Indication = styled.header`
   position: relative;
   width: 100%;
   height: auto;
@@ -541,7 +541,7 @@ export const Indi = styled.header`
       }
     }
 
-    .Blue{
+    .backgroundBlue{
       width: 100%;
       height: 15rem;
       margin-top: 100px;
@@ -553,7 +553,7 @@ export const Indi = styled.header`
         padding-bottom: 40px;
       }
 
-      .containerDoenças{
+      .containerIllness{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -566,7 +566,7 @@ export const Indi = styled.header`
           flex-direction: column;
         }
 
-        .item-doença{
+        .iten-illness{
           width: 95%;
           max-width: 300px;
           height: 350px;
@@ -608,7 +608,7 @@ export const Indi = styled.header`
     }
 `;
 
-export const ContatoB = styled.header`
+export const Contact = styled.header`
   width: 100%;
   height: auto;
   min-height: 20rem;
@@ -617,7 +617,7 @@ export const ContatoB = styled.header`
   max-width: 2160px;
   margin: auto;
 
-  .ContatoB{
+  .ContactB{
     position: relative;
     width: 100%;
     display: flex;
@@ -626,7 +626,7 @@ export const ContatoB = styled.header`
     justify-content: center;  
   }   
     
-  .containerContatoB{
+  .containerContactB{
     position: relative;
     width: 80%;
     height: auto;
@@ -698,7 +698,7 @@ export const ContatoB = styled.header`
   }
 `;
 
-export const Depoimento = styled.header`
+export const Testimony = styled.header`
   position: relative;
   width: 95%;
   height: auto;
@@ -742,7 +742,7 @@ export const Depoimento = styled.header`
     }
 `;
 
-export const MapaB = styled.header`
+export const Map = styled.header`
   width: 100%;
   height: auto;
   min-height: 20rem;
@@ -751,7 +751,7 @@ export const MapaB = styled.header`
   max-width: 2160px;
   margin: auto;
 
-  .MapaB{
+  .Map{
     position: relative;
     width: 100%;
     display: flex;
@@ -760,7 +760,7 @@ export const MapaB = styled.header`
     justify-content: center;  
   }   
     
-  .containerMapaB{
+  .containerTextMap{
     position: relative;
     width: 80%;
     height: auto;
@@ -782,7 +782,7 @@ export const MapaB = styled.header`
       padding-bottom: 30px;
     }
 
-    .textoMapaB{
+    .textMap{
       width: 50%;
       display: flex;
       flex-direction: column;
@@ -810,7 +810,7 @@ export const MapaB = styled.header`
       }
     }
 
-    .mapsBl{
+    .containerMap{
       width: 50%;
 
       ${Media.Nav}{width: 100%;}

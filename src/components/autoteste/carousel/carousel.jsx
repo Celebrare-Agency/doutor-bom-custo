@@ -2,7 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Carousell } from "./style";
-import Photo from '../images/profile.png'; 
+import Photo from '../../../assets/autoteste/Profile.png'; 
 import { IoMdStar } from "react-icons/io";
 
 const testimonials = [

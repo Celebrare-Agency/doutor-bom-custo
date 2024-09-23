@@ -12,15 +12,11 @@ export default function WppButton() {
   // Mudando a URL com base na rota
   if (location.pathname === "/paraisopolis-consulta") {
     whatsappLink =
-      "https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista%20em%20Parais%C3%B3polis%20-%20SP.";
+      "https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista%20em%20Parais%C3%B3polis%20-%20SP.";
   } else if (location.pathname === "/taboao-consulta") {
     whatsappLink =
       "https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20oftalmologista%20em%20Tabo%C3%A3o%20da%20Serra.";
-  } else {
-    whatsappLink =
-      "https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20oftalmologista.";
   }
-
   return (
     <Styled.Container aria-label="Botão para o numero de contato">
       <a href={whatsappLink} target="_blank" rel="noopener noreferrer">

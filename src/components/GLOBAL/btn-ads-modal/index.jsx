@@ -56,7 +56,7 @@ const Container = styled.button`
   }
 `;
 
-const BtnAds = ({ modalId, toggleModalVisibility }) => {
+const BtnAds = ({ modalId, toggleModalVisibility, text }, props) => {
   const handleClick = () => {
     const currentUrl = window.location.href;
     const targetUrl =
@@ -74,10 +74,14 @@ const BtnAds = ({ modalId, toggleModalVisibility }) => {
       aria-label="Botão para o número de contato"
       onClick={handleClick}
     >
-      <AiOutlineWhatsApp className="btnWpp" />
-      Entre em contato
+      {<AiOutlineWhatsApp className="btnWpp" />}
+      {text}
     </Container>
   );
+};
+
+BtnAds.defaultProps = {
+  text: "Entrar em contato",
 };
 
 export default BtnAds;

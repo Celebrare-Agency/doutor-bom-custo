@@ -20,8 +20,8 @@ export default function Price() {
         </ol>
         <div className="pricePart col">
           <h2>TUDO ISSO POR:</h2>
-          <p className="nonPrice">R$ 9.997,00</p>
-          <p className="realPrice">R$ 5.900,00!!!</p>
+          <p className="nonPrice">R$ 6.997,00</p>
+          <p className="realPrice">R$ 3.900,00!!!</p>
         </div>
       </div>
     </Styled.Container>

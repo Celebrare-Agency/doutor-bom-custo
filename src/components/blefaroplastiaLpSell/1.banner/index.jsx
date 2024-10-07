@@ -20,7 +20,7 @@ export default function Banner() {
       )}
       <div className="col centerSideContent">
         <h1>
-          Renove Seu Olhar com a Cirurgia de Blefaroplastia! Apenas R$ 5.900,00
+          Renove Seu Olhar com a Cirurgia de Blefaroplastia! Apenas R$ 3.900,00
         </h1>
 
         <div>

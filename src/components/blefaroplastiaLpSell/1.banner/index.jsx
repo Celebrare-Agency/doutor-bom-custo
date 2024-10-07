@@ -20,12 +20,13 @@ export default function Banner() {
       )}
       <div className="col centerSideContent">
         <h1>
-          Renove Seu Olhar com a Cirurgia de Blefaroplastia! Apenas R$ 3.900,00
+          Diga Adeus às Palpebras Caídas e Rugas com a Cirurgia de
+          Blefaroplastia! Apenas R$ 3.900,00
         </h1>
 
         <div>
           <div>
-            <h2>Oferta Exclusiva até 30/06!</h2>
+            <h2>Oferta Exclusiva até 25/10!</h2>
             <p>Parcelamento em até 12x</p>
           </div>
 

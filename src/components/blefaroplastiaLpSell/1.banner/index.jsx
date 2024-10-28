@@ -15,7 +15,7 @@ export default function Banner() {
         <Modal
           display={isModalVisible}
           onClose={() => toggleModalVisibility()}
-          modalId="1" // Você pode passar o modalId se necessário
+          modalId="1"
         />
       )}
       <div className="col centerSideContent">
@@ -26,8 +26,9 @@ export default function Banner() {
 
         <div>
           <div>
-            <h2>Oferta Exclusiva até 25/10!</h2>
+            <h2>Oferta Exclusiva!</h2>
             <p>Parcelamento em até 12x</p>
+            <p>Anestesista a parte</p>
           </div>
 
           <span className="centerText">

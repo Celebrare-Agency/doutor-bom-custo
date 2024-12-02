@@ -14,15 +14,15 @@ export default function Modal(props) {
     onClose();
   };
 
-  const getObservacao = () => {
+  const getProcedimento = () => {
     if (location.pathname === "/catarata") {
-      return "Lead de catarata";
+      return "Catarata";
     } else if (location.pathname === "/blefaroplastia") {
-      return "Lead de blefaroplastia";
+      return "Blefaroplastia";
     } else if (location.pathname === "/refrativa") {
-      return "Lead de Refrativa";
+      return "Refrativa";
     } else {
-      return "Lead de origem desconhecida";
+      return "Origem desconhecida";
     }
   };
 
@@ -34,6 +34,11 @@ export default function Modal(props) {
 
     const formData = new FormData(event.target);
 
+    const diagnosticoCatarata =
+      location.pathname === "/catarata"
+        ? formData.get("Diagnostico") || "Não informado"
+        : "";
+
     // Dados do formulário
     const data = {
       nome: formData.get("Nome"),
@@ -42,8 +47,7 @@ export default function Modal(props) {
       prazoContato:
         formData.get("Prazo para entrar em contato") ||
         new Date().toISOString(), // Padrão para o prazo
-      responsavel: "Usuário Padrão", // Responsável automático
-      observacoes: formData.get("Observações") || "Sem observações adicionais",
+      observacoes: `Procedimento: ${getProcedimento()}. Diagnóstico de catarata: ${diagnosticoCatarata}.`,
     };
 
     try {
@@ -77,10 +81,6 @@ export default function Modal(props) {
               {
                 field_id: "prazo_para_entrar_em_contato",
                 field_value: data.prazoContato,
-              },
-              {
-                field_id: "respons_vel_pelo_card",
-                field_value: data.responsavel,
               },
               { field_id: "observa_es", field_value: data.observacoes },
             ],
@@ -168,6 +168,14 @@ export default function Modal(props) {
           className="Telefone"
           data-input-id={`telefone-${modalId}`}
         />
+        {location.pathname === "/catarata" && (
+          <select name="Diagnostico" required>
+            <option value="">Você já tem o diagnóstico de catarata?</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+            <option value="Não sei">Não sei</option>
+          </select>
+        )}
         {showSubmitButton && (
           <input
             className="Button"

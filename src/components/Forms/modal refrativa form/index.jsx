@@ -27,8 +27,8 @@ export default function Modal(props) {
       nome: formData.get("Nome"),
       telefone: formData.get("Telefone"),
       origem: "Google", // Fixo para este exemplo
-      observacoes: `Procedimento: Catarata. Diagnóstico: ${
-        formData.get("Diagnostico") || "Não informado"
+      observacoes: `Procedimento: Refrativa. Grau aproximado: ${
+        formData.get("Grau") || "Não informado"
       }`,
     };
 
@@ -60,7 +60,7 @@ export default function Modal(props) {
               { field_id: "origem_do_lead", field_value: data.origem },
               { field_id: "observa_es", field_value: data.observacoes },
               { field_id: "observa_es_5", field_value: data.observacoes },
-              { field_id: "procedimento_1", field_value: "Catarata" },
+              { field_id: "procedimento_1", field_value: "Refrativa" },
             ],
           },
         }),
@@ -134,7 +134,6 @@ export default function Modal(props) {
           placeholder="Nome"
           pattern="^[A-Za-zÀ-ú\s]+$"
           className="Nome"
-          data-input-id={`nome-${modalId}`}
         />
         <input
           type="text"
@@ -143,16 +142,15 @@ export default function Modal(props) {
           placeholder="Telefone"
           pattern="^\+?(\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$"
           className="Telefone"
-          data-input-id={`telefone-${modalId}`}
         />
         <div className="boxSection">
-          <p>Você já tem o diagnóstico de catarata?</p>
-          {location.pathname === "/catarata" && (
-            <select name="Diagnostico" required>
+          <p>Qual o seu grau (aproximadamente)?</p>
+          {location.pathname === "/refrativa" && (
+            <select name="Grau" required>
               <option value="">Selecione uma opção</option>
-              <option value="Sim">Sim</option>
-              <option value="Não">Não</option>
-              <option value="Não sei">Não sei</option>
+              <option value="Até 3 graus">Até 3 graus</option>
+              <option value="Até 5 graus">Até 5 graus</option>
+              <option value="Acima de 10 graus">Acima de 10 graus</option>
             </select>
           )}
         </div>

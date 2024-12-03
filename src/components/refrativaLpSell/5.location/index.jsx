@@ -3,7 +3,7 @@ import Map from "./Map/maps";
 import React, { useState } from "react";
 
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
-import Modal from "../../modalForm/index.jsx";
+import Modal from "../../Forms/modal refrativa form/index.jsx";
 export default function Location() {
   const [isModalVisible, setModalVisibility] = useState(false);
 

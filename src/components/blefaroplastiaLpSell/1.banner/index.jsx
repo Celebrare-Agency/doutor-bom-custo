@@ -1,7 +1,7 @@
 import * as Styled from "./style.js";
 import React, { useState } from "react";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
-import Modal from "../../modalForm/index.jsx";
+import Modal from "../../Forms/modal blefaroplastia form/index.jsx";
 export default function Banner() {
   const [isModalVisible, setModalVisibility] = useState(false);
 

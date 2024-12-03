@@ -2,7 +2,7 @@ import * as Styled from "./style.js";
 import photo from "../../../assets/blefaroplastiaLpSell/2.callus/photo.png";
 import { useState } from "react";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
-import Modal from "../../modalForm/index.jsx";
+import Modal from "../../Forms/modal blefaroplastia form/index.jsx";
 
 export default function Contact() {
   const [isModalVisible, setModalVisibility] = useState(false);

@@ -2,7 +2,7 @@ import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 import React, { useState } from "react";
 import * as Styled from "./style.js";
 import PrimeiroDepoimento from "./ytDepoimentsIframe/index.jsx";
-import Modal from "../../modalForm/index.jsx";
+import Modal from "../../Forms/modal catarata form/index.jsx";
 
 export default function Depoiments() {
   const [isModalVisible, setModalVisibility] = useState(false);

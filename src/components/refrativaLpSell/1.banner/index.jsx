@@ -2,7 +2,7 @@ import * as Styled from "./style.js";
 import React, { useState } from "react";
 import discountFlag from "../../../assets/catarataLpSell/1.banner/flagDisccount.png";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
-import Modal from "../../modalForm/index.jsx";
+import Modal from "../../Forms/modal refrativa form/index.jsx";
 export default function Banner() {
   const [isModalVisible, setModalVisibility] = useState(false);
 

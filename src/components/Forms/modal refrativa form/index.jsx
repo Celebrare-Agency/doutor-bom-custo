@@ -61,6 +61,7 @@ export default function Modal(props) {
               { field_id: "observa_es", field_value: data.observacoes },
               { field_id: "observa_es_5", field_value: data.observacoes },
               { field_id: "procedimento_1", field_value: "Refrativa" },
+              { field_id: "origem", field_value: "FORM" },
             ],
           },
         }),

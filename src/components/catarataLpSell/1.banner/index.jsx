@@ -6,9 +6,8 @@ import Modal from "../../Forms/modal catarata form/index.jsx";
 export default function Banner() {
   const [isModalVisible, setModalVisibility] = useState(false);
 
-  const toggleModalVisibility = (modalId) => {
+  const toggleModalVisibility = () => {
     setModalVisibility(!isModalVisible);
-    // Lógica para lidar com o ID do modal se necessário
   };
   return (
     <Styled.Container id="conversion">
@@ -19,6 +18,7 @@ export default function Banner() {
           modalId="1" // Você pode passar o modalId se necessário
         />
       )}
+
       <div className="col LeftSideContent">
         <h2>recupere a alegria de enxergar com clareza!</h2>
         <h1>
@@ -33,6 +33,7 @@ export default function Banner() {
           <span>*preço exclusivo por olho</span>
         </div>
         <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
+
         <img className="flags" src={discountFlag} alt="flag de desconto" />
       </div>
     </Styled.Container>

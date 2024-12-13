@@ -9,28 +9,21 @@ const Media = {
 
 export const Container = styled.main`
   position: fixed;
-  width: 90%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999; /* Increase to ensure it stays above the other modal */
+  z-index: 9999; /* Garante que o modal ficará acima */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1rem 0;
-  ${Media.PhoneLarge} {
-    width: 95%; /* Adjust width for smaller screens */
-  }
+  padding: 1rem;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Sombra ao redor do formulário */
+  border-radius: 10px;
 
-  ${Media.PhoneSmall} {
-    width: 100%; /* Adjust width for smallest screens */
-    top: 50%; /* Re-center */
-    left: 50%; /* Re-center */
-    transform: translate(-50%, -50%); /* Re-center */
-  }
-
+  /* Ajustes para blur do fundo */
   &::before {
     content: "";
     position: fixed;
@@ -38,104 +31,19 @@ export const Container = styled.main`
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 1rem 0;
-    background-color: rgba(1, 1, 1, 0.6); /* Dark overlay */
-    backdrop-filter: blur(8px); /* Gaussian blur */
-    z-index: -1; /* Place it below the content */
-    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Aplica o desfoque no fundo */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    z-index: -1; /* Garante que o blur fique atrás do modal */
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    margin: auto;
-    .Button {
-      border: none;
-      background-color: #38af7e;
-      cursor: pointer;
-      padding: 1rem !important;
-      font-size: 1rem !important;
-      color: var(--light);
-      text-align: center;
-      font-family: Inter;
-      font-weight: 800;
-      text-transform: uppercase;
-      border-radius: 10.94px !important;
-    }
-    .boxSection {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
-      p {
-        color: white;
-      }
-
-      select {
-        text-align: center;
-      }
-    }
-    input,
-    select {
-      padding: 0.5rem 1rem;
-      border: 1px solid #ccc;
-      border-radius: 15px;
-      width: 50%;
-      font-size: 1.5rem;
-
-      ${Media.PhoneLarge} {
-        font-size: 1rem;
-        width: 90%;
-      }
-    }
-
-    input::placeholder {
-      font-size: 1.3rem;
-      text-align: left;
-      color: var(--black);
-      font-family: lato;
-      font-weight: bold;
-
-      ${Media.PhoneLarge} {
-        font-size: 1rem;
-        width: 90%;
-      }
-    }
-
-    input:focus {
-      outline: none;
-      box-shadow: 0 0 2px 1px var(--blue);
-    }
+  ${Media.PhoneLarge} {
+    width: 95%; /* Ajusta a largura para telas menores */
   }
 
-  h3 {
-    color: var(--light) !important;
-    text-align: center;
-    font-family: Inter;
-    font-weight: Bold;
-    text-transform: uppercase;
-    white-space: pre;
-    ${Media.Laptop} {
-      white-space: normal;
-    }
-  }
-  button {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-
-    ${Media.PhoneLarge} {
-      font-size: 1.5rem;
-    }
+  ${Media.PhoneSmall} {
+    width: 100%; /* Ajusta para telas pequenas */
+    top: 50%; /* Recentraliza */
+    left: 50%; /* Recentraliza */
+    transform: translate(-50%, -50%);
   }
 `;

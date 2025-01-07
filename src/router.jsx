@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./components/GLOBAL/loading/index";
 
+const Linktree = lazy(() => import("./pages/link/index"));
 const Home = lazy(() => import("./pages/1.home/index"));
 const Autoteste = lazy(() => import("./pages/autoteste/index"));
 const RefrativaLpSell = lazy(() => import("./pages/refrativaLpSell/index"));
@@ -26,6 +27,7 @@ export function Router() {
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/development" element={<Home />} />
+        <Route path="/links" element={<Linktree />} />
         <Route path="/blefaroplastia" element={<BlefaroplastiaLpSell />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/refrativa" element={<RefrativaLpSell />} />

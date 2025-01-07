@@ -55,7 +55,20 @@ export const Container = styled.main`
     min-height: 90vh;
     gap: 1rem;
   }
-
+  .iconRedes {
+    gap: 1rem;
+    .icon {
+      width: 3rem;
+      height: 3rem;
+      background-color: var(--blue);
+      border-radius: 50%;
+      padding: 0.5rem;
+      ${Media.PhoneLarge} {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
   .introductionContainer {
     text-align: center;
     gap: 1rem;

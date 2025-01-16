@@ -6,6 +6,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineFacebook,
 } from "react-icons/ai";
+import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -47,6 +48,13 @@ export default function Footer() {
             <div className="socialContainer row">
               <AiOutlineFacebook className="icon" />
               <p>Dr Bom Custo</p>
+            </div>
+          </a>
+
+          <a href="tel:1140400219">
+            <div className="socialContainer row">
+              <FaPhoneAlt className="icon" />
+              <p>(11) 4040-0219</p>
             </div>
           </a>
         </div>

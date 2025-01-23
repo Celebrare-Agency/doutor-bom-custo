@@ -22,11 +22,10 @@ export default function Modal(props) {
 
     const formData = new FormData(event.target);
 
-    // Dados do formulário
     const data = {
       nome: formData.get("Nome"),
       telefone: formData.get("Telefone"),
-      origem: "Google", // Fixo para este exemplo
+      origem: "Google",
       observacoes: `Procedimento: Blefaroplastia. Região de interesse: ${
         formData.get("Regiao") || "Não informado"
       }`,
@@ -41,9 +40,10 @@ export default function Modal(props) {
         },
         body: JSON.stringify({
           query: `
-          mutation CreateCard($pipe_id: ID!, $fields: [FieldValueInput!]!) {
+          mutation CreateCard($pipe_id: ID!, $phase_id: ID!, $fields: [FieldValueInput!]!) {
             createCard(input: {
               pipe_id: $pipe_id,
+              phase_id: $phase_id,
               fields_attributes: $fields
             }) {
               card {
@@ -53,15 +53,16 @@ export default function Modal(props) {
           }
         `,
           variables: {
-            pipe_id: 304871975, // ID do Pipe
+            pipe_id: 305658430, // ID do Pipe
+            phase_id: 333778386, // ID da Primeira Coluna
             fields: [
               { field_id: "nome", field_value: data.nome },
-              { field_id: "copy_of_nome", field_value: data.telefone },
-              { field_id: "origem_do_lead", field_value: data.origem },
-              { field_id: "observa_es", field_value: data.observacoes },
-              { field_id: "observa_es_5", field_value: data.observacoes },
-              { field_id: "procedimento_1", field_value: "Blefaroplastia" },
-              { field_id: "origem", field_value: "FORM" },
+              { field_id: "telefone", field_value: data.telefone },
+              { field_id: "origem", field_value: data.origem },
+              {
+                field_id: "regi_o_de_interesse_em_realizar_o_procedimento",
+                field_value: data.observacoes,
+              },
             ],
           },
         }),
@@ -80,12 +81,10 @@ export default function Modal(props) {
 
       console.log("Card criado com sucesso:", result.data.createCard.card.id);
 
-      // Redirecionar para o WhatsApp após sucesso
       let whatsappLink =
         "https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia!";
       window.location.href = whatsappLink;
 
-      // Fecha o modal após o envio bem-sucedido
       handleCloseModal();
     } catch (error) {
       console.error("Erro ao conectar com a API do Pipefy:", error);

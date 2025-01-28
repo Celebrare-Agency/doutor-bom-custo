@@ -26,11 +26,10 @@ export default function Modal(props) {
     const data = {
       nome: formData.get("Nome"),
       telefone: formData.get("Telefone"),
-      origem: "Google", // Fixo para este exemplo
-      observacoes: `Procedimento: Refrativa. Grau aproximado: ${
-        formData.get("Grau") || "Não informado"
-      }`,
+      grau_aproximado: formData.get("Grau") || "Não informado",
     };
+
+    console.log("📤 Dados enviados para Pipefy:", data); // LOG para verificar os dados antes do envio
 
     try {
       const response = await fetch("https://api.pipefy.com/graphql", {
@@ -53,32 +52,38 @@ export default function Modal(props) {
           }
         `,
           variables: {
-            pipe_id: 304871975, // ID do Pipe
+            pipe_id: 305678356, // ID do Pipe
             fields: [
               { field_id: "nome", field_value: data.nome },
-              { field_id: "copy_of_nome", field_value: data.telefone },
-              { field_id: "origem_do_lead", field_value: data.origem },
-              { field_id: "observa_es", field_value: data.observacoes },
-              { field_id: "observa_es_5", field_value: data.observacoes },
-              { field_id: "procedimento_1", field_value: "Refrativa" },
-              { field_id: "origem", field_value: "FORM" },
+              { field_id: "telefone", field_value: data.telefone },
+              {
+                field_id: "qual_o_grau_aproximado",
+                field_value: data.grau_aproximado,
+              },
+              { field_id: "origem", field_value: data.origem },
             ],
           },
         }),
       });
 
       const result = await response.json();
-      console.log("Resposta da API Pipefy:", result);
+      console.log(
+        "✅ Resposta completa da API Pipefy:",
+        JSON.stringify(result, null, 2)
+      );
 
       if (result.errors) {
-        console.error("Erro na API Pipefy:", result.errors);
+        console.error("❌ Erro na API Pipefy:", result.errors);
         alert(
           "Erro ao enviar os dados para o Pipefy. Verifique os campos e tente novamente."
         );
         return;
       }
 
-      console.log("Card criado com sucesso:", result.data.createCard.card.id);
+      console.log(
+        "🎉 Card criado com sucesso! ID:",
+        result.data.createCard.card.id
+      );
 
       // Redirecionar para o WhatsApp após sucesso
       let whatsappLink =
@@ -88,7 +93,7 @@ export default function Modal(props) {
       // Fecha o modal após o envio bem-sucedido
       handleCloseModal();
     } catch (error) {
-      console.error("Erro ao conectar com a API do Pipefy:", error);
+      console.error("⚠️ Erro ao conectar com a API do Pipefy:", error);
     } finally {
       setIsSubmitting(false);
     }

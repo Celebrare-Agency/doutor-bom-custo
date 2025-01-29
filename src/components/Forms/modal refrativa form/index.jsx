@@ -27,6 +27,7 @@ export default function Modal(props) {
       nome: formData.get("Nome"),
       telefone: formData.get("Telefone"),
       grau_aproximado: formData.get("Grau") || "Não informado",
+      origem: "Google", // Campo fixo para este exemplo
     };
 
     console.log("📤 Dados enviados para Pipefy:", data); // LOG para verificar os dados antes do envio

@@ -21,7 +21,7 @@ export default function Banner() {
       <div className="col centerSideContent">
         <h1>
           Diga Adeus às Palpebras Caídas e Rugas com a Cirurgia de
-          Blefaroplastia! Apenas R$ 3.900,00
+          Blefaroplastia!
         </h1>
 
         <div>

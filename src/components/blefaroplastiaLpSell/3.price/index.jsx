@@ -18,11 +18,11 @@ export default function Price() {
           <li>Consulta pré-operatória </li>
           <li>Consulta de pós operatório</li>
         </ol>
-        <div className="pricePart col">
+        {/* <div className="pricePart col">
           <h2>TUDO ISSO POR:</h2>
           <p className="nonPrice">R$ 6.997,00</p>
           <p className="realPrice">R$ 3.900,00!!!</p>
-        </div>
+        </div> */}
       </div>
     </Styled.Container>
   );

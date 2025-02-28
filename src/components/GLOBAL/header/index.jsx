@@ -4,8 +4,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { useEffect, useState } from "react";
-const wppLink =
-  "https://api.whatsapp.com/send?phone=5511950212678text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20com%20Oftalmologista.%20";
+const wppLink = "https://wa.me/551196277567";
 const menuItems = [
   { path: "sobre", label: "Sobre nós" },
   { path: "/catarata", label: "Catarata" },

@@ -4,7 +4,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { useEffect, useState } from "react";
-const wppLink = "https://wa.me/551196277567";
+const wppLink = "https://wa.me/5511962775667";
 const menuItems = [
   { path: "sobre", label: "Sobre nós" },
   { path: "/catarata", label: "Catarata" },

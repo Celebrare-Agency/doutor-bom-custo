@@ -82,7 +82,7 @@ export default function Modal(props) {
       console.log("Card criado com sucesso:", result.data.createCard.card.id);
 
       let whatsappLink =
-        "https://api.whatsapp.com/send?phone=5511962775667&text=Ol%C3%A1!%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20blefaroplastia!";
+        "https://api.whatsapp.com/send?phone=5511967681768&text=Ol%C3%A1!%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20blefaroplastia!";
       window.location.href = whatsappLink;
 
       handleCloseModal();

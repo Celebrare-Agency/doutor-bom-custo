@@ -20,38 +20,64 @@ export const Container = styled.section`
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    p {
+      font-size: 1rem;
+    }
 
+    justify-content: space-between;
     .sociais a {
       margin-left: 10px;
 
       svg {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
       }
     }
   }
 
   .banner {
     width: 95%;
-    min-height: 600px;
+    min-height: 30rem;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
+    gap: 1rem;
 
+    ${breakpoints.tablet} {
+      align-items: flex-start;
+      justify-content: center;
+    }
     img {
       width: 150px;
       height: 150px;
+
+      ${breakpoints.tablet} {
+        width: 100px;
+        height: 100px;
+      }
+      ${breakpoints.phoneLarge} {
+        width: 75px;
+        height: 75px;
+      }
     }
 
     h1 {
       width: 90%;
-      max-width: 900px;
       color: #fff;
       text-align: center;
+      font-weight: 500;
+      b {
+        color: var(--blue);
+        text-transform: uppercase;
+      }
+
+      ${breakpoints.tablet} {
+        width: 100%;
+        text-align: left;
+      }
     }
 
     button {
@@ -67,7 +93,7 @@ export const Container = styled.section`
       justify-content: center;
       margin-top: 20px;
       transition: background 0.3s;
-      
+
       ${breakpoints.phoneLarge} {
         line-height: 20px;
       }

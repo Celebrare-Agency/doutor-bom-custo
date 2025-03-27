@@ -13,6 +13,9 @@ const Ortoceratologia = lazy(() =>
 const BlefaroplastiaLpSell = lazy(() =>
   import("./pages/blefaroplastiaLpSell/index")
 );
+const BlefaroplastiaLpSell2 = lazy(() =>
+  import("./pages/blefaroplastiaLpSell2/index")
+);
 const Ophthalmologist = lazy(() => import("./pages/consultaLpSellV1/index"));
 const Politica = lazy(() => import("./pages/politica/index"));
 
@@ -29,6 +32,7 @@ export function Router() {
         <Route path="/development" element={<Home />} />
         <Route path="/links" element={<Linktree />} />
         <Route path="/blefaroplastia" element={<BlefaroplastiaLpSell />} />
+        <Route path="/blefaroplastia2" element={<BlefaroplastiaLpSell2 />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/refrativa" element={<RefrativaLpSell />} />
         <Route path="/autoteste" element={<Autoteste />} />

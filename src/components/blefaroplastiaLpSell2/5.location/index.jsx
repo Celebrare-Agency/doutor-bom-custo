@@ -7,32 +7,36 @@ import { FaWhatsapp, FaSubway, FaWaze } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { SiGooglemaps } from "react-icons/si";
 
-
 import StreetViewMap from "./maps/StreetView.jsx";
 import StreetViewMap2 from "./maps/StreetView2.jsx";
 import Map from "./maps/maps.jsx";
 
 export default function Location() {
-
   return (
     <Styled.Container>
       <div className="container-title">
         <img src={logo} />
-        <h3>Acompanhe quantos sonhos foram realizados através da blefaroplastia</h3>
+        <h3>
+          Acompanhe quantos sonhos foram realizados através da blefaroplastia
+        </h3>
       </div>
 
-      <div className="container-video">        
-        <YoutubeEmbed embedId="R6SCGmtHg2w" />  
+      <div className="container-video">
+        <YoutubeEmbed embedId="R6SCGmtHg2w" />
         <div>
           <h1>Luciane</h1>
           <p>"Com o Dr. eu me senti mais tranquila e confortável"</p>
-          <button><FaWhatsapp /> WhatsApp</button>
+          <button>
+            <FaWhatsapp /> WhatsApp
+          </button>
         </div>
       </div>
 
       <div className="container-maps">
-        <h1>Uma clínica de sonhos e novos olhares. Doutor bom custo é o
-        lugar da sua transformação.</h1>
+        <h1>
+          Uma clínica de sonhos e novos olhares. Doutor bom custo é o lugar da
+          sua transformação.
+        </h1>
 
         <div className="maps-street">
           <StreetViewMap />
@@ -46,28 +50,44 @@ export default function Location() {
           </div>
 
           <div className="location-icons">
-            <div className="icons"><FaLocationDot /> <p>Av. Nova Independência, 1087 - Brooklin - São Paulo</p></div>
-            <div className="icons"><FaSubway /> <p>Estação de metrô CPTM mais próxima: Vila Olímpia - Linha CPTM</p></div>
+            <div className="icons">
+              <FaLocationDot />{" "}
+              <p>Av. Ipiranga, 344 - São Paulo - SP, 01046-010</p>
+            </div>
+            <div className="icons">
+              <FaSubway />{" "}
+              <p>
+                Estação de metrô CPTM mais próxima: República - Linha Amarela
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="maps">
           <Map />
           <div className="information-maps">
-            <div className="container-information">
-                <p>Não conhece muito bem a cidade? Clique e
-                vamos te ajudar!</p>
+            {/* <div className="container-information">
+              <p>Não conhece muito bem a cidade? Clique e vamos te ajudar!</p>
+              <a href="http://">
                 <button>Dicas para te ajudar</button>
-              </div>
+              </a>
+            </div> */}
 
-              <div className="container-information">
-                <button><SiGooglemaps /> Rotas com Google Maps</button>                
-                <button><FaWaze /> Rotas com Waze</button>
-              </div>
+            <div className="container-information">
+              <a href="https://www.google.com/maps/dir//Av.+Ipiranga,+344+-+Centro+Hist%C3%B3rico+de+S%C3%A3o+Paulo,+S%C3%A3o+Paulo+-+SP,+01046-010/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x94ce584e671fdf25:0x104f0990b9956a4c?sa=X&ved=1t:707&ictx=111">
+                <button>
+                  <SiGooglemaps /> Rotas com Google Maps
+                </button>
+              </a>
+              <a href="https://ul.waze.com/ul?venue_id=205325852.2053258523.901418&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
+                <button>
+                  <FaWaze /> Rotas com Waze
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
     </Styled.Container>
   );
 }

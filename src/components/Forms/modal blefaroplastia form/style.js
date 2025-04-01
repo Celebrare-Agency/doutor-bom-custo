@@ -124,7 +124,7 @@ export const Container = styled.main`
       white-space: normal;
     }
   }
-  button {
+  a {
     position: absolute;
     top: 10px;
     right: 20px;

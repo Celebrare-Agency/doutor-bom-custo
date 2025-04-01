@@ -55,7 +55,6 @@ export const Section = styled.section`
     }
   }
   .faqContainer {
-    background: var(--blue);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     width: 100%;
@@ -76,6 +75,7 @@ export const Section = styled.section`
       position: relative;
       background: var(--light);
       padding: 1.4rem 2em;
+      width: 50%;
       font-family: "lato";
       transition: 0.3s all;
       font-style: normal;
@@ -88,7 +88,7 @@ export const Section = styled.section`
 
     p {
       transition: 0.3s all;
-
+      width: 50%;
       line-break: loose;
       padding: 0.8rem;
       max-width: 93%;

@@ -164,7 +164,7 @@ export default function Modal(props) {
         )}
       </form>
 
-      <button onClick={handleCloseModal}>X</button>
+      <a onClick={handleCloseModal}>X</a>
     </Styled.Container>
   );
 }

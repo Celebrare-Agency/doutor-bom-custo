@@ -32,16 +32,22 @@ export const Container = styled.section`
     border-radius: 50px;
     margin: 40px 0;
 
-    ${breakpoints.tablet} { margin: 40px auto 0 auto; }
+    ${breakpoints.tablet} {
+      margin: 40px auto 0 auto;
+    }
 
-    img { width: 40px; }
+    img {
+      width: 40px;
+    }
 
     h3 {
       font-size: 20px;
       margin-left: 10px;
       color: #fff;
       word-wrap: break-word;
-      ${breakpoints.tablet} { margin-left: 5px; }
+      ${breakpoints.tablet} {
+        margin-left: 5px;
+      }
     }
   }
 
@@ -53,7 +59,9 @@ export const Container = styled.section`
       font-size: 28px;
     }
 
-    p { margin: 20px auto; }
+    p {
+      margin: 20px auto;
+    }
 
     .imagens {
       margin: 50px auto;
@@ -85,7 +93,9 @@ export const Container = styled.section`
     justify-content: space-around;
     width: 100%;
 
-    ${breakpoints.tablet} { flex-direction: column; }
+    ${breakpoints.tablet} {
+      flex-direction: column;
+    }
 
     .information {
       width: 95%;
@@ -99,7 +109,7 @@ export const Container = styled.section`
     }
   }
 
-  .schedule {
+  button {
     width: 100%;
     max-width: 550px;
     background: #29ac06;
@@ -115,8 +125,12 @@ export const Container = styled.section`
     text-align: center;
     line-height: 31px;
 
-    ${breakpoints.phoneLarge} { line-height: 23px; }
+    ${breakpoints.phoneLarge} {
+      line-height: 23px;
+    }
   }
 
-  .schedule:hover { background: #208305; }
+  .schedule:hover {
+    background: #208305;
+  }
 `;

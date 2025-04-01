@@ -23,34 +23,34 @@ export const Container = styled.section`
     justify-content: center;
     text-align: center;
     margin: 40px auto auto 0;
-    background-color: #3B4AE2;
+    background-color: #3b4ae2;
     padding: 10px 10px;
     max-width: 400px;
     width: 90%;
     line-height: 35px;
-    border-radius: 50px;    
-    
+    border-radius: 50px;
+
     ${breakpoints.phoneLarge} {
       line-height: 23px;
       text-align: left;
     }
 
     ${breakpoints.tablet} {
-      margin: 40px auto auto auto;      
+      margin: 40px auto auto auto;
     }
 
-    img{
+    img {
       width: 40px;
     }
 
-    h3{
+    h3 {
       font-size: 20px;
       margin-left: 10px;
       color: #ffffff;
       word-wrap: break-word;
 
       ${breakpoints.tablet} {
-        margin-left: 5px;   
+        margin-left: 5px;
       }
     }
   }
@@ -118,33 +118,37 @@ export const Container = styled.section`
   }
 
   .slick-dots li button:before {
-    font-size: 12px; 
-    color: #FFF;
+    font-size: 12px;
+    color: #fff;
   }
 
   .slick-dots li.slick-active button:before {
-    color: #3B4AE2;
+    color: #3b4ae2;
   }
 
-  .schedule{
-    background: #29AC06;
-    border-radius: 50px;
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-    font-size: 18px;
-    line-height: 31px;
-    font-weight: 400;
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto auto auto;
+  .wrapper {
+    button {
+      background: #29ac06;
+      border-radius: 50px;
+      position: relative;
+      color: #ffffff;
+      text-align: center;
+      font-size: 18px;
+      line-height: 31px;
+      font-weight: 400;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto auto auto;
 
-    ${breakpoints.phoneLarge} {
-      line-height: 20px;
+      ${breakpoints.phoneLarge} {
+        line-height: 20px;
+      }
+    }
+
+    .schedule:hover {
+      background: #208305;
     }
   }
-    
-  .schedule:hover{ background: #208305; }
 `;

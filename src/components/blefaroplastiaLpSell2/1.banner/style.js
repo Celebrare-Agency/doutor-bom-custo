@@ -79,24 +79,24 @@ export const Container = styled.section`
         text-align: left;
       }
     }
+  }
 
-    button {
-      background: #29ac06;
-      border-radius: 50px;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 31px;
-      padding: 10px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-      transition: background 0.3s;
+  button {
+    background: #29ac06;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 18px !important;
+    font-weight: 400;
+    line-height: 31px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    transition: background 0.3s;
 
-      ${breakpoints.phoneLarge} {
-        line-height: 20px;
-      }
+    ${breakpoints.phoneLarge} {
+      line-height: 20px;
     }
 
     button:hover {

@@ -6,6 +6,7 @@ const Linktree = lazy(() => import("./pages/link/index"));
 const Home = lazy(() => import("./pages/1.home/index"));
 const Autoteste = lazy(() => import("./pages/autoteste/index"));
 const RefrativaLpSell = lazy(() => import("./pages/refrativaLpSell/index"));
+const RefrativaLpSell2 = lazy(() => import("./pages/refrativaLpSell2/index"));
 const Ortoceratologia = lazy(() =>
   import("./pages/ortoceratologiaLpSell/index")
 );
@@ -35,6 +36,7 @@ export function Router() {
         <Route path="/blefaroplastia2" element={<BlefaroplastiaLpSell2 />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/refrativa" element={<RefrativaLpSell />} />
+        <Route path="/refrativa2" element={<RefrativaLpSell2 />} />
         <Route path="/autoteste" element={<Autoteste />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
         <Route path="/politica" element={<Politica />} />

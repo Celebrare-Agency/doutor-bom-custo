@@ -7,7 +7,7 @@ const Media = {
 };
 
 export const Footer = styled.footer`
-  margin-top: 5rem;
+  padding-top: 3rem;
   background-color: var(--blue);
   .col {
     display: flex;

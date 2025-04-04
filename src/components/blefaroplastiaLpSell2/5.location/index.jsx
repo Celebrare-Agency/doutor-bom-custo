@@ -10,10 +10,38 @@ import { SiGooglemaps } from "react-icons/si";
 import StreetViewMap from "./maps/StreetView.jsx";
 import StreetViewMap2 from "./maps/StreetView2.jsx";
 import Map from "./maps/maps.jsx";
+import Modal from "../../Forms/modal blefaroplastia form/index.jsx";
+import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 
 export default function Location() {
+  const [isModalVisible, setModalVisibility] = useState(false);
+  const depoimentos = [
+    {
+      embedId: "UmyU1YRVSDo",
+      titulo: "Marcos Benador",
+      texto: `Um hospital de ponta, com uma equipe maravilhosa. 
+            Tudo com um preço de custo!`,
+    },
+
+    {
+      embedId: "6mIkFEvnEz4",
+      titulo: "Irani das Graças",
+      texto: `Me senti acolhida e eu adorei,amei demais o resultad!`,
+    },
+  ];
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+    // Lógica para lidar com o ID do modal se necessário
+  };
   return (
-    <Styled.Container>
+    <Styled.Container id="conversion">
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1"
+        />
+      )}
       <div className="container-title">
         <img src={logo} />
         <h3>
@@ -21,15 +49,22 @@ export default function Location() {
         </h3>
       </div>
 
-      <div className="container-video">
-        <YoutubeEmbed embedId="R6SCGmtHg2w" />
-        <div>
-          <h1>Luciane</h1>
-          <p>"Com o Dr. eu me senti mais tranquila e confortável"</p>
-          <button>
-            <FaWhatsapp /> WhatsApp
-          </button>
-        </div>
+      <div className="container-videos">
+        {depoimentos.map((dep, index) => (
+          <div className="container-video" key={index}>
+            <YoutubeEmbed embedId={dep.embedId} />
+            <div className="container-Text">
+              <h1>{dep.titulo}</h1>
+              <p>{dep.texto}</p>
+
+              <BtnAds
+                text="Clique aqui"
+                modalId="1"
+                toggleModalVisibility={toggleModalVisibility}
+              />
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="container-maps">

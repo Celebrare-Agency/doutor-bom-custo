@@ -33,14 +33,18 @@ export const Container = styled.section`
       text-align: left;
     }
 
-    img { width: 40px; }
+    img {
+      width: 40px;
+    }
 
     h3 {
       font-size: 20px;
       margin-left: 10px;
       color: #fff;
       word-wrap: break-word;
-      ${breakpoints.tablet} { margin-left: 5px; }
+      ${breakpoints.tablet} {
+        margin-left: 5px;
+      }
     }
   }
 
@@ -50,25 +54,45 @@ export const Container = styled.section`
     align-items: center;
     gap: 50px;
     width: 100%;
-
-    ${breakpoints.tablet} { flex-direction: column; }
-
+    ${breakpoints.tablet} {
+      flex-direction: column;
+    }
+    .container-Text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 50%;
+      margin: auto;
+      ${breakpoints.tablet} {
+        margin: 0;
+        width: 100%;
+      }
+    }
     .video-container {
       width: 100%;
       height: 400px;
-      ${breakpoints.phoneLarge} { height: auto !important; }
+      ${breakpoints.phoneLarge} {
+        height: auto !important;
+      }
     }
 
-    h1, p {
+    h1,
+    p {
       color: #fff;
     }
 
-    h1 { font-size: 28px; }
-    p { font-size: 20px; margin: 20px auto; }
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 20px;
+    }
 
     button {
       width: 100%;
-      max-width: 200px;
+      max-width: 50%;
       background: #29ac06;
       border-radius: 50px;
       color: #fff;
@@ -80,10 +104,17 @@ export const Container = styled.section`
       justify-content: center;
       margin: 20px 0;
 
-      svg { margin: auto 5px; }
+      svg {
+        margin: auto 5px;
+      }
     }
 
-    button:hover{ background: #208305; }
+    button:hover {
+      background: #208305;
+    }
+    ${breakpoints.tablet} {
+      width: 100%;
+    }
   }
 
   .container-maps {
@@ -93,7 +124,7 @@ export const Container = styled.section`
       font-size: 28px;
     }
 
-    .maps-street{
+    .maps-street {
       width: 100%;
       margin: 20px auto;
       display: flex;
@@ -101,19 +132,19 @@ export const Container = styled.section`
       justify-content: center;
       align-items: center;
 
-      .container-iframe-maps-streetview{
+      .container-iframe-maps-streetview {
         width: 100%;
         height: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      
+
       ${breakpoints.tablet} {
         flex-direction: column;
         gap: 20px;
-        
-        iframe{
+
+        iframe {
           width: 100%;
           border-radius: 20px;
         }
@@ -125,7 +156,9 @@ export const Container = styled.section`
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      ${breakpoints.tablet} { flex-direction: column; }
+      ${breakpoints.tablet} {
+        flex-direction: column;
+      }
     }
 
     .how-to-get-there {
@@ -142,12 +175,16 @@ export const Container = styled.section`
         font-weight: 700;
         padding: 10px 0;
         max-width: 150px;
-        ${breakpoints.tablet} { margin: auto; }
+        ${breakpoints.tablet} {
+          margin: auto;
+        }
       }
 
       h1 {
         margin: 30px 0;
-        ${breakpoints.tablet} { text-align: center; }
+        ${breakpoints.tablet} {
+          text-align: center;
+        }
       }
     }
 
@@ -159,44 +196,53 @@ export const Container = styled.section`
         display: flex;
         align-items: center;
 
-        ${breakpoints.phoneSmall} { 
-          flex-direction: column; 
+        ${breakpoints.phoneSmall} {
+          flex-direction: column;
           text-align: center;
         }
-        p { width: 90%; color: #fff; font-size: 18px; margin: 20px 0; }
-        svg { color: #3b4ae2; width: 40px; height: 30px; }
+        p {
+          width: 90%;
+          color: #fff;
+          font-size: 18px;
+          margin: 20px 0;
+        }
+        svg {
+          color: #3b4ae2;
+          width: 40px;
+          height: 30px;
+        }
       }
     }
   }
 
-  .maps{
+  .maps {
     position: relative;
-    width: 100%;  
-    padding-bottom: 150px;        
-    
-    ${breakpoints.laptop} {          
-      padding-bottom: 10px;   
+    width: 100%;
+    padding-bottom: 150px;
+
+    ${breakpoints.laptop} {
+      padding-bottom: 10px;
     }
-    
-    .information-maps{
+
+    .information-maps {
       width: 100%;
       position: absolute;
       bottom: 0;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;     
-      
+      justify-content: space-between;
+
       ${breakpoints.laptop} {
         flex-direction: column;
         gap: 20px;
         position: relative;
       }
 
-      .container-infoMaps{
+      .container-infoMaps {
         width: 100%;
       }
 
-      .container-information{
+      .container-information {
         padding: 50px;
         width: 90%;
         max-width: 400px;
@@ -213,9 +259,11 @@ export const Container = styled.section`
         }
       }
 
-      p{  color: #ffffff; }
-      button{      
-        background: #3B4AE2;
+      p {
+        color: #ffffff;
+      }
+      button {
+        background: #3b4ae2;
         border-radius: 50px;
         position: relative;
         color: #ffffff;
@@ -234,8 +282,10 @@ export const Container = styled.section`
           line-height: 25px;
         }
       }
-      
-      button:hover { background:rgb(39, 50, 179); }          
-    }     
+
+      button:hover {
+        background: rgb(39, 50, 179);
+      }
+    }
   }
 `;

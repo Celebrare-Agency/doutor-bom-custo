@@ -20,7 +20,6 @@ export default function BlefaroLpSell2() {
       <Location />
       <WhatsApp />
       <Faq />
-      <Footer />
     </Styled.Container>
   );
 }

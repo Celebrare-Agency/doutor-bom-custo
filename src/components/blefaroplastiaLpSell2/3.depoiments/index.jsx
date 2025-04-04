@@ -6,6 +6,19 @@ import "slick-carousel/slick/slick-theme.css";
 import logo from "../../../assets/logoWhite.svg";
 import Modal from "../../Forms/modal blefaroplastia form/index.jsx";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
+import img1 from "./images/blefaropalstia-inferior.webp";
+import img2 from "./images/blefaroplastia-superior-e-inferior.webp";
+import img3 from "./images/blefaroplastia-superior-e-inferior-5-olhos-fechados.jpg";
+import img4 from "./images/blefaroplastia-inferior-3.webp";
+import img5 from "./images/blefaroplastia-inferior-4.png";
+import img6 from "./images/blefaroplastia-inferior-5.png";
+import img7 from "./images/blefaroplastia-superior.png";
+import img8 from "./images/blefaroplastia-superior2.png";
+import img9 from "./images/blefaroplastia-superior-e inferior-2.webp";
+import img10 from "./images/blefaroplastia-superior-e inferior-3.webp";
+import img11 from "./images/blefaroplastia-superior-e inferior-4.jpg";
+import img12 from "./images/blefaroplastia-superior-e inferior-6.jpg";
+import img13 from "./images/blefaroplastia-superior-e-inferior-7.png";
 
 export default function Depoiments() {
   const [isModalVisible, setModalVisibility] = useState(false);
@@ -15,31 +28,23 @@ export default function Depoiments() {
     // Lógica para lidar com o ID do modal se necessário
   };
   const testimonials = [
-    {
-      id: 1,
-      img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      testimonial: "Blefaroplastia superior, inferior com cantopexia.",
-    },
-    {
-      id: 2,
-      img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      testimonial: "Blefaroplastia superior, inferior com cantopexia.",
-    },
+    { id: 1, img: img1, testimonial: "Blefaroplastia inferior" },
+    { id: 2, img: img2, testimonial: "Blefaroplastia superior e inferior" },
     {
       id: 3,
-      img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      testimonial: "Blefaroplastia superior, inferior com cantopexia.",
+      img: img3,
+      testimonial: "Blefaroplastia superior e inferior",
     },
-    {
-      id: 4,
-      img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      testimonial: "Blefaroplastia superior, inferior com cantopexia.",
-    },
-    {
-      id: 5,
-      img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      testimonial: "Blefaroplastia superior, inferior com cantopexia.",
-    },
+    { id: 4, img: img4, testimonial: "Blefaroplastia inferior" },
+    { id: 5, img: img5, testimonial: "Blefaroplastia inferior" },
+    { id: 6, img: img6, testimonial: "Blefaroplastia inferior" },
+    { id: 7, img: img7, testimonial: "Blefaroplastia superior" },
+    { id: 8, img: img8, testimonial: "Blefaroplastia superior" },
+    { id: 9, img: img9, testimonial: "Blefaroplastia superior e inferior" },
+    { id: 10, img: img10, testimonial: "Blefaroplastia superior e inferior " },
+    { id: 11, img: img11, testimonial: "Blefaroplastia superior e inferior " },
+    { id: 12, img: img12, testimonial: "Blefaroplastia superior e inferior " },
+    { id: 13, img: img13, testimonial: "Blefaroplastia superior e inferior" },
   ];
 
   const settings = {

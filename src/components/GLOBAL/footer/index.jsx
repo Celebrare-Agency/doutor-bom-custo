@@ -63,7 +63,7 @@ export default function Footer() {
         <Link to="/politica" target="_blank">
           <p>Política de privacidade</p>
         </Link>
-        <p>Copyright © 2023 Doutor BomCusto </p>
+        <p>Copyright © 2025 Doutor BomCusto </p>
         {/* <p>Termos de serviço</p> */}
       </div>
     </Styled.Footer>

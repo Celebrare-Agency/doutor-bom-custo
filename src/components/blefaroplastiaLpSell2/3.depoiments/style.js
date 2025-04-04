@@ -94,9 +94,6 @@ export const Container = styled.section`
       margin: 0 auto;
 
       img {
-        width: 70px;
-        height: 70px;
-        border-radius: 70px;
         object-fit: contain;
       }
 

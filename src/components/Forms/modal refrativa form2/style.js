@@ -9,8 +9,8 @@ const Media = {
 
 export const Container = styled.main`
   position: fixed;
-  width: 90%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -126,8 +126,8 @@ export const Container = styled.main`
   }
   button {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     background-color: transparent;
     border: none;
     color: white;

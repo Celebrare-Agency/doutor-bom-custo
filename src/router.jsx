@@ -32,8 +32,8 @@ export function Router() {
       <Routes>
         <Route path="/development" element={<Home />} />
         <Route path="/links" element={<Linktree />} />
-        <Route path="/blefaroplastia" element={<BlefaroplastiaLpSell />} />
-        <Route path="/blefaroplastia2" element={<BlefaroplastiaLpSell2 />} />
+        <Route path="/blefaroplastia2" element={<BlefaroplastiaLpSell />} />
+        <Route path="/blefaroplastia" element={<BlefaroplastiaLpSell2 />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/refrativa" element={<RefrativaLpSell />} />
         <Route path="/refrativa2" element={<RefrativaLpSell2 />} />

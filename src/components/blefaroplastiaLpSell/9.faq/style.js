@@ -81,7 +81,8 @@ export const Section = styled.section`
       font-style: normal;
       color: var(--black);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      ${Media.PhoneLarge} {
+      ${Media.Tablet} {
+        width: 100%;
         padding: 1rem 0.5em;
       }
     }

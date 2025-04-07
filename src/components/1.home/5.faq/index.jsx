@@ -3,56 +3,55 @@ import * as Styled from "./style.js";
 export default function Faq() {
   const questionsAnswer = [
     {
-      question: "Como agendar uma consulta?",
+      question: "Como agendar minha cirurgia?",
       answer:
-        "Para agendar uma consulta, você pode entrar em contato com a nossa equipe de atendimento via whatsapp, agendamento online. Nossa equipe de atendimento irá instruí-lo(a) em relação às nossas especialidades, médicos, datas e horários conforme às suas necessidades.",
+        "Você pode iniciar seu agendamento pelo WhatsApp. Nossa equipe vai conversar com você, entender seu caso e te orientar sobre as etapas até o dia da cirurgia.",
       id: 1,
     },
     {
-      question:
-        "Qual é a localização das clínicas parceiras e como chegar até elas?",
+      question: "Onde acontecem as cirurgias?",
       answer:
-        "Nossa equipe de atendimento online te dará todos os direcionamentos necessários para que você chegue até a clínica de sua preferência.  ",
-
+        "As cirurgias são realizadas em clínicas parceiras especializadas, com infraestrutura moderna e equipe experiente. Após a triagem, nossa equipe vai te indicar o local mais próximo e apropriado para o seu caso.",
       id: 2,
     },
     {
-      question: "Quais são as formas de pagamento aceitas nas clínicas?",
+      question: "Preciso de encaminhamento médico ou convênio?",
       answer:
-        "Nossos parceiros aceitam pagamentos em dinheiro, cartões de débito e crédito.",
+        "Não! Aqui você não precisa de convênio nem de encaminhamento. Criamos um modelo direto e acessível, que facilita sua jornada até a cirurgia.",
       id: 3,
     },
     {
-      question: "Aceitam convênios médicos?",
+      question: "Quais são as formas de pagamento?",
       answer:
-        "Não, a Doutor bom custo criou todos os facilitadores para você, desta forma fornecemos todos os serviços e procedimentos através de nossas parcerias, para que você não precise recorrer a convênios e médicos externos de alto custo.",
+        "Aceitamos dinheiro, cartões de débito e crédito. Também oferecemos condições facilitadas para você realizar sua cirurgia com tranquilidade.",
       id: 4,
     },
     {
-      question: "Quanto tempo antes da consulta devo chegar?",
+      question: "Como funciona a avaliação pré-cirúrgica?",
       answer:
-        "Recomendamos que os pacientes cheguem pelo menos 15 minutos antes da consulta agendada para preencher formulários e garantir um atendimento pontual.",
+        "Antes da cirurgia, você passará por uma avaliação detalhada com o especialista. Essa etapa é fundamental para garantir a segurança e o sucesso do procedimento.",
       id: 5,
     },
     {
-      question: "O que devo levar para minha consulta médica?",
+      question: "Em quanto tempo acontece a cirurgia após a avaliação?",
       answer:
-        "Documento de identificação, lista de medicamentos se houver e resultados de exames médicos anteriores, se disponíveis.",
+        "Após a avaliação, se estiver tudo certo, conseguimos agendar a cirurgia em poucos dias, conforme a sua disponibilidade e a agenda da clínica.",
       id: 6,
     },
     {
-      question: "Como faço para obter resultados dos exames realizados?",
+      question: "Como recebo as orientações do pós-operatório?",
       answer:
-        "Os resultados de exames estarão disponíveis para retirada presencial na recepção das clínicas parceiras dentro do período que será informado. Certifique-se de seguir as instruções fornecidas durante a consulta. ",
+        "Todas as instruções são entregues por escrito e explicadas com cuidado pela equipe. Você também terá nosso suporte pelo WhatsApp para qualquer dúvida.",
       id: 7,
     },
     {
-      question: "É possível remarcar ou cancelar uma consulta agendada?",
+      question: "Posso remarcar minha cirurgia se necessário?",
       answer:
-        "Sim, você pode remarcar ou cancelar sua consulta com antecedência de até 24 horas, entrando em contato conosco por telefone ou através do nosso sistema de agendamento online. ",
+        "Sim! Basta avisar com antecedência de pelo menos 24 horas para que possamos ajustar a agenda sem prejuízos para você.",
       id: 8,
     },
   ];
+
   return (
     <Styled.Container id="duvidas">
       <h3>Ainda com dúvida?</h3>

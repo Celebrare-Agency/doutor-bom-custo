@@ -16,6 +16,9 @@ export const Container = styled.main`
   margin: auto;
   text-align: center;
   color: #fff;
+  img {
+    border-radius: 20px;
+  }
 
   ${Media.Tablet} {
     height: auto;
@@ -55,7 +58,7 @@ export const Container = styled.main`
       font-size: 14.9439px;
       line-height: 19px;
 
-      color: #A0A4A8;
+      color: #a0a4a8;
     }
     .container-initial {
       width: 95%;

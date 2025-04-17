@@ -67,10 +67,11 @@ export const Container = styled.main`
       font-weight: 400;
       font-size: 20px;
       line-height: 25px;
-      color: #A0A4A8;
+      color: #a0a4a8;
     }
     img {
       max-width: 400px;
+      border-radius: 20px;
       width: 100%;
 
       ${Media.Tablet} {

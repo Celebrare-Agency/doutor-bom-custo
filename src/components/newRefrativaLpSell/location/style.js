@@ -10,10 +10,13 @@ const breakpoints = {
 export const Container = styled.section`
   position: relative;
   width: 95%;
-  max-width: 85rem;
+  max-width: 65rem;
   min-height: 40rem;
   margin: auto;
   padding: 50px 0;
+  ${breakpoints.tablet} {
+    max-width: 85rem;
+  }
 
   .container-title {
     display: flex;
@@ -103,7 +106,9 @@ export const Container = styled.section`
       align-items: center;
       justify-content: center;
       margin: 20px 0;
-
+      ${breakpoints.tablet} {
+        max-width: 80%;
+      }
       svg {
         margin: auto 5px;
       }

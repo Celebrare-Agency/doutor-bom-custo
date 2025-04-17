@@ -40,7 +40,7 @@ export function Router() {
         <Route path="/refrativa2" element={<RefrativaLpSell2 />} />
         <Route path="/autoteste" element={<Autoteste />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
-        <Route path="/politica" element={<Politica />} />        
+        <Route path="/politica" element={<Politica />} />
         <Route path="/refrativa3" element={<RefrativaLpSell3 />} />
         <Route path="/Ortoceratologia" element={<Ortoceratologia />} />
         <Route

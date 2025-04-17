@@ -16,7 +16,10 @@ export const Container = styled.section`
 
   .container-wtt {
     width: 100%;
-    max-width: 80rem;
+    max-width: 65rem;
+    ${breakpoints.tablet} {
+      max-width: 85rem;
+    }
     min-height: 150px;
     background-color: #1c214b;
     border-radius: 20px;
@@ -61,7 +64,9 @@ export const Container = styled.section`
       }
     }
 
-    button:hover{ background: #208305; }
+    button:hover {
+      background: #208305;
+    }
   }
 
   .why-am-i-doing-this {
@@ -71,8 +76,8 @@ export const Container = styled.section`
     justify-content: space-between;
     align-items: center;
     margin-top: 80px;
-    background-color: #3B4AE2;
-
+    background-color: #3b4ae2;
+    padding: 50px 0;
     .container-why {
       max-width: 1500px;
       width: 90%;
@@ -83,8 +88,6 @@ export const Container = styled.section`
       margin: auto;
       text-align: left;
       color: #fff;
-      padding: 50px 0;
-      gap: 20px;
 
       h1 {
         font-style: normal;
@@ -94,18 +97,22 @@ export const Container = styled.section`
       }
       ${breakpoints.tablet} {
         flex-direction: column;
+        text-align: left;
       }
 
       p {
         font-size: 1.2rem;
         max-width: 700px;
+        ${breakpoints.tablet} {
+          text-align: left;
+        }
       }
     }
   }
 
-  .container-price{
+  .container-price {
     width: 95%;
-    max-width: 85rem;
+    max-width: 65rem;
     margin: auto;
     color: #fff;
     display: flex;
@@ -116,25 +123,34 @@ export const Container = styled.section`
     gap: 30px;
     padding: 50px 0;
     text-align: center;
-    
+    ${breakpoints.tablet} {
+      max-width: 85rem;
+    }
+
     ${breakpoints.tablet} {
       flex-direction: column;
     }
-     
-    h1{  
-      font-size: 2rem;  
+
+    h1 {
+      font-size: 2rem;
       margin: 20px auto;
+      ${breakpoints.tablet} {
+        text-align: left;
+        width: 100%;
+      }
     }
 
-    p{ 
+    p {
       margin: 10px auto;
-      color: #A0A4A8;
+      color: #a0a4a8;
+      ${breakpoints.tablet} {
+        text-align: left;
+      }
     }
-    
-  }  
+  }
 
-  .imagens {    
-    max-width: 85rem;  
+  .imagens {
+    max-width: 65rem;
     margin: 130px auto 20px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -143,6 +159,7 @@ export const Container = styled.section`
     ${breakpoints.tablet} {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+      max-width: 85rem;
     }
 
     ${breakpoints.phoneLarge} {

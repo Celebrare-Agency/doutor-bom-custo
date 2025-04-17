@@ -30,9 +30,7 @@ export default function Questions() {
                 <input type="checkbox" id="scales" name="scales" />
                 <span class="checkmark"></span>
               </label>
-              <p>
-                Não sabia da existência da cirurgia refrativa
-              </p>
+              <p>Não sabia da existência da cirurgia refrativa</p>
             </div>
 
             <div className="check">
@@ -40,9 +38,7 @@ export default function Questions() {
                 <input type="checkbox" id="scales" name="scales" />
                 <span class="checkmark"></span>
               </label>
-              <p>
-                Não encontrou um local que se sinta seguro
-              </p>
+              <p>Não encontrou um local que se sinta seguro</p>
             </div>
 
             <div className="check">
@@ -50,9 +46,7 @@ export default function Questions() {
                 <input type="checkbox" id="scales" name="scales" />
                 <span class="checkmark"></span>
               </label>
-              <p>
-                Acha que o procedimento não está ao seu alcance financeiro
-              </p>
+              <p>Acha que o procedimento não está ao seu alcance financeiro</p>
             </div>
 
             <div className="check">
@@ -60,14 +54,13 @@ export default function Questions() {
                 <input type="checkbox" id="scales" name="scales" />
                 <span class="checkmark"></span>
               </label>
-              <p>
-                Ou simplesmente nunca parou pra pensar nisso?
-              </p>
+              <p>Ou simplesmente nunca parou pra pensar nisso?</p>
             </div>
           </div>
         </div>
         <p className="text-p">
-          Caso tenha se identificado e deseja mudar essa realidade, você acaba de encontrar a solução perfeita para você!
+          Caso tenha se identificado e deseja mudar essa realidade, você acaba
+          de encontrar a solução perfeita para você!
         </p>
         <Button
           className="btn"

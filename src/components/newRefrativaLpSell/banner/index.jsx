@@ -34,12 +34,15 @@ export default function Declaration() {
           />
         </div>
         <h1>
-          PARTICIPE DO MAIOR EVENTO DE LIBERDADE <br/> VISUAL JÁ REALIZADO NO BRASIL
+          PARTICIPE DO MAIOR EVENTO DE LIBERDADE <br /> VISUAL JÁ REALIZADO NO
+          BRASIL
         </h1>
         <p>
-          O Refrativa SP chega para quem deseja deixar de depender dos óculos ou das lentes de contato com segurança, tecnologia avançada e preços justos.
+          O Refrativa SP chega para quem deseja deixar de depender dos óculos ou
+          das lentes de contato com segurança, tecnologia avançada e preços
+          justos.
         </p>
-        <Video embedId="pgUmVF1C6ig" />
+        <Video embedId="n4iNP2e1T9U" />
         <Button
           className="btn"
           text="QUERO ACESSAR AGORA!"
@@ -47,7 +50,9 @@ export default function Declaration() {
           onClick={() => toggleModalVisibility("1", "vip")}
         />
         <p className="finaltext">
-          Liberte-se das amarras que os óculos te impõem e redescubra a sensação de enxergar a vida com os seus próprios olhos. A sua liberdade visual começa agora.
+          Liberte-se das amarras que os óculos te impõem e redescubra a sensação
+          de enxergar a vida com os seus próprios olhos. A sua liberdade visual
+          começa agora.
         </p>
       </div>
     </Styled.Container>

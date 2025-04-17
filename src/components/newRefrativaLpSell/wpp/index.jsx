@@ -5,12 +5,12 @@ import Button from "../../GLOBAL/buttons.jsx";
 import React, { useState } from "react";
 
 import { FaWhatsapp } from "react-icons/fa";
-import imagem1 from "../../../assets/blefaroplastiaLpSell2/6.whatsApp/image1.png";
-import imagem2 from "../../../assets/blefaroplastiaLpSell2/6.whatsApp/image2.png";
-import imagem3 from "../../../assets/blefaroplastiaLpSell2/6.whatsApp/image3.png";
-import imagem4 from "../../../assets/blefaroplastiaLpSell2/6.whatsApp/image4.png";
-import imagem5 from "../../../assets/blefaroplastiaLpSell2/6.whatsApp/image5.png";
-import imagem6 from "../../../assets/blefaroplastiaLpSell2/6.whatsApp/image6.png";
+import imagem1 from "../../../assets/newRefrativaLpSell/wpp/imagem1.png";
+import imagem2 from "../../../assets/newRefrativaLpSell/wpp/imagem2.png";
+import imagem3 from "../../../assets/newRefrativaLpSell/wpp/imagem3.png";
+import imagem4 from "../../../assets/newRefrativaLpSell/wpp/imagem4.png";
+import imagem5 from "../../../assets/newRefrativaLpSell/wpp/imagem5.png";
+import imagem6 from "../../../assets/newRefrativaLpSell/wpp/imagem6.png";
 
 export default function WhatsApp() {
   const [isModalVisible, setModalVisibility] = useState(false);
@@ -28,10 +28,10 @@ export default function WhatsApp() {
           modalId="1"
         />
       )}
-      
+
       <div className="container-wtt">
         <p>
-          Clique no botão ao lado e dê o primeiro passo para <br/>
+          Clique no botão ao lado e dê o primeiro passo para <br />
           realizar sua cirurgia refrativa!
         </p>
 
@@ -46,7 +46,9 @@ export default function WhatsApp() {
         <div className="container-why">
           <h1>Por que estamos fazendo isso?</h1>
           <p>
-            Temos como propósito ajudar as 50 milhões de pessoas que usaram óculos durante toda a vida e agora deseja experimentar a vida com mais liberdade visual.
+            Temos como propósito ajudar as 50 milhões de pessoas que usaram
+            óculos durante toda a vida e agora deseja experimentar a vida com
+            mais liberdade visual.
           </p>
         </div>
       </div>
@@ -55,11 +57,15 @@ export default function WhatsApp() {
         <h1>Agora é a sua vez</h1>
 
         <p>
-          Você está a um passo de garantir a sua vaga no maior evento de liberdade visual do Brasil! Não perca a oportunidade de acordar e ver o mundo como ele realmente é. 
+          Você está a um passo de garantir a sua vaga no maior evento de
+          liberdade visual do Brasil! Não perca a oportunidade de acordar e ver
+          o mundo como ele realmente é.
         </p>
 
-        <h1>LIBERTE-SE DOS ÓCULOS PELO VALOR MAIS <br /> ACESSÍVEL DE SÃO PAULO</h1>
-        
+        <h1>
+          LIBERTE-SE DOS ÓCULOS PELO VALOR MAIS <br /> ACESSÍVEL DE SÃO PAULO
+        </h1>
+
         <Button
           className="btn"
           text="Acesse o mapa do meu sucesso agora"

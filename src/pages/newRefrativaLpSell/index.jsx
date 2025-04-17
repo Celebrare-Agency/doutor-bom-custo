@@ -6,16 +6,16 @@ import Solution from "../../components/newRefrativaLpSell/solution/index.jsx";
 import Location from "../../components/newRefrativaLpSell/location/index.jsx";
 import Questions from "../../components/newRefrativaLpSell/questions";
 import Wpp from "../../components/newRefrativaLpSell/wpp/index.jsx";
-import Faq from "../../components/blefaroplastiaLpSell/9.faq";
+import Faq from "./../../components/newRefrativaLpSell/9.faq/index";
 
 export default function RefrativaLpSell2() {
   return (
     <Styled.Container>
       <Banner />
       <Declaration />
-      <Questions /> 
+      <Questions />
       <Solution />
-      <Location /> 
+      <Location />
       <Wpp />
       <Faq />
     </Styled.Container>

@@ -15,6 +15,9 @@ export const Container = styled.main`
   margin: auto;
   text-align: center;
   color: #fff;
+  img {
+    border-radius: 20px;
+  }
 
   ${Media.Tablet} {
     height: auto;
@@ -55,10 +58,10 @@ export const Container = styled.main`
       flex-direction: column;
     }
 
-    .text-p{
+    .text-p {
       margin: 20px;
       font-size: 1.2rem;
-      color: #A0A4A8;
+      color: #a0a4a8;
     }
 
     .container-check {
@@ -94,7 +97,7 @@ export const Container = styled.main`
           display: inline-block;
           width: 40px;
           height: 40px;
-          border: 2px solid #3B4AE2;
+          border: 2px solid #3b4ae2;
           border-radius: 6px;
           background-color: transparent;
           position: relative;
@@ -109,7 +112,7 @@ export const Container = styled.main`
           top: 4px;
           width: 10px;
           height: 20px;
-          border: solid #3B4AE2;
+          border: solid #3b4ae2;
           border-width: 0 3px 3px 0;
           transform: rotate(45deg);
         }

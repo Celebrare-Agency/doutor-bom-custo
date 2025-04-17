@@ -17,16 +17,9 @@ export default function Locationn() {
   const [isModalVisible, setModalVisibility] = useState(false);
   const depoimentos = [
     {
-      embedId: "UmyU1YRVSDo",
-      titulo: "Marcos Benador",
-      texto: `Um hospital de ponta, com uma equipe maravilhosa. 
-            Tudo com um preço de custo!`,
-    },
-
-    {
-      embedId: "6mIkFEvnEz4",
-      titulo: "Irani das Graças",
-      texto: `Me senti acolhida e eu adorei,amei demais o resultad!`,
+      embedId: "sjB018VA1-0",
+      titulo: "O Óculos atrapalhava o meu dia a dia",
+      texto: `Me sinto realizada e sou muito grata a equipe da Doutor Bom custo!`,
     },
   ];
   const toggleModalVisibility = (modalId) => {
@@ -45,7 +38,8 @@ export default function Locationn() {
       <div className="container-title">
         <img src={logo} />
         <h3>
-          Acompanhe quantos sonhos foram realizados através da blefaroplastia
+          Acompanhe quantos sonhos foram realizados através da cirurgia
+          refrativa
         </h3>
       </div>
 

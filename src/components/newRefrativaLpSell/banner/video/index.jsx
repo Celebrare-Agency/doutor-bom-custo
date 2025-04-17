@@ -10,6 +10,7 @@ const Media = {
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  max-width: 85rem;
   padding-top: 56.25%; /* 16:9 */
   border-radius: 20px;
   overflow: hidden;
@@ -37,14 +38,14 @@ const CenteredButton = styled.button`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--gold);
+  background: var(--blue);
   color: white;
   width: 50%;
   height: 30%;
   border-radius: 0;
   padding: 20px 30px;
   border: none;
-  font-family: "Sora";
+  font-family: "inter";
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
@@ -56,11 +57,8 @@ const CenteredButton = styled.button`
   border-radius: 20px;
   ${Media.Tablet} {
     font-size: 0.8rem;
-    width: 90%;
+    width: 70%;
     height: 40%;
-  }
-  &:hover {
-    background: var(--gold-strong);
   }
 `;
 

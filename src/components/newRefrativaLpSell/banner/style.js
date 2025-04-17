@@ -11,7 +11,7 @@ export const Container = styled.main`
   height: auto;
   position: relative;
   overflow: hidden;
-  max-width: 85rem;
+  max-width: 65rem;
   margin: auto;
   padding-top: 50px;
   text-align: center;
@@ -50,7 +50,7 @@ export const Container = styled.main`
     p {
       font-weight: 300;
       line-height: 150%;
-      color: #A0A4A8;
+      color: #a0a4a8;
       ${Media.Tablet} {
         font-size: 1rem;
       }
@@ -73,7 +73,6 @@ export const Container = styled.main`
       img {
         max-width: 230px;
         width: 100%;
-
         ${Media.Tablet} {
           max-width: 150px;
         }

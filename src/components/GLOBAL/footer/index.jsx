@@ -35,7 +35,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://api.whatsapp.com/send?phone=55970409738&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
+            href="https://api.whatsapp.com/send?phone=5511970409738&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
             target="blanked"
           >
             <div className="socialContainer row">

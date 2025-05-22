@@ -8,21 +8,21 @@ export default function Linktree() {
   const links = [
     {
       id: 2,
-      href: "https://api.whatsapp.com/send?phone=5511970409738&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20cirurgia%20de%20catarata!",
+      href: "https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20cirurgia%20de%20catarata!",
       title: "Cirurgia de Catarata",
       class: "link catarata",
       text: "Saiba mais sobre a cirurgia de catarata.",
     },
     {
       id: 3,
-      href: "https://api.whatsapp.com/send?phone=5511970409738&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20cirurgia%20refrativa!",
+      href: "https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20cirurgia%20refrativa!",
       title: "Cirurgia Refrativa",
       class: "link refrativa",
       text: "Saiba mais sobre a cirurgia refrativa.",
     },
     {
       id: 4,
-      href: "https://api.whatsapp.com/send?phone=5511970409738&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20cirurgia%20de%20blefaroplastia!",
+      href: "https://api.whatsapp.com/send?phone=5511945852272&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20cirurgia%20de%20blefaroplastia!",
       title: "Cirurgia de Blefaroplastia",
       class: "link blefaroplastia",
       text: "Saiba mais sobre a cirurgia de blefaroplastia.",

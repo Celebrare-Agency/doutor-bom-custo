@@ -71,6 +71,7 @@ export const Container = styled.section`
 .final{
   margin:auto;
   margin-top:2rem;
+  margin-bottom:2rem;
   gap:1rem;
 }
     .Button {

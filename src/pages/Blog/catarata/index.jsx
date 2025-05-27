@@ -81,7 +81,7 @@ export default function Catarata() {
           </p>
           <br />
 
-          <a href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20">
+          <a href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20">
             <button className="Button">Marque uma consulta!</button>
           </a>
         </section>
@@ -218,7 +218,7 @@ export default function Catarata() {
             Gostou do conteúdo? Marque uma consulta com um dos nossos atendentes
             para fazer sua avaliação!
           </h4>
-          <a href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20">
+          <a href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20">
             <button className="Button">Marque uma consulta!</button>
           </a>
         </section>

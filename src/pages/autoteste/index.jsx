@@ -26,7 +26,7 @@ import Carousel from "../../components/autoteste/carousel/carousel";
 import BtnAds from "../../components/GLOBAL/btn-ads-modal/index.jsx";
 import Modal from "../../components/modalForm/index.jsx";
 const wppLink =
-  "https://api.whatsapp.com/send?phone=5511950212678&text=Olá!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20";
+  "https://api.whatsapp.com/send?phone=5511945824194&text=Olá!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20";
 const menuItems = [
   { path: "autoteste", label: "Autoteste" },
   { path: wppLink, icon: <SlCalender />, label: "Agendar consulta" },
@@ -293,7 +293,7 @@ export default function AutoTeste() {
                   text="Entre em contato"
                 />
                 <a>
-                  <SlPhone /> 11 95021-2678
+                  <SlPhone /> 11 94582-4194
                 </a>
               </div>
             </div>

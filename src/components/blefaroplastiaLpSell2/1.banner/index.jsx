@@ -30,7 +30,7 @@ export default function Banner() {
           </a>
           {/* <a href="" target="blanked"><FaYoutube className="icon" /></a> */}
           <a
-            href="https://api.whatsapp.com/send?phone=5511950212678&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
+            href="https://api.whatsapp.com/send?phone=5511945852272&text=Ol%C3%A1!%20Eu%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
             target="blanked"
           >
             <FaWhatsapp className="icon" />

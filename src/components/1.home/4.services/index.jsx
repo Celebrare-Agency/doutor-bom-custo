@@ -17,7 +17,7 @@ export default function Services() {
       </h3>
       <div className="formGroup">
         <a
-          href="https://api.whatsapp.com/send?phone=5511950212678&text=Olá!%20Eu%20gostaria%20de%20falar%20com%20um%20especialista.%20"
+          href="https://api.whatsapp.com/send?phone=5511945824194&text=Olá!%20Eu%20gostaria%20de%20falar%20com%20um%20especialista.%20"
           target="blanked"
         >
           <button className="row">Oftalmologia</button>

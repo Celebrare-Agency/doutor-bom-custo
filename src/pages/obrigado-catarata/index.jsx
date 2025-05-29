@@ -9,7 +9,7 @@ export default function Obrigado() {
         Você pode entrar em contato pelo WhatsApp para finalizar sua inscrição.
       </p>
       <a
-        href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1,%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!"
+        href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!"
         rel="noreferrer"
       >
         <button>Entrar em contato pelo WhatsApp</button>

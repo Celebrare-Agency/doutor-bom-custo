@@ -3,7 +3,7 @@ import photo from "../../../assets/consultaLpSellV1/contactUs/photo.png";
 export default function ContactUs() {
   return (
     <Styled.Container>
-      <div className="containerText col">
+      <div className="containerText col" data-aos="fade-right">
         <h3>Entre em contato!</h3>
         <p>Para mais informações sobre exames, entre em contato!</p>
         <a
@@ -15,7 +15,7 @@ export default function ContactUs() {
           </button>
         </a>
       </div>
-      <div className="imgContainer row">
+      <div className="imgContainer row" data-aos="fade-left">
         <img src={photo} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
     </Styled.Container>

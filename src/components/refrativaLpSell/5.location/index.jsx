@@ -20,7 +20,7 @@ export default function Location() {
           modalId="1" // Você pode passar o modalId se necessário
         />
       )}
-      <div className="titlePart col">
+      <div className="titlePart col" data-aos="fade-up">
         <h3>Estamos localizados no coração de São Paulo</h3>
         <p>
           Estamos aqui no edifício Itália, no quinto andar, a 5 minutos da
@@ -28,7 +28,7 @@ export default function Location() {
         </p>
       </div>
       <Map />
-      <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
+      <div data-aos="fade-up"><BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} /></div>
     </Styled.Container>
   );
 }

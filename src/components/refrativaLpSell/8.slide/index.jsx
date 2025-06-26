@@ -13,9 +13,9 @@ export default function SlideshowBlefaro() {
     <Container>
       <div className="containerTitle">
         <a href="#espaco">
-          <h3>Nossos Espaços e Nossa Tecnologia</h3>
+          <h3 data-aos="fade-right">Nossos Espaços e Nossa Tecnologia</h3>
         </a>
-        <hr />
+        <hr data-aos="fade-right" />
       </div>
       <div>
         <Swiper
@@ -27,6 +27,7 @@ export default function SlideshowBlefaro() {
           spaceBetween={90}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           className="mySwiper"
+          data-aos="fade-right"
         >
           <SwiperSlide>
             <img src={slide1} alt="fotos da clinica" className="imgSlide" />

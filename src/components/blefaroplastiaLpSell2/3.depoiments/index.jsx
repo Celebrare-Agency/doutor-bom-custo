@@ -86,28 +86,31 @@ export default function Depoiments() {
           modalId="1"
         />
       )}
-      <div className="container-title">
+      <div className="container-title" data-aos="fade-right">
         <img src={logo} />
         <h3>Antes e depois da Blefaroplastia</h3>
       </div>
 
-      <Slider {...settings}>
-        {testimonials.map((testimonial) => (
-          <div key={testimonial.id} className="carousel-slide">
-            <div className="container-carousel">
-              <div className="profile">
-                <img
-                  src={testimonial.img}
-                  alt="Testimonial"
-                  className="testimonial-img"
-                />
-                <p className="testimonial-text">"{testimonial.testimonial}"</p>
+      <div data-aos="zoom-in">
+        <Slider {...settings}>
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="carousel-slide">
+              <div className="container-carousel">
+                <div className="profile">
+                  <img
+                    src={testimonial.img}
+                    alt="Testimonial"
+                    className="testimonial-img"
+                  />
+                  <p className="testimonial-text">"{testimonial.testimonial}"</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-      <div className="wrapper">
+          ))}
+        </Slider>
+      </div>
+      
+      <div className="wrapper" data-aos="fade-up">
         <BtnAds
           className="schudele"
           modalId="1"

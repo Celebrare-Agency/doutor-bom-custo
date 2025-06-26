@@ -118,12 +118,12 @@ export default function Services() {
   ];
   return (
     <Styled.Container>
-      <div className="text col">
+      <div className="text col" data-aos="fade-up">
         <h3> Ainda em dúvida?</h3>
         <p>Você merece o melhor cuidado para os seus olhos!</p>
       </div>
       <div className="comparativeCont row">
-        <div className="card col">
+        <div className="card col" data-aos="fade-right">
           <div className="top col">
             <h3>Concorrentes</h3>
             <hr />
@@ -137,7 +137,7 @@ export default function Services() {
             ))}
           </div>
         </div>
-        <div className="card card2 col">
+        <div className="card card2 col" data-aos="fade-left">
           <div className="top col">
             <h3>Doutor bom custo</h3>
             <hr />
@@ -153,7 +153,7 @@ export default function Services() {
         </div>
       </div>
 
-      <WppButton className="button" />
+      <div data-aos="fade-up"><WppButton className="button" /></div>
     </Styled.Container>
   );
 }

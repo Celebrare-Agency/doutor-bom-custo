@@ -5,24 +5,24 @@ export default function Price() {
     <Styled.Container id="conversion">
       <div className="content col">
         <div className="titlePart col">
-          <a href="#preco">
+          <a href="#preco" data-aos="fade-right">
             <h3>O que está incluso</h3>
           </a>
-          <p>você vai receber mais de dois mil reais de desconto!</p>
+          <p data-aos="fade-right">você vai receber mais de dois mil reais de desconto!</p>
         </div>
         <ol className="col">
-          <li>Médico cirurgião</li>
-          <li>Médico cirurgião auxiliar</li>
-          <li>Instrumentador </li>
-          <li>Aluguel do centro cirúrgico</li>
-          <li>Todos os insumos</li>
-          <li>Consulta de pós operatório</li>
-          <li>Todos os exames necessários</li>
+          <li data-aos="fade-right">Médico cirurgião</li>
+          <li data-aos="fade-right">Médico cirurgião auxiliar</li>
+          <li data-aos="fade-right">Instrumentador </li>
+          <li data-aos="fade-right">Aluguel do centro cirúrgico</li>
+          <li data-aos="fade-right">Todos os insumos</li>
+          <li data-aos="fade-right">Consulta de pós operatório</li>
+          <li data-aos="fade-right">Todos os exames necessários</li>
         </ol>
         <div className="pricePart col">
-          <h2>TUDO ISSO POR:</h2>
-          <p className="nonPrice">R$ 5.997,00</p>
-          <p className="realPrice">R$ 3.900,00!!!</p>
+          <h2 data-aos="fade-right">TUDO ISSO POR:</h2>
+          <p className="nonPrice" data-aos="fade-right">R$ 5.997,00</p>
+          <p className="realPrice" data-aos="fade-right">R$ 3.900,00!!!</p>
         </div>
       </div>
     </Styled.Container>

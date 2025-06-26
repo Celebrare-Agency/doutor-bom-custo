@@ -4,7 +4,7 @@ export default function Service() {
   return (
     <Styled.Container>
       <div className="container">
-        <div className="cards row">
+        <div className="cards row" data-aos="fade-up">
           {Servicess.map((item) => (
             <div className="contianerLines row">
               <div className="cardItem col" key={item.id}>

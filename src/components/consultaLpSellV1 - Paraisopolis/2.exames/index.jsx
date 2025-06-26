@@ -6,9 +6,9 @@ export default function Exames() {
   return (
     <Styled.Container id="conversion">
       <a href="#contato">
-        <h2>Exames</h2>
+        <h2 data-aos="fade-up">Exames</h2>
       </a>
-      <div className="containerCard row">
+      <div className="containerCard row" data-aos="fade-up">
         {Services.map((item) => (
           <div className="card col" key={item.id}>
             <details>

@@ -42,14 +42,14 @@ export default function Location() {
           modalId="1"
         />
       )}
-      <div className="container-title">
+      <div className="container-title" data-aos="fade-up">
         <img src={logo} />
         <h3>
           Acompanhe quantos sonhos foram realizados através da blefaroplastia
         </h3>
       </div>
 
-      <div className="container-videos">
+      <div className="container-videos" data-aos="zoom-in">
         {depoimentos.map((dep, index) => (
           <div className="container-video" key={index}>
             <YoutubeEmbed embedId={dep.embedId} />
@@ -68,23 +68,23 @@ export default function Location() {
       </div>
 
       <div className="container-maps">
-        <h1>
+        <h1 data-aos="fade-up">
           Uma clínica de sonhos e novos olhares. Doutor bom custo é o lugar da
           sua transformação.
         </h1>
 
-        <div className="maps-street">
+        <div className="maps-street" data-aos="zoom-in">
           <StreetViewMap />
           <StreetViewMap2 />
         </div>
 
         <div className="container-location">
-          <div className="how-to-get-there">
+          <div className="how-to-get-there" data-aos="fade-right">
             <div className="location">Local</div>
             <h1>Como Chegar?</h1>
           </div>
 
-          <div className="location-icons">
+          <div className="location-icons" data-aos="fade-left">
             <div className="icons">
               <FaLocationDot />{" "}
               <p>Av. Ipiranga, 344 - São Paulo - SP, 01046-010</p>
@@ -99,7 +99,7 @@ export default function Location() {
         </div>
 
         <div className="maps">
-          <Map />
+          <div data-aos="fade-up"><Map /></div>
           <div className="information-maps">
             {/* <div className="container-information">
               <p>Não conhece muito bem a cidade? Clique e vamos te ajudar!</p>
@@ -108,7 +108,7 @@ export default function Location() {
               </a>
             </div> */}
 
-            <div className="container-information">
+            <div className="container-information" data-aos="fade-up">
               <a href="https://www.google.com/maps/dir//Av.+Ipiranga,+344+-+Centro+Hist%C3%B3rico+de+S%C3%A3o+Paulo,+S%C3%A3o+Paulo+-+SP,+01046-010/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x94ce584e671fdf25:0x104f0990b9956a4c?sa=X&ved=1t:707&ictx=111">
                 <button>
                   <SiGooglemaps /> Rotas com Google Maps

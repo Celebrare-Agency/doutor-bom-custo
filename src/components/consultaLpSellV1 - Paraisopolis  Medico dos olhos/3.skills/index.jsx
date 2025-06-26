@@ -6,16 +6,16 @@ import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Skills() {
   return (
     <Styled.Container>
-      <div className="imgContainer row">
+      <div className="imgContainer row" data-aos="fade-up">
         <img src={doctor} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
       <div className="skillSideContainer col">
-        <h2>
+        <h2 data-aos="fade-up">
           Nossos Diferenciais <br />
           em Saúde Acessível
         </h2>
         {Skill.map((item) => (
-          <div key={item.id} className="itemsContainer col">
+          <div key={item.id} className="itemsContainer col" data-aos="fade-up">
             <img src={item.img} alt={item.alt} />
             <h3>{item.title}</h3>
             <p>{item.text}</p>

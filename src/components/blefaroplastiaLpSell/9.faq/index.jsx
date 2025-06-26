@@ -66,7 +66,7 @@ export default function Faq() {
   ];
 
   return (
-    <Section id="questions">
+    <Section id="questions" data-aos="fade-up"> 
       <h3>DÚVIDAS FREQUENTES</h3>
 
       <div className="faqContainer column">

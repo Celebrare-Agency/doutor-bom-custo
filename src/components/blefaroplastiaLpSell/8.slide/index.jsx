@@ -11,7 +11,7 @@ import { Container } from "./style";
 export default function Slideshow() {
   return (
     <Container>
-      <div className="containerTitle">
+      <div className="containerTitle" data-aos="fade-right">
         <h3>Nossos Espaços e Nossa Tecnologia</h3>
         <hr />
       </div>
@@ -24,12 +24,12 @@ export default function Slideshow() {
           keyboard={true}
           spaceBetween={90}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="mySwiper"
+          className="mySwiper" 
         >
           <SwiperSlide>
-            <img src={slide1} alt="fotos da clinica" className="imgSlide" />
+            <img src={slide1} alt="fotos da clinica" className="imgSlide" data-aos="fade-right" />
 
-            <div className="text">
+            <div className="text" data-aos="fade-left">
               <div className="title">
                 <h1>Nossos Espaços</h1>
               </div>

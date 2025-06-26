@@ -4,11 +4,11 @@ export default function Exames() {
   return (
     <Styled.Container>
       <a href="#exames">
-        <h2>Exames</h2>
+        <h2 data-aos="fade-up">Exames</h2>
       </a>
       <div className="containerCard row">
         {Services.map((item) => (
-          <div className="card col" key={item.id}>
+          <div className="card col" key={item.id} data-aos="fade-up">
             <details>
               <summary>{item.title}</summary>
               <p>{item.text}</p>

@@ -6,6 +6,8 @@ import { Router } from "./router";
 import Footer from "./components/GLOBAL/footer";
 import FixedButton from "./components/GLOBAL/buttonWpp fixed";
 import TagManager from "react-gtm-module";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { injectContentsquareScript } from "@contentsquare/tag-sdk";
 
 injectContentsquareScript({
@@ -13,9 +15,19 @@ injectContentsquareScript({
   async: true, // Optional: Set to false to wait for script execution until after document parsing.
   defer: false, // Optional: Set to true to defer script execution after document parsing.
 });
+
 const tagManagerArgs = {
   gtmId: "GTM-PQ2XPWNH",
 };
+
+AOS.refresh();
+AOS.init({
+  offset: 200,
+  duration: 1000,
+  easing: "ease-in-sine",
+  once: true,
+});
+
 TagManager.initialize(tagManagerArgs);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

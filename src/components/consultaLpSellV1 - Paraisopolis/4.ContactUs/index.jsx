@@ -5,12 +5,12 @@ import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function ContactUs() {
   return (
     <Styled.Container id="conversion">
-      <div className="containerText col">
+      <div className="containerText col" data-aos="fade-right">
         <h3>Entre em contato!</h3>
         <p>Para mais informações sobre exames, entre em contato!</p>
         <WppButton />
       </div>
-      <div className="imgContainer row">
+      <div className="imgContainer row" data-aos="fade-left">
         <img src={photo} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
     </Styled.Container>

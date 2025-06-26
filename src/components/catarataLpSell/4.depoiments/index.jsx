@@ -21,18 +21,18 @@ export default function Depoiments() {
         />
       )}
       <div className="titlePart col">
-        <h3>excelência</h3>
-        <p>Mais de 5mil pacientes operados e satisfeitos!</p>
+        <h3 data-aos="fade-up">excelência</h3>
+        <p data-aos="fade-up">Mais de 5mil pacientes operados e satisfeitos!</p>
       </div>
       <div className="content row">
-        <div className="video col">
+        <div className="video col" data-aos="fade-right">
           <PrimeiroDepoimento embedId="5eSMXdDXJgs" />
           <div className="containerText col">
             <h3>Maria Neide</h3>
             <p>Veja como a cirurgia de catarata mudou a vida de Maria Neide</p>
           </div>
         </div>
-        <div className="video col">
+        <div className="video col" data-aos="fade-left">
           <PrimeiroDepoimento embedId="EsUG8wezPiA" />
           <div className="containerText col">
             <h3>Maria Lucia</h3>
@@ -44,7 +44,7 @@ export default function Depoiments() {
           </div>
         </div>
       </div>
-      <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
+      <div data-aos="fade-up"><BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} /></div>
     </Styled.Container>
   );
 }

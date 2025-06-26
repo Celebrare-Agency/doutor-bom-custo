@@ -29,7 +29,7 @@ export default function WhatsApp() {
         />
       )}
 
-      <div className="container-wtt">
+      <div className="container-wtt" data-aos="fade-up">
         <p>
           Clique no botão ao lado e dê o primeiro passo para <br />
           realizar sua cirurgia refrativa!
@@ -44,8 +44,8 @@ export default function WhatsApp() {
 
       <div className="why-am-i-doing-this">
         <div className="container-why">
-          <h1>Por que estamos fazendo isso?</h1>
-          <p>
+          <h1 data-aos="fade-right">Por que estamos fazendo isso?</h1>
+          <p data-aos="fade-left">
             Temos como propósito ajudar as 50 milhões de pessoas que usaram
             óculos durante toda a vida e agora deseja experimentar a vida com
             mais liberdade visual.
@@ -53,7 +53,7 @@ export default function WhatsApp() {
         </div>
       </div>
 
-      <div className="container-price">
+      <div className="container-price" data-aos="fade-up">
         <h1>Agora é a sua vez</h1>
 
         <p>
@@ -74,7 +74,7 @@ export default function WhatsApp() {
         />
       </div>
 
-      <div className="imagens">
+      <div className="imagens" data-aos="zoom-in">
         <img src={imagem1} />
         <img src={imagem2} />
         <img src={imagem3} />

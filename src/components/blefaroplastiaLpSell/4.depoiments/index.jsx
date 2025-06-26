@@ -21,13 +21,13 @@ export default function Depoiments() {
   return (
     <Styled.Container id="conversion">
       <div className="titlePart col">
-        <h3>Transformações Reais</h3>
-        <p>
+        <h3 data-aos="fade-up">Transformações Reais</h3>
+        <p data-aos="fade-up">
           Veja como o procedimento de blefaroplastia pode transformar um olhar
           triste para um olhar empoderado
         </p>
       </div>
-      <div className="content row">
+      <div className="content row" data-aos="zoom-in">
         <div className="afterAndBeforeContainer row">
           {dps.map((item) => (
             <>

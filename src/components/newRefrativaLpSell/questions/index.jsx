@@ -22,9 +22,9 @@ export default function Questions() {
         />
       )}
       <div className="container-questions">
-        <h1>Você ainda está usando óculos ou lentes porque...</h1>
+        <h1 data-aos="fade-up">Você ainda está usando óculos ou lentes porque...</h1>
         <div className="container-check">
-          <div className="auto">
+          <div className="auto" data-aos="fade-up">
             <div className="check">
               <label class="custom-checkbox">
                 <input type="checkbox" id="scales" name="scales" />
@@ -58,16 +58,18 @@ export default function Questions() {
             </div>
           </div>
         </div>
-        <p className="text-p">
+        <p className="text-p" data-aos="fade-up">
           Caso tenha se identificado e deseja mudar essa realidade, você acaba
           de encontrar a solução perfeita para você!
         </p>
-        <Button
-          className="btn"
-          text="Quero ME LIVRAR DOS ÓCULOS"
-          display="none"
-          onClick={() => toggleModalVisibility("1", "vip")}
-        />
+        <div data-aos="fade-up">
+          <Button
+            className="btn"
+            text="Quero ME LIVRAR DOS ÓCULOS"
+            display="none"
+            onClick={() => toggleModalVisibility("1", "vip")}          
+          />
+        </div>
       </div>
     </Styled.Container>
   );

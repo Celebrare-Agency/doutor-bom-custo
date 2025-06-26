@@ -6,9 +6,9 @@ export default function Surgery() {
   return (
     <Styled.Container id="conversion">
       <a href="#sobre">
-        <h2>Cirurgias</h2>
+        <h2 data-aos="fade-up">Cirurgias</h2>
       </a>
-      <div className="containerCard row">
+      <div className="containerCard row" data-aos="fade-up">
         {SurgeryS.map((item) => (
           <div className="card col" key={item.id}>
             <details>

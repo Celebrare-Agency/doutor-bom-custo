@@ -62,7 +62,7 @@ export default function Check() {
 
   return (
     <Styled.Container>
-      <div className="containerText col">
+      <div className="containerText col" data-aos="fade-right">
         <h2>O que você sente ao enxergar?</h2>
         <div className="items col">
           {Items3.map((item, index) => (
@@ -103,7 +103,7 @@ export default function Check() {
           <WppButton />
         </div>
       </div>
-      <div className="imgContainer row">
+      <div className="imgContainer row" data-aos="fade-left">
         <img src={photo} alt="idoso olhando para o horizonte triste" />
       </div>
     </Styled.Container>

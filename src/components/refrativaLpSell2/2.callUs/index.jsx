@@ -20,14 +20,14 @@ export default function Contact() {
           modalId="1" // Você pode passar o modalId se necessário
         />
       )}
-      <div className="containerText col">
+      <div className="containerText col" data-aos="fade-right">
         <h3>
           Hospital de ponta com os melhores equipamentos e profissionais da
           atualidade.
         </h3>
         <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
       </div>
-      <div className="imgContainer row">
+      <div className="imgContainer row" data-aos="fade-left">
         <img src={photo} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
     </Styled.Container>

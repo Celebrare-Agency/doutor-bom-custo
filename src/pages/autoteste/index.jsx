@@ -128,19 +128,21 @@ export default function AutoTeste() {
 
         <Cover>
           <div className="texts">
-            <h2>Acorde com uma Visão Clara:</h2>
-            <h1>
+            <h2 data-aos="fade-up">Acorde com uma Visão Clara:</h2>
+            <h1 data-aos="fade-up">
               Lentes de Ortoceratologia que Transformam suas Noites e Dias!
             </h1>
-            <p>
+            <p data-aos="fade-up">
               Diga adeus às lentes de contato durante o dia e aproveite a
               liberdade de uma visão nítida sem preocupações.
             </p>
+           <div data-aos="fade-up">
             <BtnAds
-              modalId="1"
-              toggleModalVisibility={toggleModalVisibility}
-              text="Quero enxergar melhor"
-            />
+                modalId="1"
+                toggleModalVisibility={toggleModalVisibility}
+                text="Quero enxergar melhor"
+              />
+            </div>  
           </div>
         </Cover>
 
@@ -148,26 +150,26 @@ export default function AutoTeste() {
           <div className="Orto">
             <div className="containerOrto">
               <div className="textsOrto">
-                <h2>
+                <h2 data-aos="fade-right">
                   <div className="line"></div>Liberdade Total Durante o Dia
                 </h2>
-                <h1>O Que é Ortoceratologia?</h1>
-                <p>
+                <h1 data-aos="fade-right">O Que é Ortoceratologia?</h1>
+                <p data-aos="fade-right">
                   A ortoceratologia é uma tecnologia avançada que utiliza lentes
                   de contato especiais para moldar temporariamente a sua córnea
                   enquanto você dorme.{" "}
                 </p>
-                <p>
+                <p data-aos="fade-right">
                   Ao acordar, sua visão está corrigida, permitindo que você
                   passe o dia inteiro sem a necessidade de óculos ou lentes de
                   contato tradicionais.{" "}
                 </p>
-                <p>
+                <p data-aos="fade-right">
                   Simples, eficaz e sem dor, essa é a solução para Who busca
                   liberdade visual sem comprometer o conforto.
                 </p>
               </div>
-              <div className="containerImgOrto">
+              <div className="containerImgOrto" data-aos="fade-left">
                 <img src={Lens} alt="Lens" />
               </div>
             </div>
@@ -178,22 +180,22 @@ export default function AutoTeste() {
           <div className="Ben">
             <div className="containerBen">
               <div className="textsBen">
-                <h1>
+                <h1 data-aos="fade-right">
                   Benefícios que
                   <br /> Você Vai Amar
                 </h1>
               </div>
               <div className="containerImgBen">
                 <div>
-                  <p>
+                  <p data-aos="fade-left">
                     <ImCheckboxChecked className="IconChecked" /> Liberdade
                     Total Durante o Dia{" "}
                   </p>
-                  <p>
+                  <p data-aos="fade-left">
                     <ImCheckboxChecked className="IconChecked" /> Mais Conforto
                     e Menos Preocupações{" "}
                   </p>
-                  <p>
+                  <p data-aos="fade-left">
                     <ImCheckboxChecked className="IconChecked" /> Tecnologia
                     Segura e Comprovada{" "}
                   </p>
@@ -207,33 +209,35 @@ export default function AutoTeste() {
           <div className="Who">
             <div className="containerWho">
               <div className="textsWho">
-                <h2>
+                <h2 data-aos="fade-right">
                   <div className="line"></div>Essas lente pode ser perfeita para
                   você!
                 </h2>
-                <h1>Para quem é Indicada a Lente de Ortoceratologia?</h1>
-                <p>
+                <h1 data-aos="fade-right">Para quem é Indicada a Lente de Ortoceratologia?</h1>
+                <p data-aos="fade-right">
                   I. Quer acordar com visão nítida e sem precisar colocar lentes
                   pela manhã.{" "}
                 </p>
-                <p>
+                <p data-aos="fade-right">
                   II. Está cansado de lidar com desconforto causado por lentes
                   de contato tradicionais.{" "}
                 </p>
-                <p>
+                <p data-aos="fade-right">
                   III. Procura uma solução sem cirurgia, mas com resultados
                   comparáveis.{" "}
                 </p>
-                <p>
+                <p data-aos="fade-right">
                   IV. Leva uma vida ativa e precisa de total liberdade visual ao
                   longo do dia.{" "}
                 </p>
-                <BtnAds
-                  modalId="1"
-                  toggleModalVisibility={toggleModalVisibility}
-                />
+                <div data-aos="fade-right">
+                  <BtnAds
+                    modalId="1"
+                    toggleModalVisibility={toggleModalVisibility}
+                  />
+                </div>
               </div>
-              <div className="containerImgWho">
+              <div className="containerImgWho" data-aos="fade-left">
                 <img src={Pessoas} alt="Pessoas" />
               </div>
             </div>
@@ -242,8 +246,8 @@ export default function AutoTeste() {
 
         <Indication>
           <div className="containerIndi">
-            <h1>Indicações para o Uso das Lentes Ortoceratológicas</h1>
-            <p>
+            <h1 data-aos="fade-up">Indicações para o Uso das Lentes Ortoceratológicas</h1>
+            <p data-aos="fade-up">
               Recuperar a visão com clareza é mais do que um desejo, é uma
               necessidade para uma vida plena. Veja como a cirurgia Refrativa
               pode transformar sua qualidade de vida:
@@ -251,7 +255,7 @@ export default function AutoTeste() {
           </div>
 
           <div className="backgroundBlue">
-            <div className="containerIllness">
+            <div className="containerIllness" data-aos="zoom-in">
               <div className="iten-illness">
                 <div>
                   <FaHeartbeat />
@@ -278,7 +282,7 @@ export default function AutoTeste() {
         </Indication>
 
         <Contact>
-          <div className="ContactB">
+          <div className="ContactB" data-aos="fade-up">
             <div className="containerContactB">
               <h1>Não Perca Mais Tempo com Lentes Diurnas</h1>
               <p>
@@ -302,32 +306,32 @@ export default function AutoTeste() {
 
         <Testimony>
           <div className="containerDep">
-            <p>Depoimentos</p>
-            <div className="line"></div>
-            <h1>Depoimentos de Clientes </h1>
+            <p data-aos="fade-up">Depoimentos</p>
+            <div className="line" data-aos="fade-up"></div>
+            <h1 data-aos="fade-up">Depoimentos de Clientes </h1>
           </div>
 
-          <Carousel />
+          <div data-aos="zoom-in"><Carousel /></div>
         </Testimony>
 
         <Map>
           <div className="Map">
             <div className="containerTextMap">
               <div className="textMap">
-                <h1>Está Pronto para Transformar Suas Noites e Dias?</h1>
-                <p>
+                <h1 data-aos="fade-right">Está Pronto para Transformar Suas Noites e Dias?</h1>
+                <p data-aos="fade-right">
                   Entre em contato conosco hoje mesmo para agendar uma consulta
                   e descobrir como as lentes de ortoceratologia podem mudar sua
                   vida. Nossos especialistas estão prontos para ajudar você a
                   aproveitar ao máximo essa tecnologia inovadora.
                 </p>
               </div>
-              <div className="containerMap">
+              <div className="containerMap" data-aos="fade-left">
                 <MapEmbed />
               </div>
             </div>
           </div>
-          <div className="containerImgMap">
+          <div className="containerImgMap" data-aos="fade-down">
             <img src={Maps} alt="map" />
           </div>
         </Map>

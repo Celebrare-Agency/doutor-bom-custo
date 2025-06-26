@@ -3,10 +3,10 @@ import * as Styled from "./style.js";
 export default function Surgery() {
   return (
     <Styled.Container>
-      <h2>Cirurgias</h2>
+      <h2  data-aos="fade-up">Cirurgias</h2>
       <div className="containerCard row">
         {SurgeryS.map((item) => (
-          <div className="card col" key={item.id}>
+          <div className="card col" key={item.id} data-aos="fade-up">
             <details>
               <summary>{item.title}</summary>
               <p>{item.text}</p>

@@ -21,8 +21,8 @@ export default function () {
         />
       )}
       <div className="containerText  col">
-        <h2>Como funciona a cirurgia de blefaroplastia?</h2>
-        <p>
+        <h2 data-aos="fade-right">Como funciona a cirurgia de blefaroplastia?</h2>
+        <p data-aos="fade-right">
           A blefaroplastia, também conhecida como cirurgia das pálpebras, é um
           procedimento que visa rejuvenescer a região dos olhos, com a remoção
           do excesso de pele, bolsas de gordura e reposicionamento muscular,
@@ -30,7 +30,7 @@ export default function () {
           envelhecimento, pálpebras caídas, olheiras e rugas
         </p>
       </div>
-      <div className="imgContainer row">
+      <div className="imgContainer row" data-aos="fade-left">
         <img src={photo} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
     </Styled.Container>

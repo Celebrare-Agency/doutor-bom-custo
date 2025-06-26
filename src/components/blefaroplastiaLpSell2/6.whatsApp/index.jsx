@@ -27,7 +27,7 @@ export default function WhatsApp() {
           modalId="1"
         />
       )}
-      <div className="container-wtt">
+      <div className="container-wtt" data-aos="fade-up">
         <p>
           Clique no botão ao lado e dê o primeiro passo para realizar seu sonho
           da blefaroplastia marcando uma avaliação
@@ -40,7 +40,7 @@ export default function WhatsApp() {
         />
       </div>
 
-      <div className="imagens">
+      <div className="imagens" data-aos="zoom-in">
         <img src={imagem1} />
         <img src={imagem2} />
         <img src={imagem3} />

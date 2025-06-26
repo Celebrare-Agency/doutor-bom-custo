@@ -48,7 +48,7 @@ export default function Faqq() {
 
       <div className="container-faq">
         <div className="container-questions">          
-          <div className="container-title">
+          <div className="container-title" data-aos="fade-up">
             <h3>FAQ</h3>
           </div>
 

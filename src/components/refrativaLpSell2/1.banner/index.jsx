@@ -21,18 +21,18 @@ export default function Banner() {
       )}
       <div className="col LeftSideContent">
         {/* <h2>recupere a alegria de enxergar com clareza!</h2> */}
-        <h1>
+        <h1 data-aos="fade-right">
           Cirurgia Refrativa <br /> A partir de
           <b> R$ 3.900,00</b> EM SÃO PAULO!
         </h1>
-        <p>
+        <p data-aos="fade-right">
           Pacote Completo com exames. <br></br> Fazemos parcelamento!
         </p>
-        <div>
+        <div data-aos="fade-right">
           <span>*preço exclusivo para os dois olhos</span>
         </div>
-        <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
-        <img className="flags" src={discountFlag} alt="flag de desconto" />
+        <div data-aos="fade-right"><BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} /></div>
+        <img className="flags" src={discountFlag} alt="flag de desconto" data-aos="fade-left" />
       </div>
     </Styled.Container>
   );

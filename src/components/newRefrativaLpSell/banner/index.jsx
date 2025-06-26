@@ -33,23 +33,26 @@ export default function Declaration() {
             alt="logo Instituto Kós"
           />
         </div>
-        <h1>
+        <h1 data-aos="fade-up">
           PARTICIPE DO MAIOR EVENTO DE LIBERDADE <br /> VISUAL JÁ REALIZADO NO
           BRASIL
         </h1>
-        <p>
+        <p data-aos="fade-up">
           O Refrativa SP chega para quem deseja deixar de depender dos óculos ou
           das lentes de contato com segurança, tecnologia avançada e preços
           justos.
         </p>
         <Video embedId="n4iNP2e1T9U" />
-        <Button
+        <div data-aos="fade-up"> 
+          <Button
           className="btn"
           text="QUERO ACESSAR AGORA!"
           display="none"
           onClick={() => toggleModalVisibility("1", "vip")}
-        />
-        <p className="finaltext">
+          />
+        </div>
+
+        <p className="finaltext" data-aos="fade-up">
           Liberte-se das amarras que os óculos te impõem e redescubra a sensação
           de enxergar a vida com os seus próprios olhos. A sua liberdade visual
           começa agora.

@@ -6,12 +6,13 @@ import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Banner() {
   return (
     <Styled.Container>
-      <img
+      <img 
         src={doctorSmiling}
         alt="doutora sorrindo por estar feliz em atender pacientes"
         className="DoctorSmilingImage"
+        data-aos="fade-right"
       />
-      <div className="middlePartContainer col">
+      <div className="middlePartContainer col" data-aos="fade-up">
         <h1>
           Procurando por
           <br /> médico oftalmologista
@@ -37,6 +38,7 @@ export default function Banner() {
         src={oldWoman}
         alt="senhora sorrindo e feliz por estar sendo ajudada por uma médica"
         className="oldWomanImage"
+        data-aos="fade-left"
       />
     </Styled.Container>
   );

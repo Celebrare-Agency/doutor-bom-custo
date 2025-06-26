@@ -4,19 +4,19 @@ export default function Politica() {
   return (
     <Styled.Container>
       <header>
-        <h1>Política de Privacidade</h1>
+        <h1 data-aos="fade-down">Política de Privacidade</h1>
       </header>
       <section>
         <article>
-          <h2>Informações do Usuário</h2>
-          <p>
+          <h2 data-aos="fade-right">Informações do Usuário</h2>
+          <p data-aos="fade-right">
             É importante coletarmos algumas informações dos usuários de nossos
             serviços para que possamos oferecer um site melhor e mais
             direcionado às suas preferências. Também precisamos informá-los
             sobre novidades e informações relevantes. Por isso, leia atentamente
             esta política e nossos termos de uso.
           </p>
-          <p>
+          <p data-aos="fade-right">
             Garantimos que quaisquer informações pessoais dos usuários não serão
             fornecidas, publicadas ou comercializadas em quaisquer
             circunstâncias. Estas informações estão seguras conosco. Exceto em
@@ -26,27 +26,27 @@ export default function Politica() {
           </p>
         </article>
         <article>
-          <h2>Cadastro</h2>
-          <p>
+          <h2 data-aos="fade-right">Cadastro</h2>
+          <p data-aos="fade-right">
             Nós nunca enviamos e-mails solicitando confirmação de dados/cadastro
             ou com anexos executáveis (extensão exe, com, scr, bat) e links para
             download.
           </p>
-          <p>
+          <p data-aos="fade-right">
             Para usufruir dos benefícios adicionais do site e receber o email
             com informações sobre nossos serviços, você precisa se cadastrar em
             algum de nossos formulários de opt-in. Este cadastro é armazenado em
             um banco de dados protegido e sigiloso.
           </p>
-          <p>
+          <p data-aos="fade-right">
             Caso não queira receber mais nossos informativos, basta clicar no
             link de cancelamento que há no rodapé de cada mensagem ou nos avisar
             através de e-mail. Nós nunca enviamos spams.
           </p>
         </article>
         <article>
-          <h2>Cookies</h2>
-          <p>
+          <h2 data-aos="fade-right">Cookies</h2>
+          <p data-aos="fade-right">
             Podemos utilizar a tecnologia de cookies para melhorar a experiência
             do usuário. Isso auxilia na identificação do seu IP, facilitando a
             navegação e customizando a navegação. Você pode bloquear qualquer
@@ -54,8 +54,8 @@ export default function Politica() {
           </p>
         </article>
         <article>
-          <h2>Compartilhamento de informações</h2>
-          <p>
+          <h2 data-aos="fade-right">Compartilhamento de informações</h2>
+          <p data-aos="fade-right">
             Para fins de segurança, as informações poderão ser compartilhadas
             quando houver requerimento de autoridades judiciais ou
             governamentais competentes para fins de investigações pessoais
@@ -67,7 +67,7 @@ export default function Politica() {
             considerar que a atividade de um usuário seja suspeita de tentar ou
             de cometer um delito ou tentar prejudicar outras pessoas.
           </p>
-          <p>
+          <p data-aos="fade-right">
             Possuímos links de acesso para outros sites e que não estão cobertos
             por esta política. Assim, verifique a política de privacidade desses
             sites, tendo em vista que suas informações serão administradas de
@@ -76,8 +76,8 @@ export default function Politica() {
           </p>
         </article>
         <article>
-          <h2>Dúvidas e correção de dados</h2>
-          <p>
+          <h2 data-aos="fade-right">Dúvidas e correção de dados</h2>
+          <p data-aos="fade-right">
             Reservamo-nos o direito de alterar a política a qualquer momento.
           </p>
         </article>

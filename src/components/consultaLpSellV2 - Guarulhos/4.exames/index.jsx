@@ -27,13 +27,13 @@ export default function Exames() {
   return (
     <Styled.Container>
       <div className="text col">
-        <h2>Os Exames Mais Procurados por Nossos Clientes</h2>
-        <p>
+        <h2 data-aos="fade-up">Os Exames Mais Procurados por Nossos Clientes</h2>
+        <p data-aos="fade-up">
           Com base em nossa análise interna, identificamos os exames mais
           requisitados e realizados por nossas equipes especializadas.
         </p>
       </div>
-      <div className="cardsCont">
+      <div className="cardsCont" data-aos="zoom-out">
         {items.map((item) => (
           <div className="card col" key={item.id}>
             <h3>{item.title}</h3>
@@ -41,7 +41,7 @@ export default function Exames() {
           </div>
         ))}
       </div>
-      <WppButton />
+      <div data-aos="fade-up"><WppButton /></div>
     </Styled.Container>
   );
 }

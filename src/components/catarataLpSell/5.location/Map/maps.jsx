@@ -31,7 +31,7 @@ const Container = styled.div`
 
 const Map = () => {
   return (
-    <Container>
+    <Container  data-aos="fade-up">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.63828910646!2d-46.646084923914614!3d-23.545508661011468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce584dc0373909%3A0xd99672d1469c6d5f!2sCondom%C3%ADnio%20Edif%C3%ADcio%20It%C3%A1lia%20-%20Rep%C3%BAblica%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001046-001!5e0!3m2!1spt-BR!2sbr!4v1715346226206!5m2!1spt-BR!2sbr"
         width="600"

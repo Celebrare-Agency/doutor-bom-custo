@@ -5,10 +5,10 @@ export default function Price() {
     <Styled.Container id="conversion">
       <div className="content col">
         <div className="titlePart col">
-          <h3>O que está incluso</h3>
-          <p>você vai receber mais de dois mil reais de desconto!</p>
+          <h3 data-aos="fade-right">O que está incluso</h3>
+          <p data-aos="fade-right">você vai receber mais de dois mil reais de desconto!</p>
         </div>
-        <ol className="col">
+        <ol className="col" data-aos="fade-right">
           <li>Médico cirurgião</li>
           <li>Médico cirurgião auxiliar</li>
           <li>Instrumentador </li>

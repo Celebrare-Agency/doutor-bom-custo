@@ -54,11 +54,11 @@ export default function Faq() {
 
   return (
     <Styled.Container id="duvidas">
-      <h3>Ainda com dúvida?</h3>
-      <p className="textQuestions">
+      <h3 data-aos="fade-up">Ainda com dúvida?</h3>
+      <p className="textQuestions" data-aos="fade-up">
         Separamos essa sessão para esclarecer as principais dúvidas.{" "}
       </p>
-      <div className="faqContainer col">
+      <div className="faqContainer col" data-aos="fade-up">
         {questionsAnswer.map((item) => (
           <details className="col" key={item.id}>
             <summary className="question">{item.question}</summary>

@@ -11,8 +11,9 @@ export default function Banner() {
           className="backgroundVector"
           src={backgroundVector}
           alt="linha onduladas verdes"
+          data-aos="fade-right"
         />
-        <div className="containerText col">
+        <div className="containerText col" data-aos="fade-right">
           <h1>
             Consultas com Médico dos Olhos e Exame de Fundo de Olho em
             Paraisópolis -sp por:
@@ -20,7 +21,7 @@ export default function Banner() {
           <img src={imgText} alt="Imagem de texto promocional" />
           <WppButton />
         </div>
-        <div className="imgContainer">
+        <div className="imgContainer" data-aos="fade-left">
           <img
             className="doctoPhoto"
             src={photoDoctor}

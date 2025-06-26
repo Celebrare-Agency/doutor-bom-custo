@@ -12,13 +12,14 @@ export default function Banner() {
           className="backgroundVector"
           src={backgroundVector}
           alt="linha onduladas verdes"
+          data-aos="fade-right"
         />
-        <div className="containerText col">
+        <div className="containerText col" data-aos="fade-right">
           <h1>Consulta com oftalmologista em Taboão da serra por:</h1>
           <img src={imgText} alt="Imagem de texto promocional" />
           <WppButton />
         </div>
-        <div className="imgContainer">
+        <div className="imgContainer" data-aos="fade-left">
           <img
             className="doctoPhoto"
             src={photoDoctor}

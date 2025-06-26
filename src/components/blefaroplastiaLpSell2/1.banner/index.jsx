@@ -21,7 +21,7 @@ export default function Banner() {
           modalId="1"
         />
       )}
-      <div className="container-header">
+      <div className="container-header" data-aos="fade-up">
         <p>Acompanhe nossas redes:</p>
 
         <div className="sociais">
@@ -41,13 +41,13 @@ export default function Banner() {
         </div>
       </div>
       <div className="banner">
-        <img src={logo} alt="logotipo" />
-        <h1>
+        <img src={logo} alt="logotipo" data-aos="fade-up" />
+        <h1 data-aos="fade-up">
           Faça a tão sonhada cirurgia das pálpebras com uma equipe de médicos
           especialistas em <b>blefaroplastia</b>
         </h1>
 
-        <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
+        <div data-aos="fade-up"><BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} /></div>
       </div>
     </Styled.Container>
   );

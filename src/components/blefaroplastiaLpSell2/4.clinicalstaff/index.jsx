@@ -27,14 +27,14 @@ export default function ClinicalStaff() {
           modalId="1"
         />
       )}
-      <div className="container-title">
+      <div className="container-title" data-aos="fade-right"> 
         <img src={logo} />
         <h3>Corpo Clinico</h3>
       </div>
 
       <div className="hospital">
-        <h1>Hospital especializada em blefaroplastia e face</h1>
-        <p>
+        <h1 data-aos="fade-up">Hospital especializada em blefaroplastia e face</h1>
+        <p data-aos="fade-up">
           Nosso corpo clínico é formado por médicos oftalmologistas
           especialistas em plástica ocular e um dermatologista especialista em
           cosmiatria e lasers. Acreditamos que “Quem faz de tudo um pouco, não
@@ -42,7 +42,7 @@ export default function ClinicalStaff() {
           assunto que dominam, afinal, a prática leva a perfeição.
         </p>
 
-        <div className="imagens">
+        <div className="imagens" data-aos="zoom-in">
           <img src={imagem} />
           <img src={imagem2} />
           <img src={imagem3} />
@@ -52,7 +52,7 @@ export default function ClinicalStaff() {
         </div>
       </div>
 
-      <div className="container-information">
+      <div className="container-information" data-aos="fade-up">
         <div className="information">
           <h3>Atendimento humanizado</h3>
           <p>
@@ -87,11 +87,14 @@ export default function ClinicalStaff() {
           </p>
         </div>
       </div>
-      <BtnAds
-        modalId="1"
-        toggleModalVisibility={toggleModalVisibility}
-        text=" QUERO REALIZAR O SONHO DA BLEFAROPLASTIA"
-      />
+
+      <div data-aos="fade-up">
+        <BtnAds
+          modalId="1"
+          toggleModalVisibility={toggleModalVisibility}
+          text=" QUERO REALIZAR O SONHO DA BLEFAROPLASTIA"
+        />
+      </div>  
     </Styled.Container>
   );
 }

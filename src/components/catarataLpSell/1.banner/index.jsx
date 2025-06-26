@@ -20,21 +20,21 @@ export default function Banner() {
       )}
 
       <div className="col LeftSideContent">
-        <h2>recupere a alegria de enxergar com clareza!</h2>
-        <h1>
+        <h2 data-aos="fade-right">recupere a alegria de enxergar com clareza!</h2>
+        <h1 data-aos="fade-right">
           Cirurgia de catarata <br />
           por <b>R$ 2.900,00</b> em São Paulo.
         </h1>
-        <p>
+        <p data-aos="fade-right">
           Pacote Completo com Lente Importada e Exames. <br></br>Parcelamos em
           até <b>12x</b>.
         </p>
-        <div>
-          <span>*preço exclusivo por olho</span>
+        <div data-aos="fade-right">
+          <span data-aos="fade-right">*preço exclusivo por olho</span>
         </div>
-        <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
+        <div data-aos="fade-right"><BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} /></div>
 
-        <img className="flags" src={discountFlag} alt="flag de desconto" />
+        <img className="flags" src={discountFlag} alt="flag de desconto" data-aos="fade-left" />
       </div>
     </Styled.Container>
   );

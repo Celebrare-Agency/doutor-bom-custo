@@ -73,12 +73,12 @@ export default function Check() {
   return (
     <Styled.Container>
       <div className="containerText col">
-        <h2>
+        <h2 data-aos="fade-right">
           IMAGINE A TRANQUILIDADE DE ENXERGAR BEM, TER DE VOLTA A ALEGRIA DE
           VIVER E NÃO TER MAIS ESSES PROBLEMAS DE VISÃO?
         </h2>
       </div>
-      <div className="containerCheck row">
+      <div className="containerCheck row" data-aos="fade-left">
         <div className="items col">
           {Items3.map((item, index) => (
             <CheckboxContainer key={index}>

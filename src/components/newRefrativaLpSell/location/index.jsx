@@ -35,7 +35,7 @@ export default function Locationn() {
           modalId="1"
         />
       )}
-      <div className="container-title">
+      <div className="container-title" data-aos="fade-up">
         <img src={logo} />
         <h3>
           Acompanhe quantos sonhos foram realizados através da cirurgia
@@ -45,9 +45,9 @@ export default function Locationn() {
 
       <div className="container-videos">
         {depoimentos.map((dep, index) => (
-          <div className="container-video" key={index}>
-            <YoutubeEmbed embedId={dep.embedId} />
-            <div className="container-Text">
+          <div className="container-video" key={index}> 
+            <div data-aos="fade-right"><YoutubeEmbed embedId={dep.embedId} /></div>
+            <div className="container-Text" data-aos="fade-left">
               <h1>{dep.titulo}</h1>
               <p>{dep.texto}</p>
 
@@ -62,23 +62,23 @@ export default function Locationn() {
       </div>
 
       <div className="container-maps">
-        <h1>
+        <h1 data-aos="fade-up">
           Uma clínica de sonhos e novos olhares. Doutor bom custo é o lugar da
           sua transformação.
         </h1>
 
-        <div className="maps-street">
+        <div className="maps-street" data-aos="zoom-in">
           <StreetViewMap />
           <StreetViewMap2 />
         </div>
 
-        <div className="container-location">
+        <div className="container-location" data-aos="fade-right">
           <div className="how-to-get-there">
             <div className="location">Local</div>
             <h1>Como Chegar?</h1>
           </div>
 
-          <div className="location-icons">
+          <div className="location-icons" data-aos="fade-left">
             <div className="icons">
               <FaLocationDot />{" "}
               <p>Av. Ipiranga, 344 - São Paulo - SP, 01046-010</p>
@@ -92,7 +92,7 @@ export default function Locationn() {
           </div>
         </div>
 
-        <div className="maps">
+        <div className="maps" data-aos="fade-up">
           <Map />
           <div className="information-maps">
             {/* <div className="container-information">

@@ -21,14 +21,14 @@ export default function Location() {
         />
       )}
       <div className="titlePart col">
-        <h3>Estamos localizados no coração de São Paulo</h3>
-        <p>
+        <h3 data-aos="fade-up">Estamos localizados no coração de São Paulo</h3>
+        <p data-aos="fade-up">
           Estamos aqui no edifício Itália, no quinto andar, a 5 minutos da
           estação republica.
         </p>
       </div>
-      <Map />
-      <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
+      <div data-aos="fade-up"><Map /></div>
+      <div data-aos="fade-up"><BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} /></div>
     </Styled.Container>
   );
 }

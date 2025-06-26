@@ -73,13 +73,13 @@ export default function CheckBlefaro() {
   return (
     <Styled.Container>
       <div className="containerText col">
-        <h2>
+        <h2 data-aos="fade-right">
           IMAGINE A TRANQUILIDADE DE TER UM OLHAR REVITALIZADO, TER DE VOLTA A
           ALEGRIA DE SE SENTIR BEM CONSIGO MESMO E NÃO TER MAIS ESSES PROBLEMAS
           ESTÉTICOS E FUNCIONAIS?
         </h2>
       </div>
-      <div className="containerCheck row">
+      <div className="containerCheck row" data-aos="fade-left">
         <div className="items col">
           {Items3.map((item, index) => (
             <CheckboxContainer key={index}>

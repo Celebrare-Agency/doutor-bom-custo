@@ -65,9 +65,9 @@ export default function Faq() {
 
   return (
     <Section id="questions">
-      <h3>DÚVIDAS FREQUENTES</h3>
+      <h3 data-aos="fade-up">DÚVIDAS FREQUENTES</h3>
 
-      <div className="faqContainer column">
+      <div className="faqContainer column" data-aos="fade-up">
         {questionsAnswer.map((item) => (
           <details className="column" key={item.id}>
             <summary className="question">{item.question}</summary>

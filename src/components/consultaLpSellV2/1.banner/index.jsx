@@ -6,7 +6,7 @@ import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
 export default function Banner() {
   return (
     <Styled.Container>
-      <div className="middlePartContainer col">
+      <div className="middlePartContainer col" data-aos="fade-right">
         <h1>
           Consulta com Oftalmologista em Clínica Particular com Valores
           Acessíveis em Taboão da Serra.
@@ -34,6 +34,7 @@ export default function Banner() {
         src={oldMan}
         alt="senhor sorrindo e feliz por estar sendo ajudada por um médico"
         className="oldManImage"
+        data-aos="fade-left"
       />
     </Styled.Container>
   );

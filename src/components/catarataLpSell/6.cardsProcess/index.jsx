@@ -3,7 +3,7 @@ import { Servicess } from "../../../mock/sellerPageServices.js";
 export default function Service() {
   return (
     <Styled.Container>
-      <div className="container">
+      <div className="container" data-aos="zoom-in">
         <div className="cards row">
           {Servicess.map((item) => (
             <div className="contianerLines row">

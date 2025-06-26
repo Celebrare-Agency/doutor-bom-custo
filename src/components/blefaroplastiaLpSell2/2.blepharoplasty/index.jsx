@@ -28,14 +28,14 @@ export default function blepharoplasty() {
       <div>
         <div className="squares">
           <div className="squares-container">
-            <div className="squares">
+            <div className="squares" data-aos="fade-right">
               <p className="miniTitle">
                 O que é a <br />
                 <b>blefaroplastia?</b>
               </p>
             </div>
 
-            <div className="texts">
+            <div className="texts" data-aos="fade-left">
               <p>
                 A Blefaroplastia, também conhecida como cirurgia das pálpebras,
                 é a porta de entrada para uma{" "}
@@ -55,9 +55,9 @@ export default function blepharoplasty() {
           </div>
 
           <div className="squares-container2">
-            <img src={visao} />
+            <img src={visao} data-aos="fade-right" />
 
-            <div className="squares2">
+            <div className="squares2" data-aos="fade-left">
               <p className="miniTitle">
                 Encontre uma <br />
                 <b>nova visão</b>
@@ -68,7 +68,7 @@ export default function blepharoplasty() {
           </div>
 
           <div className="squares-container3">
-            <div>
+            <div data-aos="fade-right">
               <p>
                 Para além das preocupações estéticas,{" "}
                 <span>
@@ -99,9 +99,9 @@ export default function blepharoplasty() {
           </div>
 
           <div className="squares-container4">
-            <img src={blu} />
+            <img src={blu} data-aos="fade-right"/>
 
-            <div className="classe">
+            <div className="classe" data-aos="fade-left">
               <div className="squares4">
                 <p>
                   Estamos comprometidos em oferecer a você a oportunidade de
@@ -118,12 +118,12 @@ export default function blepharoplasty() {
         </div>
 
         <div className="container-type-blepha">
-          <h1>
+          <h1 data-aos="fade-up">
             Conheça os <span>tipos de Blefaroplastia</span>
           </h1>
-          <p>Existem 3 diferentes tipos de cirurgia de blefaroplastia</p>
+          <p data-aos="fade-up">Existem 3 diferentes tipos de cirurgia de blefaroplastia</p>
 
-          <div className="container-blepha">
+          <div className="container-blepha" data-aos="zoom-in">
             <div className="blepha">
               <img src={olho} />
               <h1>
@@ -162,12 +162,12 @@ export default function blepharoplasty() {
             </div>
           </div>
 
-          <p>
+          <p data-aos="fade-up">
             Se o excesso de pele e as bolsas de gordura nas pálpebras incomodam
             você, agende <br />
             uma avalição com os nossos médicos especialistas.
           </p>
-          <BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} />
+          <div data-aos="fade-up"><BtnAds modalId="1" toggleModalVisibility={toggleModalVisibility} /></div>
         </div>
       </div>
     </Styled.Container>

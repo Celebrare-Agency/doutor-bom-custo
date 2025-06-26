@@ -18,7 +18,7 @@ export default function Banner() {
           modalId="1"
         />
       )}
-      <div className="col centerSideContent">
+      <div className="col centerSideContent" data-aos="fade-up">
         <h1>
           Diga Adeus às Palpebras Caídas e Rugas com a Cirurgia de
           Blefaroplastia!

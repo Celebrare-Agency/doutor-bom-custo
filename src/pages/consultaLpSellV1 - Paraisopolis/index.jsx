@@ -17,7 +17,7 @@ export default function OphthalmologistParaisopolis() {
     <>
       <Header />
       <Banner />
-      <p style={styleObj}>
+      <p style={styleObj} data-aos="fade-up">
         Estão incluídos em todas as nossas consultas; Avaliação do médico,
         autorefrator, exame optométrico, ceratrometria e tonometria.
       </p>

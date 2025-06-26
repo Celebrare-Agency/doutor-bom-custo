@@ -10,8 +10,9 @@ export default function AboutUs() {
           src={imgHospital}
           alt="imagem de dentro do nosso centro cirurgico"
           className="firstTopPhoto"
+          data-aos="fade-right"
         />
-        <div className="containerTextTitle col">
+        <div className="containerTextTitle col" data-aos="fade-left">
           <h2>
             Dr. Bom Custo: <br />
             Saúde de Qualidade <br />
@@ -23,10 +24,10 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
-      <div className="timelineContainer col">
+      <div className="timelineContainer col" data-aos="fade-left">
         <hr className="line" />
         {Timeline.map((item) => (
-          <div className="timelineYears row" key={item.id}>
+          <div className="timelineYears row" key={item.id} data-aos="fade-right">
             <span>{item.year}</span>
             <p>{item.text}</p>
           </div>

@@ -30,10 +30,10 @@ export default function Solutionn() {
       )}
       <div className="container-solution">
         <div className="container-initial">
-          <h1>O QUE VOCÊ VAI ENCONTRAR NO REFRATIVA SP</h1>
+          <h1 data-aos="fade-up">O QUE VOCÊ VAI ENCONTRAR NO REFRATIVA SP</h1>
 
           <div className="container-img">
-            <p>
+            <p data-aos="fade-right">
               O maior evento de liberdade visual conta com uma estrutura
               completa para garantir excelência em cada etapa do atendimento.{" "}
               <br />
@@ -47,13 +47,13 @@ export default function Solutionn() {
               personalizado para o seu caso, desde a triagem até o
               pós-operatório.
             </p>
-            <img src={img} />
+            <img src={img} data-aos="fade-left" />
           </div>
 
-          <h1>Como participar</h1>
+          <h1 data-aos="fade-up">Como participar</h1>
 
           <div className="container-img img-cont">
-            <p>
+            <p data-aos="fade-left">
               O primeiro passo é realizar uma consulta de avaliação com os
               nossos médicos especialistas, para entenderem o seu caso e
               verificar se sua saúde ocular está nas condições ideiais para o
@@ -66,16 +66,16 @@ export default function Solutionn() {
               Enfim, quando os resultados estiverem disponiveis, você já pode
               realizar a tão aguardada cirurgia refrativa! muito.
             </p>
-            <img src={img2} />
+            <img src={img2} data-aos="fade-right" />
           </div>
 
-          <h1>
+          <h1 data-aos="fade-up">
             ATENÇÃO: ATENDIMENTO LIMITADO. PARTICIPAÇÃO <br /> POR ORDEM DE
             INTERESSE!
           </h1>
 
           <div className="container-img">
-            <p>
+            <p data-aos="fade-right">
               No Refrativa SP, priorizamos um atendimento exclusivo e sem
               sobrecargas, nossa agenda de consultas é limitada e os horários
               são preenchidos rapidamente. <br />
@@ -83,13 +83,13 @@ export default function Solutionn() {
               As consultas e cirurgias serão agendadas por ordem de interesse,
               respeitando o limite da equipe médica e da estrutura hospitalar.
             </p>
-            <img src={img3} />
+            <img src={img3} data-aos="fade-left" />
           </div>
 
-          <h1>Após o procedimento, o que muda?</h1>
+          <h1 data-aos="fade-up">Após o procedimento, o que muda?</h1>
 
           <div className="container-img img-cont">
-            <p>
+            <p data-aos="fade-left">
               Tudo muda! Você vai enxergar com nitidez, sem depender de óculos
               ou lentes. Vai ganhar mais liberdade e autonomia para trabalhar,
               dirigir, praticar esportes e realizar tarefas do dia a dia com
@@ -97,21 +97,23 @@ export default function Solutionn() {
               vida. Tudo isso com segurança, tecnologia avançada e resultados de
               excelência.
             </p>
-            <img src={img4} />
+            <img src={img4} data-aos="fade-right" />
           </div>
         </div>
 
-        <h1>
+        <h1 data-aos="fade-up">
           Realize a sua consulta de avaliação e garanta a cirurgia refrativa
           pelo <br /> preço mais acessível da cidade:
         </h1>
 
-        <Button
-          className="btn"
-          text="Quero garantir a minha cirurgia "
-          display="none"
-          onClick={() => toggleModalVisibility("1", "vip")}
-        />
+        <div data-aos="fade-up">
+          <Button
+            className="btn"
+            text="Quero garantir a minha cirurgia "
+            display="none"
+            onClick={() => toggleModalVisibility("1", "vip")}
+          />
+        </div>
       </div>
     </Styled.Container>
   );

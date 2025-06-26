@@ -7,8 +7,8 @@ export default function Declaration() {
   return (
     <Styled.Container>
       <div className="container-declaration">
-        <img src={img} />
-        <div className="texts">
+        <img src={img} data-aos="fade-right" />
+        <div className="texts" data-aos="fade-left">
           <p>
             No Brasil, temos quase 24% da população fazendo o uso de óculos ou
             lentes de contato para corrigir erros de refração como miopia,

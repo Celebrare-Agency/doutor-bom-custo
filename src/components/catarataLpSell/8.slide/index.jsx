@@ -12,10 +12,10 @@ export default function SlideshowBlefaro() {
   return (
     <Container>
       <div className="containerTitle">
-        <a href="#espaco">
+        <a href="#espaco" data-aos="fade-right">
           <h3>Nossos Espaços e Nossa Tecnologia</h3>
         </a>
-        <hr />
+        <hr data-aos="fade-right" />
       </div>
       <div>
         <Swiper
@@ -27,12 +27,13 @@ export default function SlideshowBlefaro() {
           spaceBetween={90}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           className="mySwiper"
+          data-aos="fade-right"
         >
           <SwiperSlide>
             <img src={slide1} alt="fotos da clinica" className="imgSlide" />
 
             <div className="text">
-              <div className="title">
+              <div className="title" data-aos="fade-right">
                 <h1>Nossos Espaços</h1>
               </div>
               <p>

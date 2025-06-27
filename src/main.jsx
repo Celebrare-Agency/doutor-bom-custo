@@ -22,10 +22,11 @@ const tagManagerArgs = {
 
 AOS.refresh();
 AOS.init({
-  offset: 200,
-  duration: 1000,
-  easing: "ease-in-sine",
-  once: true,
+  offset: 200,             
+  duration: 1200,             
+  easing: 'ease-out-cubic',   
+  delay: 10,                 
+  once: true,   
 });
 
 TagManager.initialize(tagManagerArgs);

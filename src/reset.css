@@ -32,6 +32,18 @@ button {
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+[data-aos] {
+  will-change: transform, opacity;
+}
+
+[data-aos="fade-left"] {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
 ::-webkit-scrollbar {
   width: 3px;
 }

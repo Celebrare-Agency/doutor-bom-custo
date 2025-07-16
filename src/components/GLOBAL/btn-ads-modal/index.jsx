@@ -60,7 +60,7 @@ const BtnAds = ({ modalId, toggleModalVisibility, text }, props) => {
   const handleClick = () => {
     const currentUrl = window.location.href;
     const targetUrl =
-      "https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20um%20m%C3%A9dico%20oftalmologista%20em%20Parais%C3%B3polis";
+      "https://api.whatsapp.com/send?phone=5511945972641&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20um%20m%C3%A9dico%20oftalmologista%20em%20Parais%C3%B3polis";
 
     if (currentUrl.includes("oftalmo-paraisopolis")) {
       window.location.href = targetUrl;

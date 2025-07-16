@@ -3,17 +3,19 @@ import * as Styled from "./style";
 import logo from "../../../assets/logoWhite.svg";
 import Video from "./video/index";
 import Button from "../../GLOBAL/buttons";
+import Modal from "../../Forms/modal refrativa form/index.jsx";
 
 import { useLocation } from "react-router-dom";
 
 export default function Declaration() {
-  const [isModalVisible, setModalVisibility] = useState(false);
   const [ticketType, setTicketType] = useState(null); // Armazena o tipo de ingresso
   const location = useLocation();
 
-  const toggleModalVisibility = (modalId, type) => {
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
     setModalVisibility(!isModalVisible);
-    setTicketType(type); // Define o tipo de ingresso (on ou vip)
+    // Lógica para lidar com o ID do modal se necessário
   };
   return (
     <Styled.Container>
@@ -48,7 +50,8 @@ export default function Declaration() {
           className="btn"
           text="QUERO ACESSAR AGORA!"
           display="none"
-          onClick={() => toggleModalVisibility("1", "vip")}
+          modalId="1" 
+          toggleModalVisibility={toggleModalVisibility}
           />
         </div>
 

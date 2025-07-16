@@ -10,7 +10,7 @@ import { SiGooglemaps } from "react-icons/si";
 import StreetViewMap from "./maps/StreetView.jsx";
 import StreetViewMap2 from "./maps/StreetView2.jsx";
 import Map from "./maps/maps.jsx";
-import Modal from "../../Forms/modal blefaroplastia form/index.jsx";
+import Modal from "../../Forms/modal refrativa form/index.jsx";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
 
 export default function Locationn() {

@@ -1,5 +1,5 @@
 import * as Styled from "./style.js";
-import Modal from "../../Forms/modal blefaroplastia form/index.jsx";
+import Modal from "../../Forms/modal refrativa form/index.jsx";
 import BtnAds from "../../GLOBAL/btn-ads-modal";
 import Button from "../../GLOBAL/buttons.jsx";
 import React, { useState } from "react";

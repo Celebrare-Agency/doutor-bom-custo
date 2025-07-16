@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import * as Styled from "./style";
 import Button from "../../GLOBAL/buttons";
 import { useLocation } from "react-router-dom";
+import Modal from "../../Forms/modal refrativa form/index.jsx";
+
 export default function Questions() {
-  const [isModalVisible, setModalVisibility] = useState(false);
   const [ticketType, setTicketType] = useState(null); // Armazena o tipo de ingresso
   const location = useLocation();
 
-  const toggleModalVisibility = (modalId, type) => {
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
     setModalVisibility(!isModalVisible);
-    setTicketType(type); // Define o tipo de ingresso (on ou vip)
+    // Lógica para lidar com o ID do modal se necessário
   };
   return (
     <Styled.Container>
@@ -66,8 +69,9 @@ export default function Questions() {
           <Button
             className="btn"
             text="Quero ME LIVRAR DOS ÓCULOS"
-            display="none"
-            onClick={() => toggleModalVisibility("1", "vip")}          
+            display="none"            
+            modalId="1" 
+            toggleModalVisibility={toggleModalVisibility}        
           />
         </div>
       </div>

@@ -5,7 +5,7 @@ import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import { PiTiktokLogoLight } from "react-icons/pi";
 import ModalCatarata from "../../components/formsLinks/modal catarata form/index.jsx";
-import ModalRefrativa from "../../components/formsLinks/modal refrativa form2/index.jsx";
+import ModalRefrativa from "../../components/formsLinks/modal refrativa form/index.jsx";
 import ModalBlefaroplastia from "../../components/formsLinks/modal blefaroplastia form/index.jsx";
 
 export default function Linktree() {

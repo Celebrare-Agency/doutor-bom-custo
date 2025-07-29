@@ -9,17 +9,18 @@ const Media = {
 
 export const Container = styled.main`
   position: fixed;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999; /* Increase to ensure it stays above the other modal */
   display: flex;
+  max-width: 1000px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1rem 0;
+  padding: 1rem;
   ${Media.PhoneLarge} {
     width: 95%; /* Adjust width for smaller screens */
   }

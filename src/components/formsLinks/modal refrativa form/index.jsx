@@ -152,14 +152,12 @@ export default function Modal(props) {
         />
         <div className="boxSection">
           <p>Qual o seu grau (aproximadamente)?</p>
-          {location.pathname === "/links" && (
-            <select name="Grau" required>
-              <option value="">Selecione uma opção</option>
-              <option value="Até 3 graus">Até 3 graus</option>
-              <option value="Até 5 graus">Até 5 graus</option>
-              <option value="Acima de 10 graus">Acima de 10 graus</option>
-            </select>
-          )}
+          <select name="Grau" required>
+            <option value="">Selecione uma opção</option>
+            <option value="Até 3 graus">Até 3 graus</option>
+            <option value="Até 5 graus">Até 5 graus</option>
+            <option value="Acima de 10 graus">Acima de 10 graus</option>
+          </select>
         </div>
         {showSubmitButton && (
           <input

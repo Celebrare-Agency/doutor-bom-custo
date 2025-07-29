@@ -145,14 +145,12 @@ export default function Modal(props) {
         />
         <div className="boxSection">
           <p>Em qual região você tem interesse em realizar o procedimento?</p>
-          {location.pathname === "/links" && (
-            <select name="Regiao" required>
-              <option value="">Selecione uma opção</option>
-              <option value="Superior">Superior</option>
-              <option value="Inferior">Inferior</option>
-              <option value="Completo">Completo</option>
-            </select>
-          )}
+          <select name="Regiao" required>
+            <option value="">Selecione uma opção</option>
+            <option value="Superior">Superior</option>
+            <option value="Inferior">Inferior</option>
+            <option value="Completo">Completo</option>
+          </select>
         </div>
         {showSubmitButton && (
           <input

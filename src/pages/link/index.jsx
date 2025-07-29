@@ -10,16 +10,15 @@ import ModalBlefaroplastia from "../../components/formsLinks/modal blefaroplasti
 
 export default function Linktree() {
   const [isModalVisible, setModalVisibility] = useState(false);
-  const [modalId, setModalId] = useState(null); // Para saber qual modal abrir
+  const [modalId, setModalId] = useState(null);
 
   const toggleModalVisibility = (id) => {
-    setModalVisibility(!isModalVisible); // Toggle a visibilidade
-    setModalId(id); // Define o id do modal que vai ser aberto
+    setModalVisibility(!isModalVisible); 
+    setModalId(id); 
   };
 
   return (
     <Styled.Container>
-      {/* Renderizando o modal de forma condicional */}
       {isModalVisible && modalId === "catarata" && (
         <ModalCatarata
           display={isModalVisible}

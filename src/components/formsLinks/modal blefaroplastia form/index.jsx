@@ -25,7 +25,7 @@ export default function Modal(props) {
     const data = {
       nome: formData.get("Nome"),
       telefone: formData.get("Telefone"),
-      origem: "Google",
+      origem: "Bio do Instagram",
       observacoes: `Procedimento: Blefaroplastia. Região de interesse: ${
         formData.get("Regiao") || "Não informado"
       }`,

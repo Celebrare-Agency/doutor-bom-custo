@@ -27,7 +27,7 @@ export default function Modal(props) {
       nome: formData.get("Nome"),
       telefone: formData.get("Telefone"),
       diagnostico: formData.get("Diagnostico"),
-      origem: "Google", // Campo fixo para este exemplo
+      origem: "Bio do Instagram",
     };
 
     try {

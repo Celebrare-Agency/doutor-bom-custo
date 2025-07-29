@@ -27,7 +27,7 @@ export default function Modal(props) {
       nome: formData.get("Nome"),
       telefone: formData.get("Telefone"),
       grau_aproximado: formData.get("Grau") || "Não informado",
-      origem: "Meta", // Campo fixo para este exemplo
+      origem: "Bio do Instagram", // Campo fixo para este exemplo
     };
 
     console.log("📤 Dados enviados para Pipefy:", data); // LOG para verificar os dados antes do envio
@@ -53,17 +53,13 @@ export default function Modal(props) {
           }
         `,
           variables: {
-            pipe_id: 306134856,
+            pipe_id: 305678356, // ID do Pipe
             fields: [
               { field_id: "nome", field_value: data.nome },
               { field_id: "telefone", field_value: data.telefone },
               {
                 field_id: "qual_o_grau_aproximado",
                 field_value: data.grau_aproximado,
-              },
-              {
-                field_id: "nivel_de_interesse_do_lead",
-                field_value: "",
               },
               { field_id: "origem", field_value: data.origem },
             ],
@@ -92,7 +88,7 @@ export default function Modal(props) {
 
       // Redirecionar para o WhatsApp após sucesso
       let whatsappLink =
-        "https://api.whatsapp.com/send?phone=5511945972641&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20Instagram%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20refrativa!";
+        "https://api.whatsapp.com/send?phone=5511945972641&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20refrativa!";
       window.location.href = whatsappLink;
 
       // Fecha o modal após o envio bem-sucedido

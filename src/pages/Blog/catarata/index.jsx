@@ -1,6 +1,8 @@
 import * as Styled from "./style.js";
 import Header from "../../../components/GLOBAL/header/index.jsx";
 import YoutubeEmbed from "./embed/YTEMBED.jsx";
+import React, { useState } from "react";
+import Modal from "../../../components/FormHome/index.jsx";
 
 export default function Catarata() {
   const CristalinoImg =
@@ -10,10 +12,22 @@ export default function Catarata() {
   const ComparativeCatarata =
     "https://s2-g1.glbimg.com/KgvPWA-FaXlxtcatGxf1o1z5jNY=/0x0:1200x765/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/S/8/AXfxe6Q5qQoZhBfm24Dg/visare-g1-01-23-fotos-corpo-da-materia-horizontais-02.jpg";
 
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+  };
   return (
     <>
       <Header />
       <Styled.Container>
+        {isModalVisible && (
+          <Modal
+            display={isModalVisible}
+            onClose={() => toggleModalVisibility()}
+            modalId="1"
+          />
+        )}
         <section>
           <h1 data-aos="fade-right">O que é catarata?</h1>
           <br data-aos="fade-right" />
@@ -83,7 +97,8 @@ export default function Catarata() {
           </p>
           <br />
 
-          <a href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20" data-aos="fade-right">
+          <a 
+            onClick={() => toggleModalVisibility()} data-aos="fade-right">
             <button className="Button" data-aos="fade-right">Marque uma consulta!</button>
           </a>
         </section>
@@ -220,7 +235,8 @@ export default function Catarata() {
             Gostou do conteúdo? Marque uma consulta com um dos nossos atendentes
             para fazer sua avaliação!
           </h4>
-          <a data-aos="fade-up" href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20">
+          <a data-aos="fade-up" 
+            onClick={() => toggleModalVisibility()}>
             <button className="Button">Marque uma consulta!</button>
           </a>
         </section>

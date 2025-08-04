@@ -8,10 +8,25 @@ import {
 } from "react-icons/ai";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Modal from "../../FormHome/index";
+import React, { useState } from "react";
 
-export default function Footer() {
+export default function Footer() {  
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+  };
+
   return (
     <Styled.Footer>
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1"
+        />
+      )}
       <div className="footer row">
         <div className="left col">
           <Link to="/">
@@ -35,8 +50,8 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
             target="blanked"
+            onClick={() => toggleModalVisibility()}
           >
             <div className="socialContainer row">
               <AiOutlineWhatsApp className="icon" />

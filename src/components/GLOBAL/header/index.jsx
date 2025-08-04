@@ -1,22 +1,24 @@
+import { useState, useEffect } from "react";
 import { HeaderContainer } from "./style";
-import logo from "../../../assets/logoExtendBlue.svg";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { useEffect, useState } from "react";
-const wppLink = "https://wa.me/5511945824194";
+import Modal from "../../FormHome/index.jsx";
+import logo from "../../../assets/logoExtendBlue.svg";
+
 const menuItems = [
-  { path: "sobre", label: "Sobre nós" },
+  { path: "/", label: "Sobre nós" },
   { path: "/catarata", label: "Catarata" },
   { path: "/refrativa", label: "Refrativa" },
   { path: "/blefaroplastia", label: "Blefaroplastia" },
   { path: "/blog-catarata", label: "Blog" },
-  { path: wppLink, label: "Atendimento" },
+  { path: "atendimento", label: "Atendimento" }, // Deixe apenas o path "atendimento"
 ];
 
 export default function Header() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
   const [animation, setAnimation] = useState(false);
+  const [showModal, setShowModal] = useState(false); // Adicionando estado para o modal
   const path = useLocation().pathname;
 
   useEffect(() => {
@@ -34,6 +36,7 @@ export default function Header() {
   const handleMenuClose = () => {
     setMenuIsVisible(false);
   };
+
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -41,6 +44,15 @@ export default function Header() {
   useEffect(() => {
     scrollToTop();
   }, [path]);
+
+  const openModal = (e) => {
+    e.preventDefault(); // Impede o comportamento padrão de navegação
+    setShowModal(true); // Abre o modal
+  };
+
+  const closeModal = () => {
+    setShowModal(false); // Fecha o modal
+  };
 
   return (
     <HeaderContainer isVisible={menuIsVisible} isanimation={animation}>
@@ -51,42 +63,29 @@ export default function Header() {
               <img src={logo} alt="logotipo" />
             </div>
           </Link>
-          <AiOutlineMenu
-            onClick={() => setMenuIsVisible(true)}
-            className="menu"
-          />
+          <AiOutlineMenu onClick={() => setMenuIsVisible(true)} className="menu" />
           <AiOutlineClose
             onClick={handleMenuClose}
             className={`menu closeMenu ${menuIsVisible ? "visible" : ""}`}
           />
           <ul className="menuSide">
             {menuItems.map((item) => (
-              <li
-                key={item.path}
-                className={`Options ${
-                  path === "/blefaroplastia" ? "light" : ""
-                }`}
-              >
-                {item.path === wppLink ? (
-                  <a href={item.path} target="_blank" rel="noopener noreferrer">
+              <li key={item.path} className={`Options ${path === "/blefaroplastia" ? "light" : ""}`}>
+                {item.path === "atendimento" ? (
+                  <a href="#" onClick={openModal}>
                     {item.label}
                   </a>
-                ) : item.path.startsWith("/") ? (
-                  <Link to={item.path}>{item.label}</Link>
-                ) : path === "/catarata" ||
-                  "/blefaroplastia" ||
-                  "/refrativa" ? (
-                  <Link to="/">{item.label}</Link>
                 ) : (
-                  <ScrollLink to={item.path} onClick={handleMenuClose}>
-                    {item.label}
-                  </ScrollLink>
+                  <Link to={item.path}>{item.label}</Link>
                 )}
               </li>
             ))}
           </ul>
         </div>
       </nav>
+
+      {/* Exibe o Modal quando showModal for true */}
+      {showModal && <Modal display={showModal} onClose={closeModal} modalId="1" />}
     </HeaderContainer>
   );
 }

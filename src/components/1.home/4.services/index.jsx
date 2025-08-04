@@ -1,9 +1,25 @@
+import Modal from "../../FormHome/index.jsx";
+import React, { useState } from "react";
 import * as Styled from "./style.js";
 import { Link } from "react-router-dom";
 
+
 export default function Services() {
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+  };
+
   return (
     <Styled.Container id="services">
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1"
+        />
+      )}
       <p data-aos="fade-up">
         Nossos parceiros estão à sua disposição! Projetados para sua segurança e
         comodidade, cada detalhe do centro cirúrgico e das clínicas é pensado
@@ -17,9 +33,9 @@ export default function Services() {
       </h3>
       <div className="formGroup">
         <a
-          href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista.%20"
           target="blanked"
           data-aos="fade-tight"
+          onClick={() => toggleModalVisibility()}
         >
           <button className="row">Oftalmologia</button>
         </a>

@@ -1,11 +1,27 @@
 import * as Styled from "./style.js";
+import React, { useState } from "react";
 import doctorSmiling from "../../../assets/1.home/banner/doctorSmiling.png";
 import { Link } from "react-router-dom";
 import oldWoman from "../../../assets/1.home/banner/oldWoman.png";
-import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
+import WppButton from "../../GLOBAL/buttonWppForm/index.jsx";
+import Modal from "../../FormHome/index.jsx";
+
 export default function Banner() {
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+  };
+
   return (
     <Styled.Container>
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1"
+        />
+      )}
       <img 
         src={doctorSmiling}
         alt="doutora sorrindo por estar feliz em atender pacientes"
@@ -19,7 +35,10 @@ export default function Banner() {
           <br /> bom e barato?
         </h1>
         <div className="buttonsContainer row">
-          <WppButton />
+          <WppButton 
+            modalId="1" 
+            toggleModalVisibility={toggleModalVisibility} 
+          />
           <a href="#services">
             <button type="button" className="buttonScroll">
               Serviços

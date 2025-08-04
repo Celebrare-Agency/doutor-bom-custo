@@ -1,8 +1,23 @@
 import * as Styled from "./style.js";
 import { Services } from "../../../mock/servicesOftal.js";
-export default function Exames() {
+import React, { useState } from "react";
+import Modal from "../../FormHome/index.jsx";
+export default function Exames() {    
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+  };
+  
   return (
-    <Styled.Container>
+    <Styled.Container>      
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1"
+        />
+      )}
       <a href="#exames">
         <h2 data-aos="fade-up">Exames</h2>
       </a>
@@ -14,11 +29,10 @@ export default function Exames() {
               <p>{item.text}</p>
             </details>
             <div className="btnContainer">
-              <a
-                href="https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20Oftalmologista.%20"
+              <a                
                 target="blanked"
               >
-                <button>Entrar em contato</button>
+                <button onClick={() => toggleModalVisibility()}>Entrar em contato</button>
               </a>
             </div>
           </div>

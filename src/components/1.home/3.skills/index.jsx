@@ -1,12 +1,27 @@
 import * as Styled from "./style.js";
+import React, { useState } from "react";
 import { Skill } from "../../../mock/skillsItemns.js";
 import doctor from "../../../assets/1.home/skills/photoDoctor.png";
-import WppButton from "../../GLOBAL/buttonWpp/index.jsx";
+import WppButton from "../../GLOBAL/buttonWppForm/index.jsx";
 import BtnAds from "../../GLOBAL/btn-ads-modal/index.jsx";
+import Modal from "../../FormHome/index.jsx";
 
-export default function Skills() {
+export default function Skills() {  
+  const [isModalVisible, setModalVisibility] = useState(false);
+
+  const toggleModalVisibility = (modalId) => {
+    setModalVisibility(!isModalVisible);
+  };
+
   return (
-    <Styled.Container id="conversion">
+    <Styled.Container id="conversion">      
+      {isModalVisible && (
+        <Modal
+          display={isModalVisible}
+          onClose={() => toggleModalVisibility()}
+          modalId="1"
+        />
+      )}
       <div className="imgContainer row" data-aos="fade-right">
         <img src={doctor} alt="alogmerado de fotos com doutores e pacientes" />
       </div>
@@ -25,7 +40,7 @@ export default function Skills() {
           </div>
         ))}
         <div data-aos="fade-left">
-          <WppButton style={{ color: "black" }} />
+          <WppButton style={{ color: "black" }} modalId="1" toggleModalVisibility={toggleModalVisibility}  />
         </div>
       </div>
     </Styled.Container>

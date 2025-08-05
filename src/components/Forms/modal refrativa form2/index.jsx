@@ -92,7 +92,7 @@ export default function Modal(props) {
 
       // Redirecionar para o WhatsApp após sucesso
       let whatsappLink =
-        "https://api.whatsapp.com/send?phone=5511945972641&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20refrativa!";
+        "https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20refrativa!";
       window.location.href = whatsappLink;
 
       // Fecha o modal após o envio bem-sucedido

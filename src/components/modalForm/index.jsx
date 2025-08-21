@@ -9,9 +9,28 @@ export default function Modal(props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSubmitButton, setShowSubmitButton] = useState(true);
   const [redirectMessage, setRedirectMessage] = useState("");
+  const [telefone, setTelefone] = useState("");
 
   const handleCloseModal = () => {
     onClose();
+  };
+
+  const formatTelefone = (value) => {
+    let cleaned = value.replace(/\D/g, "");
+    if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
+
+    if (cleaned.length <= 2) {
+      return `(${cleaned}`;
+    } else if (cleaned.length <= 7) {
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
+    } else if (cleaned.length <= 11) {
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
+    }
+    return value;
+  };
+
+  const handleTelefoneChange = (e) => {
+    setTelefone(formatTelefone(e.target.value));
   };
 
   const getObservacao = () => {
@@ -37,7 +56,7 @@ export default function Modal(props) {
     // Dados do formulário
     const data = {
       nome: formData.get("Nome"),
-      telefone: formData.get("Telefone"),
+      telefone: telefone, 
       origem: formData.get("Origem do Lead") || "Google", // Valor padrão
       prazoContato:
         formData.get("Prazo para entrar em contato") ||
@@ -160,13 +179,14 @@ export default function Modal(props) {
           data-input-id={`nome-${modalId}`}
         />
         <input
-          type="text"
+          type="tel"
           name="Telefone"
           required
           placeholder="Telefone"
-          pattern="^\+?(\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$"
+          value={telefone}
+          onChange={handleTelefoneChange}
+          maxLength={16}
           className="Telefone"
-          data-input-id={`telefone-${modalId}`}
         />
         {showSubmitButton && (
           <input

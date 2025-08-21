@@ -9,9 +9,28 @@ export default function Modal(props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSubmitButton, setShowSubmitButton] = useState(true);
   const [redirectMessage, setRedirectMessage] = useState("");
+  const [telefone, setTelefone] = useState("");
 
   const handleCloseModal = () => {
     onClose();
+  };
+
+  const formatTelefone = (value) => {
+    let cleaned = value.replace(/\D/g, ""); 
+    if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
+
+    if (cleaned.length <= 2) {
+      return `(${cleaned}`;
+    } else if (cleaned.length <= 7) {
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
+    } else if (cleaned.length <= 11) {
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
+    }
+    return value;
+  };
+
+  const handleTelefoneChange = (e) => {
+    setTelefone(formatTelefone(e.target.value));
   };
 
   const handleSubmit = async (event) => {
@@ -22,12 +41,11 @@ export default function Modal(props) {
 
     const formData = new FormData(event.target);
 
-    // Dados do formulário
     const data = {
       nome: formData.get("Nome"),
-      telefone: formData.get("Telefone"),
+      telefone: telefone,
       diagnostico: formData.get("Diagnostico"),
-      origem: "Google", // Campo fixo para este exemplo
+      origem: "Google",
     };
 
     try {
@@ -52,8 +70,8 @@ export default function Modal(props) {
           }
         `,
           variables: {
-            pipe_id: 305671115, // ID do Pipe
-            phase_id: 333857414, // ID da fase "Novos Leads"
+            pipe_id: 305671115, 
+            phase_id: 333857414, 
             fields: [
               { field_id: "nome", field_value: data.nome },
               { field_id: "telefone", field_value: data.telefone },
@@ -80,12 +98,10 @@ export default function Modal(props) {
 
       console.log("Card criado com sucesso:", result.data.createCard.card.id);
 
-      // Redirecionar para o WhatsApp após sucesso
       let whatsappLink =
         "https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!";
       window.location.href = whatsappLink;
 
-      // Fecha o modal após o envio bem-sucedido
       handleCloseModal();
     } catch (error) {
       console.error("Erro ao conectar com a API do Pipefy:", error);
@@ -138,13 +154,14 @@ export default function Modal(props) {
           data-input-id={`nome-${modalId}`}
         />
         <input
-          type="text"
+          type="tel"
           name="Telefone"
           required
           placeholder="Telefone"
-          pattern="^\+?(\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$"
+          value={telefone}
+          onChange={handleTelefoneChange}
+          maxLength={16} 
           className="Telefone"
-          data-input-id={`telefone-${modalId}`}
         />
         <div className="boxSection">
           <p>Você já tem o diagnóstico de catarata?</p>

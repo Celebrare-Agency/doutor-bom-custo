@@ -30,6 +30,9 @@ const Adesve = lazy(() =>
   import("./pages/newRefrativaLpSell")
 );
 
+const BlefaroForm = lazy(() => import("./components/PagesForm/blefaroplastia form/index"));
+const CatarataForm = lazy(() => import("./components/PagesForm/catarata form/index"));
+const RefrativaForm = lazy(() => import("./components/PagesForm/refrativa form/index"));
 const RefrativaLpSell3 = lazy(() => import("./pages/newRefrativaLpSell/index"));
 
 export function Router() {
@@ -48,6 +51,9 @@ export function Router() {
         <Route path="/politica" element={<Politica />} />
         <Route path="/refrativa3" element={<RefrativaLpSell3 />} />
         <Route path="/Ortoceratologia" element={<Ortoceratologia />} />
+        <Route path="/BlefaroForm" element={<BlefaroForm />} />
+        <Route path="/CatarataForm" element={<CatarataForm />} />
+        <Route path="/RefrativaForm" element={<RefrativaForm />} />
         <Route
           path="/paraisopolis-consulta"
           element={<OphthalmologistParaisopolis />}

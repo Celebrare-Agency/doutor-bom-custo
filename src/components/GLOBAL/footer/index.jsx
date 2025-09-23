@@ -40,6 +40,8 @@ export default function Footer() {
             novidades, criamos nossas redes sociais, através delas você poderá
             acompanhar de perto todas as novidades e informações. Acesse já!
           </p>
+
+          <p><strong>CNPJ:</strong> 28.674.798/0001-76</p>
         </div>
         <div className="socialGrid">
           <a href="https://www.instagram.com/dr_bomcusto/" target="blanked">

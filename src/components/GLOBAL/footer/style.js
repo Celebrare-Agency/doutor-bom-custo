@@ -89,12 +89,16 @@ export const Footer = styled.footer`
         font-style: normal;
         font-weight: 400;
         line-height: 22.142px;
+      
+        strong{
+          font-weight: bold;
+        }
       }
     }
   }
   .privacypart {
     width: 90%;
-    margin: auto;
+    margin: 1rem auto auto;
     justify-content: space-between;
     p {
       color: #fff;
@@ -103,7 +107,6 @@ export const Footer = styled.footer`
       font-style: normal;
       font-weight: 400;
       line-height: 22.8px;
-      cursor: pointer;
     }
     ${Media.Tablet} {
       flex-direction: column;

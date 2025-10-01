@@ -41,7 +41,8 @@ export default function Footer() {
             acompanhar de perto todas as novidades e informações. Acesse já!
           </p>
 
-          <p><strong>CNPJ:</strong> 28.674.798/0001-76</p>
+          <p><strong>OAS CLINICA MEDICA LTDA.</strong> <br/>
+          <strong>CNPJ:</strong> 28.674.798/0001-76</p>
         </div>
         <div className="socialGrid">
           <a href="https://www.instagram.com/dr_bomcusto/" target="blanked">

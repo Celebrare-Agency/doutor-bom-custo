@@ -20,7 +20,6 @@ export const Container = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;  
-
   form {
     display: flex;
     flex-direction: column;
@@ -53,7 +52,19 @@ export const Container = styled.main`
         background-color: var(--greenHover);
       }
     }
+    .checkbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      gap: 1rem;
+      color: var(--light);
 
+      input[type="checkbox"] {
+        width: 20px !important;
+        height: 20px;
+      }
+    }
     .boxSection {
       width: 90% !important;
       display: flex;

@@ -15,11 +15,11 @@ export const Container = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);  
+  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;  
+  background-position: center;
   form {
     display: flex;
     flex-direction: column;
@@ -48,15 +48,16 @@ export const Container = styled.main`
       width: 100%;
       max-width: 300px;
 
-      &:hover{
+      &:hover {
         background-color: var(--greenHover);
       }
     }
     .checkbox {
+      width: 90%;
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin: 0;
+      margin: auto;
       gap: 1rem;
       color: var(--light);
 
@@ -78,7 +79,7 @@ export const Container = styled.main`
         text-align: left;
       }
 
-      select {        
+      select {
         width: 100% !important;
         text-align: left;
       }
@@ -122,7 +123,7 @@ export const Container = styled.main`
     white-space: pre-wrap;
     width: 90% !important;
 
-    ${Media.PhoneLarge}{
+    ${Media.PhoneLarge} {
       font-size: 1.5rem !important;
     }
   }

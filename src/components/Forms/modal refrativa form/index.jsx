@@ -2,6 +2,39 @@ import React, { useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import * as Styled from "./style.js";
 
+const API_URL =
+  import.meta.env.VITE_API_URL?.trim() ||
+  "https://doutorbomcusto.com.br/api/rd/deals.php";
+
+const CF = {
+  ORIGEM: "69164e73e30fbc00222c0e44",
+  GRAU: "69164f4cadb4e40016d344c4",
+  CONSENT: "6916522ee174aa001d444d9a",
+  PHONE_DEAL: "69164e19c421730015dc0e75",
+  AD_NAME: "691653f263b60400136f7ff0",
+  AD_SET_NAME: "69165415adb4e40013d34772",
+  AD_CAMPAIGN_NAME: "6916544a420b5e0017ebdb95",
+};
+
+const PIPELINE_ID = "6915e85d53adfa0016001cf6";
+const STAGE_ID = "6915e85d53adfa0016001cf8";
+
+const formatTelefone = (value) => {
+  let cleaned = value.replace(/\D/g, "");
+  if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
+  if (cleaned.length <= 2) return `(${cleaned}`;
+  if (cleaned.length <= 7)
+    return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
+  return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
+};
+
+const validaNome = (s) => {
+  if (!s) return false;
+  const normalized = s.normalize("NFC").replace(/\s+/g, " ").trim();
+  const ok = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,}$/.test(normalized);
+  return ok ? normalized : false;
+};
+
 export default function Modal(props) {
   const { display, onClose, modalId } = props;
   const modalRef = useRef(null);
@@ -10,118 +43,112 @@ export default function Modal(props) {
   const [showSubmitButton, setShowSubmitButton] = useState(true);
   const [redirectMessage, setRedirectMessage] = useState("");
   const [telefone, setTelefone] = useState("");
+  const [consentimento, setConsentimento] = useState(false);
 
-  const handleCloseModal = () => {
-    onClose();
-  };
+  const handleCloseModal = () => onClose();
 
-  const formatTelefone = (value) => {
-    let cleaned = value.replace(/\D/g, "");
-    if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
-
-    if (cleaned.length <= 2) {
-      return `(${cleaned}`;
-    } else if (cleaned.length <= 7) {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
-    } else if (cleaned.length <= 11) {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
-    }
-    return value;
-  };
-
-  const handleTelefoneChange = (e) => {
+  const handleTelefoneChange = (e) =>
     setTelefone(formatTelefone(e.target.value));
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!consentimento) {
+      alert("Você precisa aceitar o consentimento para prosseguir.");
+      return;
+    }
+
     setIsSubmitting(true);
     setShowSubmitButton(false);
     setRedirectMessage("Redirecionando você para o contato...");
 
     const formData = new FormData(event.target);
+    const nomeValidado = validaNome((formData.get("Nome") || "").toString());
+    if (!nomeValidado) {
+      alert("Por favor, digite um nome válido.");
+      setIsSubmitting(false);
+      setShowSubmitButton(true);
+      setRedirectMessage("");
+      return;
+    }
 
+    const grau = formData.get("Grau") || "Não informado";
 
-    const data = {
-      nome: formData.get("Nome"),
-      telefone: telefone, 
-      grau_aproximado: formData.get("Grau") || "Não informado",
-      origem: "Google", 
-    };
+    const onlyDigits = (telefone || "").replace(/\D/g, "");
+    if (onlyDigits.length < 10) {
+      alert("Digite um telefone válido.");
+      setIsSubmitting(false);
+      setShowSubmitButton(true);
+      setRedirectMessage("");
+      return;
+    }
 
-    console.log("📤 Dados enviados para Pipefy:", data);
-    try {
-      const response = await fetch("https://api.pipefy.com/graphql", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3MjUzODg0NzUsImp0aSI6Ijc0YTYyYTJiLTg4NzEtNDZiNy05MmRiLTdmNWMxMDUxYmE5OCIsInN1YiI6MzAzMjEzNDM3LCJ1c2VyIjp7ImlkIjozMDMyMTM0MzcsImVtYWlsIjoidGlhZ29hbG1laWRhc2FudG9zMDRAZ21haWwuY29tIn19.jJdEiAbINcjf0YmaNJMumP-B5iUaaff_EA8XgESCP-WSFEyyJmGgseOG_victBzPPlcO2vKv9o9O9JNn1mPNng`, // Substitua pelo token correto
-        },
-        body: JSON.stringify({
-          query: `
-          mutation CreateCard($pipe_id: ID!, $fields: [FieldValueInput!]!) {
-            createCard(input: {
-              pipe_id: $pipe_id,
-              fields_attributes: $fields
-            }) {
-              card {
-                id
-              }
-            }
-          }
-        `,
-          variables: {
-            pipe_id: 305678356,
-            fields: [
-              { field_id: "nome", field_value: data.nome },
-              { field_id: "telefone", field_value: data.telefone },
-              {
-                field_id: "qual_o_grau_aproximado",
-                field_value: data.grau_aproximado,
-              },
-              { field_id: "origem", field_value: data.origem },
-            ],
-          },
-        }),
+    const params = new URLSearchParams(window.location.search);
+    const utm_content = params.get("utm_content") || "";
+    const utm_term = params.get("utm_term") || "";
+    const utm_campaign = params.get("utm_campaign") || "";
+
+    const cfAttrs = [
+      { custom_field_id: CF.ORIGEM, value: "Google" },
+      { custom_field_id: CF.GRAU, value: grau },
+      { custom_field_id: CF.CONSENT, value: consentimento ? "Sim" : "Não" },
+      { custom_field_id: CF.PHONE_DEAL, value: onlyDigits },
+    ];
+
+    if (utm_content)
+      cfAttrs.push({ custom_field_id: CF.AD_NAME, value: utm_content });
+    if (utm_term)
+      cfAttrs.push({ custom_field_id: CF.AD_SET_NAME, value: utm_term });
+    if (utm_campaign)
+      cfAttrs.push({
+        custom_field_id: CF.AD_CAMPAIGN_NAME,
+        value: utm_campaign,
       });
 
-      const result = await response.json();
-      console.log(
-        "✅ Resposta completa da API Pipefy:",
-        JSON.stringify(result, null, 2)
-      );
+    const payload = {
+      deal: {
+        name: nomeValidado,
+        deal_pipeline_id: PIPELINE_ID,
+        deal_stage_id: STAGE_ID,
+        contact: {
+          name: nomeValidado,
+          phones: [{ phone: onlyDigits }],
+        },
+        deal_custom_fields_attributes: cfAttrs,
+      },
+    };
 
-      if (result.errors) {
-        console.error("❌ Erro na API Pipefy:", result.errors);
-        alert(
-          "Erro ao enviar os dados para o Pipefy. Verifique os campos e tente novamente."
-        );
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const raw = await response.text();
+        console.error("Erro RD:", raw);
+        alert("Erro ao enviar os dados. Tente novamente em instantes.");
+        setIsSubmitting(false);
+        setShowSubmitButton(true);
+        setRedirectMessage("");
         return;
       }
 
-      console.log(
-        "🎉 Card criado com sucesso! ID:",
-        result.data.createCard.card.id
-      );
-
-      let whatsappLink =
+      window.location.href =
         "https://api.whatsapp.com/send?phone=5511945972641&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20refrativa!";
-      window.location.href = whatsappLink;
-
       handleCloseModal();
     } catch (error) {
-      console.error("⚠️ Erro ao conectar com a API do Pipefy:", error);
+      console.error("Falha de conexão com RD:", error);
+      alert("Falha de conexão. Verifique sua internet e tente novamente.");
+      setShowSubmitButton(true);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <Styled.Container
-      style={{
-        display: display ? "flex" : "none",
-      }}
-    >
+    <Styled.Container style={{ display: display ? "flex" : "none" }}>
       {redirectMessage && (
         <div
           style={{
@@ -142,22 +169,26 @@ export default function Modal(props) {
           {redirectMessage}
         </div>
       )}
+
       <form
         ref={modalRef}
         onSubmit={handleSubmit}
         className={`col formulario conversionForm-${modalId}`}
       >
         <h3>
-          Preencha o formulário <br />e fale com um consultor pelo Whatsapp!
+          Preencha o formulário <br />e fale com um consultor pelo Whatsapp
         </h3>
+
         <input
           type="text"
           name="Nome"
           required
-          placeholder="Nome"
-          pattern="^[A-Za-zÀ-ú\s]+$"
+          placeholder="Nome completo"
+          autoComplete="name"
+          inputMode="text"
           className="Nome"
         />
+
         <input
           type="tel"
           name="Telefone"
@@ -167,11 +198,14 @@ export default function Modal(props) {
           onChange={handleTelefoneChange}
           maxLength={16}
           className="Telefone"
+          autoComplete="tel"
+          inputMode="tel"
         />
+
         <div className="boxSection">
-          <p>Qual o seu grau (aproximadamente)?</p>
+          <p>Qual o seu grau aproximadamente</p>
           {location.pathname === "/refrativa" && (
-            <select name="Grau" required>
+            <select name="Grau" required defaultValue="">
               <option value="">Selecione uma opção</option>
               <option value="Até 3 graus">Até 3 graus</option>
               <option value="Até 5 graus">Até 5 graus</option>
@@ -179,12 +213,25 @@ export default function Modal(props) {
             </select>
           )}
         </div>
+
+        <div className="boxConsentimento">
+          <label className="checkbox">
+            <input
+              type="checkbox"
+              checked={consentimento}
+              onChange={(e) => setConsentimento(e.target.checked)}
+              required
+            />
+            Aceito receber contato via WhatsApp
+          </label>
+        </div>
+
         {showSubmitButton && (
           <input
             className="Button"
             type="submit"
             value="Fale com um consultor"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !consentimento}
           />
         )}
       </form>

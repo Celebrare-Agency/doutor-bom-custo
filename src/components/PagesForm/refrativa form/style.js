@@ -19,7 +19,7 @@ export const Container = styled.main`
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;  
+  background-position: center;
 
   form {
     display: flex;
@@ -49,11 +49,24 @@ export const Container = styled.main`
       width: 100%;
       max-width: 300px;
 
-      &:hover{
+      &:hover {
         background-color: var(--greenHover);
       }
     }
+    .checkbox {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: auto;
+      gap: 1rem;
+      color: var(--light);
 
+      input[type="checkbox"] {
+        width: 20px !important;
+        height: 20px;
+      }
+    }
     .boxSection {
       width: 90% !important;
       display: flex;
@@ -63,7 +76,6 @@ export const Container = styled.main`
       gap: 1rem;
 
       p {
-        width: 100%;
         color: white;
         text-align: left;
       }
@@ -73,7 +85,6 @@ export const Container = styled.main`
         text-align: left;
       }
     }
-
     input,
     select {
       padding: 0.8rem 1rem;

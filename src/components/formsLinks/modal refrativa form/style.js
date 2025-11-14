@@ -21,12 +21,13 @@ export const Container = styled.main`
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  box-sizing: border-box;
+  padding-top: 2rem;
   ${Media.PhoneLarge} {
     width: 95%; /* Adjust width for smaller screens */
   }
 
   ${Media.PhoneSmall} {
-    width: 100%; /* Adjust width for smallest screens */
     top: 50%; /* Re-center */
     left: 50%; /* Re-center */
     transform: translate(-50%, -50%); /* Re-center */
@@ -45,7 +46,20 @@ export const Container = styled.main`
     z-index: -1; /* Place it below the content */
     border-radius: 20px;
   }
+  .checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    gap: 0.5rem;
+    max-width: 500px;
+    color: var(--light);
 
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -75,6 +89,8 @@ export const Container = styled.main`
       gap: 1rem;
       p {
         color: white;
+        text-align: center;
+        font-size: 1rem;
       }
 
       select {
@@ -123,6 +139,7 @@ export const Container = styled.main`
     white-space: pre;
     ${Media.Laptop} {
       white-space: normal;
+      width: 80%;
     }
   }
   button {

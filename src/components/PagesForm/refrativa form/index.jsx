@@ -1,4 +1,3 @@
-// index.jsx
 import React, { useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import * as Styled from "./style.js";
@@ -20,10 +19,16 @@ const CF = {
 const PIPELINE_ID = "6915e85d53adfa0016001cf6";
 const STAGE_ID = "6915e85d53adfa0016001cf8";
 
+/* ---------------- PIPEFY ---------------- */
+
+const PIPEFY_URL = "https://api.pipefy.com/graphql";
+const PIPE_ID = 305678356;
+
+const PIPEFY_TOKEN = `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3MjUzODg0NzUsImp0aSI6Ijc0YTYyYTJiLTg4NzEtNDZiNy05MmRiLTdmNWMxMDUxYmE5OCIsInN1YiI6MzAzMjEzNDM3LCJ1c2VyIjp7ImlkIjozMDMyMTM0MzcsImVtYWlsIjoidGlhZ29hbG1laWRhc2FudG9zMDRAZ21haWwuY29tIn19.jJdEiAbINcjf0YmaNJMumP-B5iUaaff_EA8XgESCP-WSFEyyJmGgseOG_victBzPPlcO2vKv9o9O9JNn1mPNng`;
+
 const formatTelefone = (value) => {
   let cleaned = value.replace(/\D/g, "");
   if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
-
   if (cleaned.length <= 2) return `(${cleaned}`;
   if (cleaned.length <= 7)
     return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
@@ -33,22 +38,26 @@ const formatTelefone = (value) => {
 const validaNome = (s) => {
   if (!s) return false;
   const normalized = s.normalize("NFC").replace(/\s+/g, " ").trim();
-  const ok = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,}$/.test(normalized);
+  const ok = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{3,}$/.test(normalized);
   return ok ? normalized : false;
 };
 
-export default function Index() {
+export default function Modal(props) {
+  const { display, onClose, modalId } = props;
+
   const modalRef = useRef(null);
-  const location = useLocation(); // mantido se quiser usar depois
+  const location = useLocation();
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSubmitButton, setShowSubmitButton] = useState(true);
   const [redirectMessage, setRedirectMessage] = useState("");
   const [telefone, setTelefone] = useState("");
   const [consentimento, setConsentimento] = useState(false);
 
-  const handleTelefoneChange = (e) => {
+  const handleCloseModal = () => onClose();
+
+  const handleTelefoneChange = (e) =>
     setTelefone(formatTelefone(e.target.value));
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -64,18 +73,16 @@ export default function Index() {
 
     const formData = new FormData(event.target);
 
-    const nomeValidado = validaNome((formData.get("Nome") || "").toString());
-    if (!nomeValidado) {
-      alert("Por favor, digite um nome válido.");
+    const nome = validaNome((formData.get("Nome") || "").toString());
+    if (!nome) {
+      alert("Digite um nome válido.");
       setIsSubmitting(false);
       setShowSubmitButton(true);
       setRedirectMessage("");
       return;
     }
 
-    const grau = formData.get("Grau") || "Não informado";
-
-    const onlyDigits = (telefone || "").replace(/\D/g, "");
+    const onlyDigits = telefone.replace(/\D/g, "");
     if (onlyDigits.length < 10) {
       alert("Digite um telefone válido.");
       setIsSubmitting(false);
@@ -84,7 +91,10 @@ export default function Index() {
       return;
     }
 
+    const grau = formData.get("Grau") || "Não informado";
+
     const params = new URLSearchParams(window.location.search);
+
     const utm_content = params.get("utm_content") || "";
     const utm_term = params.get("utm_term") || "";
     const utm_campaign = params.get("utm_campaign") || "";
@@ -106,13 +116,13 @@ export default function Index() {
         value: utm_campaign,
       });
 
-    const payload = {
+    const rdPayload = {
       deal: {
-        name: nomeValidado,
+        name: nome,
         deal_pipeline_id: PIPELINE_ID,
         deal_stage_id: STAGE_ID,
         contact: {
-          name: nomeValidado,
+          name: nome,
           phones: [{ phone: onlyDigits }],
         },
         deal_custom_fields_attributes: cfAttrs,
@@ -120,31 +130,68 @@ export default function Index() {
     };
 
     try {
-      const response = await fetch(API_URL, {
+      const rdRes = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(rdPayload),
       });
 
-      if (!response.ok) {
-        const raw = await response.text();
+      if (!rdRes.ok) {
+        const raw = await rdRes.text();
         console.error("Erro RD:", raw);
-        alert("Erro ao enviar os dados. Tente novamente em instantes.");
-        setIsSubmitting(false);
-        setShowSubmitButton(true);
-        setRedirectMessage("");
-        return;
       }
-
-      window.location.href =
-        "https://api.whatsapp.com/send?phone=5511945972641&text=Ol%C3%A1!%20Gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20refrativa.";
-    } catch (error) {
-      console.error("Falha de conexão com RD:", error);
-      alert("Falha de conexão. Verifique sua internet e tente novamente.");
-      setShowSubmitButton(true);
-    } finally {
-      setIsSubmitting(false);
+    } catch (err) {
+      console.error("Falha RD:", err);
     }
+
+    const pipePayload = {
+      query: `
+        mutation CreateCard($pipe_id: ID!, $fields: [FieldValueInput!]!) {
+          createCard(input: {
+            pipe_id: $pipe_id,
+            fields_attributes: $fields
+          }) {
+            card { id }
+          }
+        }
+      `,
+      variables: {
+        pipe_id: PIPE_ID,
+        fields: [
+          { field_id: "nome", field_value: nome },
+          { field_id: "telefone", field_value: telefone },
+          {
+            field_id: "qual_o_grau_aproximado",
+            field_value: grau,
+          },
+          { field_id: "origem", field_value: "Google" },
+        ],
+      },
+    };
+
+    try {
+      const pipeRes = await fetch(PIPEFY_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: PIPEFY_TOKEN,
+        },
+        body: JSON.stringify(pipePayload),
+      });
+
+      const pipeJson = await pipeRes.json();
+
+      if (pipeJson.errors) {
+        console.error("Erro Pipefy:", pipeJson.errors);
+      }
+    } catch (err) {
+      console.error("Falha Pipefy:", err);
+    }
+
+    window.location.href =
+      "https://api.whatsapp.com/send?phone=5511945972641&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20refrativa!";
+
+    handleCloseModal();
   };
 
   return (
@@ -172,15 +219,15 @@ export default function Index() {
 
       <form ref={modalRef} onSubmit={handleSubmit} className="col formulario">
         <h3>
-          Preencha o formulário <br />e fale com um consultor pelo Whatsapp!
+          Preencha o formulário <br />e fale com um consultor pelo Whatsapp
         </h3>
 
         <input
           type="text"
           name="Nome"
           required
-          placeholder="Nome"
-          pattern="^[A-Za-zÀ-ú\s]+$"
+          placeholder="Nome completo"
+          autoComplete="name"
           className="Nome"
         />
 
@@ -196,8 +243,9 @@ export default function Index() {
         />
 
         <div className="boxSection">
-          <p>Qual o seu grau (aproximadamente)?</p>
-          <select name="Grau" required>
+          <p>Qual o seu grau aproximadamente</p>
+
+          <select name="Grau" required defaultValue="">
             <option value="">Selecione uma opção</option>
             <option value="Até 3 graus">Até 3 graus</option>
             <option value="Até 5 graus">Até 5 graus</option>
@@ -226,6 +274,8 @@ export default function Index() {
           />
         )}
       </form>
+
+      <button onClick={handleCloseModal}>X</button>
     </Styled.Container>
   );
 }

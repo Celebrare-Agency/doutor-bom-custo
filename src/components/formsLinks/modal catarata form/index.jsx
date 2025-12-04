@@ -24,7 +24,9 @@ export default function Modal(props) {
     } else if (cleaned.length <= 7) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
     } else if (cleaned.length <= 11) {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(
+        7
+      )}`;
     }
     return value;
   };
@@ -44,7 +46,7 @@ export default function Modal(props) {
     // Dados do formulário
     const data = {
       nome: formData.get("Nome"),
-      telefone: telefone, 
+      telefone: telefone,
       diagnostico: formData.get("Diagnostico"),
       origem: "Bio do Instagram",
     };
@@ -53,7 +55,7 @@ export default function Modal(props) {
       const response = await fetch("https://api.pipefy.com/graphql", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",          
+          "Content-Type": "application/json",
           Authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3NTM4MDcxMDksImp0aSI6IjgwODg3NTlkLTg4ZmItNGVjOS05M2YwLTBkYTM3NWYyNWVhOSIsInN1YiI6MzA2ODg0MTYwLCJ1c2VyIjp7ImlkIjozMDY4ODQxNjAsImVtYWlsIjoiYnJ1bm8uY29zdGEuYzA2QGdtYWlsLmNvbSJ9fQ.JfH2uPiMjsQJxRjPtL7lc3BPLjDtG2uzHOsLpS61KcAN6EpqYTb52Djiuig5QDZrSOC66YUIUQGDeLYnBu-TuA`, // Substitua pelo token correto
         },
         body: JSON.stringify({
@@ -101,7 +103,7 @@ export default function Modal(props) {
 
       // Redirecionar para o WhatsApp após sucesso
       let whatsappLink =
-        "https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20Instagram%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!";
+        "https://api.whatsapp.com/send?phone=5511919372954&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20Instagram%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!";
       window.location.href = whatsappLink;
 
       // Fecha o modal após o envio bem-sucedido

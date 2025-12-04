@@ -16,7 +16,7 @@ export default function Modal(props) {
   };
 
   const formatTelefone = (value) => {
-    let cleaned = value.replace(/\D/g, ""); 
+    let cleaned = value.replace(/\D/g, "");
     if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
 
     if (cleaned.length <= 2) {
@@ -24,7 +24,9 @@ export default function Modal(props) {
     } else if (cleaned.length <= 7) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
     } else if (cleaned.length <= 11) {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(
+        7
+      )}`;
     }
     return value;
   };
@@ -70,8 +72,8 @@ export default function Modal(props) {
           }
         `,
           variables: {
-            pipe_id: 305671115, 
-            phase_id: 333857414, 
+            pipe_id: 305671115,
+            phase_id: 333857414,
             fields: [
               { field_id: "nome", field_value: data.nome },
               { field_id: "telefone", field_value: data.telefone },
@@ -99,7 +101,7 @@ export default function Modal(props) {
       console.log("Card criado com sucesso:", result.data.createCard.card.id);
 
       let whatsappLink =
-        "https://api.whatsapp.com/send?phone=5511945824194&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!";
+        "https://api.whatsapp.com/send?phone=5511919372954&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20site%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!";
       window.location.href = whatsappLink;
 
       handleCloseModal();
@@ -160,7 +162,7 @@ export default function Modal(props) {
           placeholder="Telefone"
           value={telefone}
           onChange={handleTelefoneChange}
-          maxLength={16} 
+          maxLength={16}
           className="Telefone"
         />
         <div className="boxSection">

@@ -20,11 +20,6 @@ const PIPELINE_ID = "6915e85d53adfa0016001cf6";
 const STAGE_ID = "6915e85d53adfa0016001cf8";
 const ORIGEM_BIO = "Link na Bio";
 
-const PIPEFY_URL = "https://api.pipefy.com/graphql";
-const PIPE_ID = 305678356;
-
-const PIPEFY_TOKEN = `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3MjUzODg0NzUsImp0aSI6Ijc0YTYyYTJiLTg4NzEtNDZiNy05MmRiLTdmNWMxMDUxYmE5OCIsInN1YiI6MzAzMjEzNDM3LCJ1c2VyIjp7ImlkIjozMDMyMTM0MzcsImVtYWlsIjoidGlhZ29hbG1laWRhc2FudG9zMDRAZ21haWwuY29tIn19.jJdEiAbINcjf0YmaNJMumP-B5iUaaff_EA8XgESCP-WSFEyyJmGgseOG_victBzPPlcO2vKv9o9O9JNn1mPNng`;
-
 const formatTelefone = (value) => {
   let cleaned = value.replace(/\D/g, "");
   if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
@@ -141,50 +136,6 @@ export default function Modal(props) {
       }
     } catch (err) {
       console.error("Falha RD:", err);
-    }
-
-    const pipePayload = {
-      query: `
-        mutation CreateCard($pipe_id: ID!, $fields: [FieldValueInput!]!) {
-          createCard(input: {
-            pipe_id: $pipe_id,
-            fields_attributes: $fields
-          }) {
-            card { id }
-          }
-        }
-      `,
-      variables: {
-        pipe_id: PIPE_ID,
-        fields: [
-          { field_id: "nome", field_value: nome },
-          { field_id: "telefone", field_value: telefone },
-          {
-            field_id: "qual_o_grau_aproximado",
-            field_value: grau,
-          },
-          { field_id: "origem", field_value: "Bio do Instagram" },
-        ],
-      },
-    };
-
-    try {
-      const pipeRes = await fetch(PIPEFY_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: PIPEFY_TOKEN,
-        },
-        body: JSON.stringify(pipePayload),
-      });
-
-      const pipeJson = await pipeRes.json();
-
-      if (pipeJson.errors) {
-        console.error("Erro Pipefy:", pipeJson.errors);
-      }
-    } catch (err) {
-      console.error("Falha Pipefy:", err);
     }
 
     window.location.href =

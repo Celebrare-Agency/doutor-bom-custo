@@ -31,6 +31,21 @@ export const Container = styled.main`
     transform: translate(-50%, -50%); /* Re-center */
   }
 
+  .checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    gap: 0.5rem;
+    max-width: 500px;
+    color: var(--light);
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   &::before {
     content: "";
     position: fixed;

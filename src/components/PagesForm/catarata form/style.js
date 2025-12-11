@@ -15,11 +15,26 @@ export const Container = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);  
+  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;  
+  background-position: center;
+
+  .checkbox {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    gap: 1rem;
+    color: var(--light);
+
+    input[type="checkbox"] {
+      width: 20px !important;
+      height: 20px;
+    }
+  }
 
   form {
     display: flex;
@@ -49,7 +64,7 @@ export const Container = styled.main`
       width: 100%;
       max-width: 300px;
 
-      &:hover{
+      &:hover {
         background-color: var(--greenHover);
       }
     }

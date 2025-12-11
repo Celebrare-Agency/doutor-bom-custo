@@ -1,28 +1,51 @@
 import React, { useRef, useState } from "react";
 import * as Styled from "./style.js";
 
+const API_URL =
+  import.meta.env.VITE_API_URL?.trim() ||
+  "https://doutorbomcusto.com.br/api/rd/deals.php";
+
+const CF = {
+  ORIGEM: "69249a829d87530025467939",
+  PHONE_DEAL: "69249a382bb091001773571c",
+  CONSENT: "69249e2cbbf34e001c485033",
+  DIAGNOSTICO: "693b007b592d81001426c603",
+};
+
+const PIPELINE_ID = "6915daf0a539620016989271";
+const STAGE_ID = "6915daf0a539620016989273";
+const ORIGEM_GOOGLE = "Google";
+
+const formatTelefone = (value) => {
+  let cleaned = value.replace(/\D/g, "");
+  if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
+
+  if (cleaned.length <= 2) {
+    return `(${cleaned}`;
+  } else if (cleaned.length <= 7) {
+    return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
+  } else if (cleaned.length <= 11) {
+    return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(
+      7
+    )}`;
+  }
+  return value;
+};
+
+const validaNome = (s) => {
+  if (!s) return false;
+  const normalized = s.normalize("NFC").replace(/\s+/g, " ").trim();
+  const ok = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{3,}$/.test(normalized);
+  return ok ? normalized : false;
+};
+
 export default function PaginaCatarata() {
   const modalRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSubmitButton, setShowSubmitButton] = useState(true);
   const [redirectMessage, setRedirectMessage] = useState("");
   const [telefone, setTelefone] = useState("");
-
-  const formatTelefone = (value) => {
-    let cleaned = value.replace(/\D/g, "");
-    if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
-
-    if (cleaned.length <= 2) {
-      return `(${cleaned}`;
-    } else if (cleaned.length <= 7) {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
-    } else if (cleaned.length <= 11) {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(
-        7
-      )}`;
-    }
-    return value;
-  };
+  const [consentimento, setConsentimento] = useState(false);
 
   const handleTelefoneChange = (e) => {
     setTelefone(formatTelefone(e.target.value));
@@ -30,75 +53,77 @@ export default function PaginaCatarata() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!consentimento) {
+      alert("Você precisa aceitar o consentimento para prosseguir.");
+      return;
+    }
+
     setIsSubmitting(true);
     setShowSubmitButton(false);
     setRedirectMessage("Redirecionando você para o contato...");
 
     const formData = new FormData(event.target);
 
-    const data = {
-      nome: formData.get("Nome"),
-      telefone: telefone,
-      diagnostico: formData.get("Diagnostico"),
-      origem: "Google",
+    const nome = validaNome((formData.get("Nome") || "").toString());
+    if (!nome) {
+      alert("Digite um nome válido.");
+      setIsSubmitting(false);
+      setShowSubmitButton(true);
+      setRedirectMessage("");
+      return;
+    }
+
+    const onlyDigits = telefone.replace(/\D/g, "");
+    if (onlyDigits.length < 10) {
+      alert("Digite um telefone válido.");
+      setIsSubmitting(false);
+      setShowSubmitButton(true);
+      setRedirectMessage("");
+      return;
+    }
+
+    const diagnostico = formData.get("Diagnostico") || "Não informado";
+
+    const cfAttrs = [
+      { custom_field_id: CF.ORIGEM, value: ORIGEM_GOOGLE },
+      { custom_field_id: CF.PHONE_DEAL, value: onlyDigits },
+      { custom_field_id: CF.CONSENT, value: consentimento ? "Sim" : "Não" },
+      { custom_field_id: CF.DIAGNOSTICO, value: diagnostico },
+    ];
+
+    const rdPayload = {
+      deal: {
+        name: nome,
+        deal_pipeline_id: PIPELINE_ID,
+        deal_stage_id: STAGE_ID,
+        contact: {
+          name: nome,
+          phones: [{ phone: onlyDigits }],
+        },
+        deal_custom_fields_attributes: cfAttrs,
+      },
     };
 
     try {
-      const response = await fetch("https://api.pipefy.com/graphql", {
+      const rdRes = await fetch(API_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3NTM4MDcxMDksImp0aSI6IjgwODg3NTlkLTg4ZmItNGVjOS05M2YwLTBkYTM3NWYyNWVhOSIsInN1YiI6MzA2ODg0MTYwLCJ1c2VyIjp7ImlkIjozMDY4ODQxNjAsImVtYWlsIjoiYnJ1bm8uY29zdGEuYzA2QGdtYWlsLmNvbSJ9fQ.JfH2uPiMjsQJxRjPtL7lc3BPLjDtG2uzHOsLpS61KcAN6EpqYTb52Djiuig5QDZrSOC66YUIUQGDeLYnBu-TuA`, // Substitua pelo token correto
-        },
-        body: JSON.stringify({
-          query: `
-          mutation CreateCard($pipe_id: ID!, $phase_id: ID!, $fields: [FieldValueInput!]!) {
-            createCard(input: {
-              pipe_id: $pipe_id,
-              phase_id: $phase_id,
-              fields_attributes: $fields
-            }) {
-              card {
-                id
-              }
-            }
-          }
-        `,
-          variables: {
-            pipe_id: 305671115,
-            phase_id: 333857414,
-            fields: [
-              { field_id: "nome", field_value: data.nome },
-              { field_id: "telefone", field_value: data.telefone },
-              {
-                field_id: "j_tem_diagn_stico_de_catarata",
-                field_value: data.diagnostico,
-              },
-              { field_id: "origem", field_value: data.origem },
-            ],
-          },
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(rdPayload),
       });
 
-      const result = await response.json();
-      console.log("Resposta da API Pipefy:", result);
-
-      if (result.errors) {
-        console.error("Erro na API Pipefy:", result.errors);
-        alert(
-          "Erro ao enviar os dados para o Pipefy. Verifique os campos e tente novamente."
-        );
-        return;
+      if (!rdRes.ok) {
+        const raw = await rdRes.text();
+        console.error("Erro RD:", raw);
       }
-
-      let whatsappLink =
-        "https://api.whatsapp.com/send?phone=5511919372954&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20Instagram%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!";
-      window.location.href = whatsappLink;
-    } catch (error) {
-      console.error("Erro ao conectar com a API do Pipefy:", error);
-    } finally {
-      setIsSubmitting(false);
+    } catch (err) {
+      console.error("Falha RD:", err);
     }
+
+    const whatsappLink =
+      "https://api.whatsapp.com/send?phone=5511919372954&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Eu%20vim%20pelo%20Instagram%20e%20gostaria%20de%20dar%20procedimento%20a%20minha%20cirurgia%20de%20catarata!";
+    window.location.href = whatsappLink;
+    setIsSubmitting(false);
   };
 
   return (
@@ -128,8 +153,9 @@ export default function PaginaCatarata() {
           type="text"
           name="Nome"
           required
-          placeholder="Nome"
-          pattern="^[A-Za-zÀ-ú\\s]+$"
+          placeholder="Nome completo"
+          autoComplete="name"
+          className="Nome"
         />
         <input
           type="tel"
@@ -149,12 +175,25 @@ export default function PaginaCatarata() {
             <option value="Não sei">Não sei</option>
           </select>
         </div>
+
+        <div className="boxConsentimento">
+          <label className="checkbox">
+            <input
+              type="checkbox"
+              checked={consentimento}
+              onChange={(e) => setConsentimento(e.target.checked)}
+              required
+            />
+            Aceito receber contato via WhatsApp
+          </label>
+        </div>
+
         {showSubmitButton && (
           <input
             className="Button"
             type="submit"
             value="Fale com um consultor"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !consentimento}
           />
         )}
       </form>

@@ -44,7 +44,7 @@ export default function Footer() {
 
       <div className="end-footer">
         <div className="container-end-footer">
-          <p>Copyright ©️ Doutor Bom Custo 2025.</p>
+          <p>Copyright ©️ Doutor Bom Custo {new Date().getFullYear()}.</p>
           <a href="">
             <p>Política de privacidade | Termos de serviço</p>
           </a>

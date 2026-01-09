@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Modal from "../../FormHome/index";
 import React, { useState } from "react";
 
-export default function Footer() {  
+export default function Footer() {
   const [isModalVisible, setModalVisibility] = useState(false);
 
   const toggleModalVisibility = (modalId) => {
@@ -41,8 +41,10 @@ export default function Footer() {
             acompanhar de perto todas as novidades e informações. Acesse já!
           </p>
 
-          <p><strong>OAS CLINICA MEDICA LTDA.</strong> <br/>
-          <strong>CNPJ:</strong> 28.674.798/0001-76</p>
+          <p>
+            <strong>OAS CLINICA MEDICA LTDA.</strong> <br />
+            <strong>CNPJ:</strong> 28.674.798/0001-76
+          </p>
         </div>
         <div className="socialGrid">
           <a href="https://www.instagram.com/dr_bomcusto/" target="blanked">
@@ -52,10 +54,7 @@ export default function Footer() {
             </div>
           </a>
 
-          <a
-            target="blanked"
-            onClick={() => toggleModalVisibility()}
-          >
+          <a target="blanked" onClick={() => toggleModalVisibility()}>
             <div className="socialContainer row">
               <AiOutlineWhatsApp className="icon" />
               <p>(11) 94582-4194</p>
@@ -81,7 +80,7 @@ export default function Footer() {
         <Link to="/politica" target="_blank">
           <p>Política de privacidade</p>
         </Link>
-        <p>Copyright © 2025 Doutor BomCusto </p>
+        <p>Copyright © {new Date().getFullYear()} Doutor BomCusto </p>
         {/* <p>Termos de serviço</p> */}
       </div>
     </Styled.Footer>

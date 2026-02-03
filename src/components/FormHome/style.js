@@ -96,6 +96,21 @@ export const Container = styled.main`
     }
   }
 
+  .checkbox {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    gap: 1rem;
+    color: var(--light);
+
+    input[type="checkbox"] {
+      width: 20px !important;
+      height: 20px;
+    }
+  }
+
   h3 {
     color: var(--light) !important;
     text-align: center;

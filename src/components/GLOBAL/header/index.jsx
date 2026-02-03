@@ -63,16 +63,24 @@ export default function Header() {
               <img src={logo} alt="logotipo" />
             </div>
           </Link>
-          <AiOutlineMenu onClick={() => setMenuIsVisible(true)} className="menu" />
+          <AiOutlineMenu
+            onClick={() => setMenuIsVisible(true)}
+            className="menu"
+          />
           <AiOutlineClose
             onClick={handleMenuClose}
             className={`menu closeMenu ${menuIsVisible ? "visible" : ""}`}
           />
           <ul className="menuSide">
             {menuItems.map((item) => (
-              <li key={item.path} className={`Options ${path === "/blefaroplastia" ? "light" : ""}`}>
+              <li
+                key={item.path}
+                className={`Options ${
+                  path === "/blefaroplastia" ? "light" : ""
+                }`}
+              >
                 {item.path === "atendimento" ? (
-                  <a href="#" onClick={openModal}>
+                  <a href="https://api.whatsapp.com/send?phone=5511945852272&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento.">
                     {item.label}
                   </a>
                 ) : (
@@ -85,7 +93,9 @@ export default function Header() {
       </nav>
 
       {/* Exibe o Modal quando showModal for true */}
-      {showModal && <Modal display={showModal} onClose={closeModal} modalId="1" />}
+      {showModal && (
+        <Modal display={showModal} onClose={closeModal} modalId="1" />
+      )}
     </HeaderContainer>
   );
 }

@@ -5,7 +5,7 @@ import Loading from "./components/GLOBAL/loading/index";
 const Linktree = lazy(() => import("./pages/link/index"));
 const Home = lazy(() => import("./pages/1.home/index"));
 const Autoteste = lazy(() => import("./pages/autoteste/index"));
-const RefrativaLpSell = lazy(() => import("./pages/refrativaLpSell/index"));
+const RefrativaLpSell = lazy(() => import("./pages/refrativa2026/index"));
 const RefrativaLpSell2 = lazy(() => import("./pages/refrativaLpSell2/index"));
 const Ortoceratologia = lazy(() =>
   import("./pages/ortoceratologiaLpSell/index")
@@ -26,13 +26,17 @@ const OphthalmologistParaisopolis = lazy(() =>
   import("./pages/consultaLpSellV1 - Paraisopolis/index")
 );
 
-const Adesve = lazy(() =>
-  import("./pages/newRefrativaLpSell")
-);
+const Adesve = lazy(() => import("./pages/newRefrativaLpSell"));
 
-const BlefaroForm = lazy(() => import("./components/PagesForm/blefaroplastia form/index"));
-const CatarataForm = lazy(() => import("./components/PagesForm/catarata form/index"));
-const RefrativaForm = lazy(() => import("./components/PagesForm/refrativa form/index"));
+const BlefaroForm = lazy(() =>
+  import("./components/PagesForm/blefaroplastia form/index")
+);
+const CatarataForm = lazy(() =>
+  import("./components/PagesForm/catarata form/index")
+);
+const RefrativaForm = lazy(() =>
+  import("./components/PagesForm/refrativa form/index")
+);
 const RefrativaLpSell3 = lazy(() => import("./pages/newRefrativaLpSell/index"));
 const FormsTeste = lazy(() => import("./components/Forms/RD Forms/index"));
 
@@ -46,7 +50,7 @@ export function Router() {
         <Route path="/blefaroplastia" element={<BlefaroplastiaLpSell2 />} />
         <Route path="/blog-Catarata" element={<Catarata />} />
         <Route path="/refrativa" element={<RefrativaLpSell />} />
-        <Route path="/refrativa2" element={<RefrativaLpSell2 />} /> 
+        <Route path="/refrativa2" element={<RefrativaLpSell2 />} />
         <Route path="/autoteste" element={<Autoteste />} />
         <Route path="/Catarata" element={<CatarataLpSell />} />
         <Route path="/politica" element={<Politica />} />

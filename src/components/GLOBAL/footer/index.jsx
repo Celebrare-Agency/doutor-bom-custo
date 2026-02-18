@@ -1,87 +1,67 @@
 import * as Styled from "./style";
-import logo from "../../../assets/logoExtendWhite.svg";
-import {
-  AiOutlineInstagram,
-  AiOutlineWhatsApp,
-  AiOutlineLinkedin,
-  AiOutlineFacebook,
-} from "react-icons/ai";
-import { FaPhoneAlt } from "react-icons/fa";
+import logo from "../../../assets/logoExtendBlue.svg";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Modal from "../../FormHome/index";
-import React, { useState } from "react";
+import React from "react";
 
 export default function Footer() {
-  const [isModalVisible, setModalVisibility] = useState(false);
-
-  const toggleModalVisibility = (modalId) => {
-    setModalVisibility(!isModalVisible);
-  };
-
   return (
     <Styled.Footer>
-      {isModalVisible && (
-        <Modal
-          display={isModalVisible}
-          onClose={() => toggleModalVisibility()}
-          modalId="1"
-        />
-      )}
-      <div className="footer row">
-        <div className="left col">
-          <Link to="/">
-            <img src={logo} alt="logo do doutor bom Custo" />
-          </Link>
+      <div className="main-content">
+        <div className="column brand-column">
+          <img src={logo} alt="Doutor Bom Custo" className="footer-logo" />
           <p>
-            A dr bom custo é uma intermediadora de serviços de saúde, estando
-            apta apenas na intermediação entre clientes e entidades de saúde e
-            não na prestação do mesmo. <br />
+            A Doutor Bom Custo é uma intermediadora de serviços de saúde,
+            estando apta apenas na intermediação entre clientes e entidades de
+            saúde e não na prestação do mesmo.
+          </p>
+          <p>
             Pensando em manter nossos clientes conectados com a nossa missão e
             novidades, criamos nossas redes sociais, através delas você poderá
             acompanhar de perto todas as novidades e informações. Acesse já!
           </p>
-
-          <p>
-            <strong>OAS CLINICA MEDICA LTDA.</strong> <br />
-            <strong>CNPJ:</strong> 28.674.798/0001-76
-          </p>
         </div>
-        <div className="socialGrid">
-          <a href="https://www.instagram.com/dr_bomcusto/" target="blanked">
-            <div className="socialContainer row">
-              <AiOutlineInstagram className="icon" />
-              <p>doutorbomcusto</p>
-            </div>
-          </a>
 
-          <a target="blanked" onClick={() => toggleModalVisibility()}>
-            <div className="socialContainer row">
-              <AiOutlineWhatsApp className="icon" />
-              <p>(11) 94582-4194</p>
-            </div>
-          </a>
+        <div className="column info-column">
+          <div className="info-block">
+            <h3>OAS CLINICA MEDICA LTDA.</h3>
+            <p>28.674.798/0001-76</p>
+          </div>
 
-          <a href="https://www.facebook.com/doutorbomcusto/" target="blanked">
-            <div className="socialContainer row">
-              <AiOutlineFacebook className="icon" />
-              <p>Dr Bom Custo</p>
-            </div>
-          </a>
+          <div className="info-block">
+            <h3>CONTATO</h3>
+            <p>contato@doutorbomcusto.com.br</p>
+            <p>Whatsapp: (11) 94582-4194</p>
+            <p>Ligação: (11) 4040-0219</p>
+          </div>
+        </div>
 
-          <a href="tel:1140400219">
-            <div className="socialContainer row">
-              <FaPhoneAlt className="icon" />
-              <p>(11) 4040-0219</p>
-            </div>
-          </a>
+        <div className="column social-column">
+          <h3>REDES SOCIAIS</h3>
+          <div className="icons">
+            <a
+              href="https://www.facebook.com/doutorbomcusto/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/dr_bomcusto/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </div>
-      <div className="privacypart row">
-        <Link to="/politica" target="_blank">
-          <p>Política de privacidade</p>
-        </Link>
-        <p>Copyright © {new Date().getFullYear()} Doutor BomCusto </p>
-        {/* <p>Termos de serviço</p> */}
+
+      <div className="bottom-bar">
+        <div className="container-bottom-bar">
+          <p>Copyright © Doutor Bom Custo 2026.</p>
+          <Link to="/politica">Política de privacidade</Link>
+        </div>
       </div>
     </Styled.Footer>
   );

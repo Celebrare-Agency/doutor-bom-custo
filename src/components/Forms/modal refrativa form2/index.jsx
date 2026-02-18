@@ -166,6 +166,10 @@ export default function Modal(props) {
         </div>
       )}
 
+      <button className="close-btn" onClick={handleCloseModal} type="button">
+        ✕
+      </button>
+
       <form
         ref={modalRef}
         onSubmit={handleSubmit}
@@ -227,8 +231,6 @@ export default function Modal(props) {
           />
         )}
       </form>
-
-      <button onClick={handleCloseModal}>X</button>
     </Styled.Container>
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const Media = {
   PhoneLarge: "@media(max-width:600px)",
   Laptop: "@media(max-width:1150px)",
@@ -7,112 +8,141 @@ const Media = {
 };
 
 export const Footer = styled.footer`
-  padding-top: 3rem;
-  background-color: var(--blue);
-  .col {
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main-content {
+    width: 90%;
+    max-width: 1200px;
+    padding: 60px 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
-  .footer {
-    margin: auto;
     justify-content: space-between;
-    width: 85%;
-    max-width: 80rem;
-    position: relative;
-    min-height: 20rem;
+    gap: 90px;
 
     ${Media.Tablet} {
-      min-height: 26rem;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 2rem;
-    }
-    ${Media.PhoneLarge} {
-      width: 90%;
-      max-width: 90rem;
+      gap: 40px;
     }
   }
 
-  .left {
-    width: 30%;
-    align-items: flex-start;
-    gap: 1rem;
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .brand-column {
+    flex: 2;
+    max-width: 450px;
+
     ${Media.Tablet} {
-      width: 100%;
+      max-width: 100%;
     }
-    img {
-      width: 60%;
-      ${Media.Tablet} {
-        width: 30%;
-      }
-    }
-    p {
-      width: 100%;
 
-      color: var(--light);
-      font-family: Poppins;
-      font-size: 11.653px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 22.142px;
-      ${Media.Tablet} {
-        width: 60%;
+    .footer-logo {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  }
+
+  .info-column {
+    flex: 1;
+    padding-top: 10px;
+
+    .info-block {
+      margin-bottom: 30px;
+
+      h3 {
+        color: #485aff;
+        font-size: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.8;
+        color: #333;
       }
     }
   }
 
-  .socialGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
+  .social-column {
+    flex: 1;
+    align-items: flex-start;
+    padding-top: 10px;
 
-    .socialContainer {
-      gap: 0.2rem;
-      .icon {
-        color: var(--light);
-        width: 2rem;
-        height: 2rem;
+    h3 {
+      color: #485aff;
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.2;
+      width: 50%;
+
+      ${Media.Tablet} {
+        width: 100%;
       }
-      p {
-        color: var(--light);
-        font-family: Poppins;
-        font-size: 11.653px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22.142px;
-      
-        strong{
-          font-weight: bold;
+    }
+
+    .icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+
+      a {
+        color: #000;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #485aff;
         }
       }
     }
   }
-  .privacypart {
-    width: 90%;
-    margin: 1rem auto auto;
-    justify-content: space-between;
-    p {
-      color: #fff;
-      font-family: Lato;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 22.8px;
+
+  .bottom-bar {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 25px 0;
+
+    .container-bottom-bar {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+
+      ${Media.PhoneLarge} {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
     }
-    ${Media.Tablet} {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 1rem;
+
+    p,
+    a {
+      font-size: 0.9rem;
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 `;

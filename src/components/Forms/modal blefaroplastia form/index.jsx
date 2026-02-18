@@ -23,7 +23,8 @@ const formatTelefone = (value) => {
   let cleaned = value.replace(/\D/g, "");
   if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
   if (cleaned.length <= 2) return `(${cleaned}`;
-  if (cleaned.length <= 7) return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
+  if (cleaned.length <= 7)
+    return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
   return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
 };
 
@@ -46,7 +47,8 @@ export default function Modal(props) {
 
   const handleCloseModal = () => onClose();
 
-  const handleTelefoneChange = (e) => setTelefone(formatTelefone(e.target.value));
+  const handleTelefoneChange = (e) =>
+    setTelefone(formatTelefone(e.target.value));
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -63,7 +65,9 @@ export default function Modal(props) {
     const formData = new FormData(event.target);
     const nomeValidado = validaNome((formData.get("Nome") || "").toString());
     if (!nomeValidado) {
-      alert("Por favor, digite um nome válido (somente letras, espaços, hífen e apóstrofo).");
+      alert(
+        "Por favor, digite um nome válido (somente letras, espaços, hífen e apóstrofo)."
+      );
       setIsSubmitting(false);
       setShowSubmitButton(true);
       setRedirectMessage("");
@@ -91,9 +95,15 @@ export default function Modal(props) {
       { custom_field_id: CF.CONSENT, value: consentimento ? "Sim" : "Não" },
       { custom_field_id: CF.PHONE_DEAL, value: onlyDigits },
     ];
-    if (utm_content) cfAttrs.push({ custom_field_id: CF.AD_NAME, value: utm_content });
-    if (utm_term) cfAttrs.push({ custom_field_id: CF.AD_SET_NAME, value: utm_term });
-    if (utm_campaign) cfAttrs.push({ custom_field_id: CF.AD_CAMPAIGN_NAME, value: utm_campaign });
+    if (utm_content)
+      cfAttrs.push({ custom_field_id: CF.AD_NAME, value: utm_content });
+    if (utm_term)
+      cfAttrs.push({ custom_field_id: CF.AD_SET_NAME, value: utm_term });
+    if (utm_campaign)
+      cfAttrs.push({
+        custom_field_id: CF.AD_CAMPAIGN_NAME,
+        value: utm_campaign,
+      });
 
     const dealName = `${nomeValidado}`;
     const payload = {
@@ -144,15 +154,27 @@ export default function Modal(props) {
         <div
           style={{
             position: "absolute",
-            top: 0, left: 0, right: 0, bottom: 0,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
             backgroundColor: "rgba(255, 255, 255, 0.9)",
-            display: "flex", justifyContent: "center", alignItems: "center",
-            zIndex: 1000, fontSize: "24px", fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000,
+            fontSize: "24px",
+            fontWeight: "bold",
           }}
         >
           {redirectMessage}
         </div>
       )}
+
+      <button className="close-btn" onClick={handleCloseModal} type="button">
+        ✕
+      </button>
+
       <form
         ref={modalRef}
         onSubmit={handleSubmit}
@@ -218,8 +240,6 @@ export default function Modal(props) {
           />
         )}
       </form>
-
-      <a onClick={handleCloseModal}>X</a>
     </Styled.Container>
   );
 }

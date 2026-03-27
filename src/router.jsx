@@ -37,6 +37,7 @@ const CatarataForm = lazy(() =>
 const RefrativaForm = lazy(() =>
   import("./components/PagesForm/refrativa form/index")
 );
+const LiftingForm = lazy(() => import("./components/PagesForm/LiftingFacial"));
 const RefrativaLpSell3 = lazy(() => import("./pages/newRefrativaLpSell/index"));
 const FormsTeste = lazy(() => import("./components/Forms/RD Forms/index"));
 
@@ -57,6 +58,7 @@ export function Router() {
         <Route path="/refrativa3" element={<RefrativaLpSell3 />} />
         <Route path="/Ortoceratologia" element={<Ortoceratologia />} />
         <Route path="/BlefaroForm" element={<BlefaroForm />} />
+        <Route path="/LiftingForm" element={<LiftingForm />} />
         <Route path="/CatarataForm" element={<CatarataForm />} />
         <Route path="/RefrativaForm" element={<RefrativaForm />} />
         <Route

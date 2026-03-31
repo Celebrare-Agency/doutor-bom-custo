@@ -40,6 +40,9 @@ const RefrativaForm = lazy(() =>
 const LiftingForm = lazy(() => import("./components/PagesForm/LiftingFacial"));
 const RefrativaLpSell3 = lazy(() => import("./pages/newRefrativaLpSell/index"));
 const FormsTeste = lazy(() => import("./components/Forms/RD Forms/index"));
+const RefrativaTypeform = lazy(() =>
+  import("./components/typeform/refrativa/index")
+);
 
 export function Router() {
   return (
@@ -67,6 +70,7 @@ export function Router() {
         />
         <Route path="/taboao-consulta" element={<Ophthalmologist />} />
         <Route path="/forms-rd" element={<FormsTeste />} />
+        <Route path="/RefrativaQuiz" element={<RefrativaTypeform />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Suspense>
